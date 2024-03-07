@@ -8809,7 +8809,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n   \"email\":{{JSON.stringify(NewEmail.text)}},\n   \"firstName\":{{JSON.stringify(NewFirstName.text)}},\n   \"lastName\":{{JSON.stringify(NewLastName.text)}},\n   \"contactOwner\":{{JSON.stringify(NewContactOwner.text)}},\n   \"phoneNumber\":{{JSON.stringify(NewPhoneNumber.text)}},\n   \"dealStage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n   \"leadStatus\":{{JSON.stringify(NewLeadStatus.selectedOptionLabel)}},\n   \"country\":{{JSON.stringify(NewCountry.text)}},\n   \"city\":{{JSON.stringify(NewCity.text)}},\n   \"industry\":{{JSON.stringify(NewIndustry.text)}}\n}"
+                "body": "{\n   \"email\":{{JSON.stringify(NewEmail.text)}},\n   \"firstName\":{{JSON.stringify(NewFirstName.text)}},\n   \"lastName\":{{JSON.stringify(NewLastName.text)}},\n   \"contactOwner\":{{JSON.stringify(NewContactOwner.selectedOptionValue)}},\n   \"phoneNumber\":{{JSON.stringify(NewPhoneNumber.text)}},\n   \"dealStage\":{{JSON.stringify(NewDealStage.selectedOptionValue)}},\n   \"leadStatus\":{{JSON.stringify(NewLeadStatus.selectedOptionValue)}},\n   \"country\":{{JSON.stringify(NewCountry.text)}},\n   \"city\":{{JSON.stringify(NewCity.text)}},\n   \"industry\":{{JSON.stringify(NewIndustry.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -8826,19 +8826,20 @@
                 "JSON.stringify(NewEmail.text)",
                 "JSON.stringify(NewFirstName.text)",
                 "JSON.stringify(NewLastName.text)",
-                "JSON.stringify(NewContactOwner.text)",
+                "JSON.stringify(NewContactOwner.selectedOptionValue)",
                 "JSON.stringify(NewPhoneNumber.text)",
-                "JSON.stringify(NewDealStage.selectedOptionLabel)",
-                "JSON.stringify(NewLeadStatus.selectedOptionLabel)",
+                "JSON.stringify(NewDealStage.selectedOptionValue)",
+                "JSON.stringify(NewLeadStatus.)",
                 "JSON.stringify(NewCountry.text)",
                 "JSON.stringify(NewCity.text)",
-                "JSON.stringify(NewIndustry.text)"
+                "JSON.stringify(NewIndustry.text)",
+                "JSON.stringify(NewLeadStatus.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T12:29:15.294Z",
-        "updatedAt": "2024-03-06T15:51:51.876Z",
+        "updatedAt": "2024-03-07T09:12:51.110Z",
         "deleted": false,
         "policies": [
             {
