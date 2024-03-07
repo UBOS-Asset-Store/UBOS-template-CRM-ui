@@ -8809,7 +8809,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n   \"email\":{{JSON.stringify(NewEmail.text)}},\n   \"firstName\":{{JSON.stringify(NewFirstName.text)}},\n   \"lastName\":{{JSON.stringify(NewLastName.text)}},\n   \"contactOwner\":{{JSON.stringify(NewContactOwner.selectedOptionValue)}},\n   \"phoneNumber\":{{JSON.stringify(NewPhoneNumber.text)}},\n   \"dealStage\":{{JSON.stringify(NewDealStage.selectedOptionValue)}},\n   \"leadStatus\":{{JSON.stringify(NewLeadStatus.selectedOptionValue)}},\n   \"country\":{{JSON.stringify(NewCountry.text)}},\n   \"city\":{{JSON.stringify(NewCity.text)}},\n   \"industry\":{{JSON.stringify(NewIndustry.text)}}\n}"
+                "body": "{\n   \"email\":{{JSON.stringify(NewEmail.text)}},\n   \"firstName\":{{JSON.stringify(NewFirstName.text)}},\n   \"lastName\":{{JSON.stringify(NewLastName.text)}},\n   \"contactOwner\":{{JSON.stringify(NewContactOwner.selectedOptionValue)}},\n   \"phoneNumber\":{{JSON.stringify(NewPhoneNumber.text)}},\n   \"dealStage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n   \"leadStatus\":{{JSON.stringify(NewLeadStatus.selectedOptionLabel)}},\n   \"country\":{{JSON.stringify(NewCountry.selectedOptionLabel)}},\n   \"city\":{{JSON.stringify(NewCity.text)}},\n   \"industry\":{{JSON.stringify(NewIndustry.selectedOptionLabel)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -8828,18 +8828,18 @@
                 "JSON.stringify(NewLastName.text)",
                 "JSON.stringify(NewContactOwner.selectedOptionValue)",
                 "JSON.stringify(NewPhoneNumber.text)",
-                "JSON.stringify(NewDealStage.selectedOptionValue)",
-                "JSON.stringify(NewLeadStatus.)",
-                "JSON.stringify(NewCountry.text)",
+                "JSON.stringify(NewDealStage.selectedOptionLabel)",
+                "JSON.stringify(NewLeadStatus.selectedOptionLabel)",
+                "JSON.stringify(NewCountry.selectedOptionLabel)",
                 "JSON.stringify(NewCity.text)",
-                "JSON.stringify(NewIndustry.text)",
-                "JSON.stringify(NewLeadStatus.selectedOptionValue)"
+                "JSON.stringify(NewIndustry.)",
+                "JSON.stringify(NewIndustry.selectedOptionLabel)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T12:29:15.294Z",
-        "updatedAt": "2024-03-07T09:12:51.110Z",
+        "updatedAt": "2024-03-07T16:42:51.380Z",
         "deleted": false,
         "policies": [
             {
@@ -9079,7 +9079,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T16:17:31.421Z",
-        "updatedAt": "2024-03-06T16:22:00.053Z",
+        "updatedAt": "2024-03-07T16:43:13.213Z",
         "deleted": false,
         "policies": [
             {
@@ -9427,7 +9427,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T14:57:40.198Z",
-        "updatedAt": "2024-03-07T14:57:41.004Z",
+        "updatedAt": "2024-03-07T16:46:25.353Z",
         "deleted": false,
         "policies": [
             {
@@ -9567,7 +9567,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T16:33:28.636Z",
-        "updatedAt": "2024-03-07T16:33:49.281Z",
+        "updatedAt": "2024-03-07T16:39:26.188Z",
         "deleted": false,
         "policies": [
             {

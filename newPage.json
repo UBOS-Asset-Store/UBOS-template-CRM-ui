@@ -12847,23 +12847,53 @@
                                                 "isShowLoading": true,
                                                 "dynamicBindingPathList": [
                                                     {
-                                                        "key": "primaryColumns.step.computedValue"
+                                                        "key": "tableData"
                                                     },
                                                     {
-                                                        "key": "primaryColumns.task.computedValue"
+                                                        "key": "primaryColumns._id.computedValue"
                                                     },
                                                     {
-                                                        "key": "primaryColumns.status.computedValue"
+                                                        "key": "primaryColumns.deleted.computedValue"
                                                     },
                                                     {
-                                                        "key": "primaryColumns.action.computedValue"
+                                                        "key": "primaryColumns.createdAt.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.email.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.firstName.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.lastName.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.contactOwner.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.phoneNumber.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.dealStage.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.leadStatus.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.country.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.city.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.industry.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
-                                                    "step": {
+                                                    "_id": {
                                                         "index": 0,
                                                         "width": 150,
-                                                        "id": "step",
+                                                        "id": "_id",
                                                         "horizontalAlignment": "LEFT",
                                                         "verticalAlignment": "CENTER",
                                                         "columnType": "text",
@@ -12871,18 +12901,16 @@
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
+                                                        "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "step",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
+                                                        "label": "_id",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
                                                     },
-                                                    "task": {
+                                                    "deleted": {
                                                         "index": 1,
                                                         "width": 150,
-                                                        "id": "task",
+                                                        "id": "deleted",
                                                         "horizontalAlignment": "LEFT",
                                                         "verticalAlignment": "CENTER",
                                                         "columnType": "text",
@@ -12890,18 +12918,16 @@
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
+                                                        "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "task",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
+                                                        "label": "deleted",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.deleted))}}"
                                                     },
-                                                    "status": {
+                                                    "createdAt": {
                                                         "index": 2,
                                                         "width": 150,
-                                                        "id": "status",
+                                                        "id": "createdAt",
                                                         "horizontalAlignment": "LEFT",
                                                         "verticalAlignment": "CENTER",
                                                         "columnType": "text",
@@ -12909,48 +12935,204 @@
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
+                                                        "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "status",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
+                                                        "label": "createdAt",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.createdAt))}}"
                                                     },
-                                                    "action": {
+                                                    "email": {
                                                         "index": 3,
                                                         "width": 150,
-                                                        "id": "action",
+                                                        "id": "email",
                                                         "horizontalAlignment": "LEFT",
                                                         "verticalAlignment": "CENTER",
-                                                        "columnType": "button",
+                                                        "columnType": "text",
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
-                                                        "isCellVisible": true,
                                                         "isDisabled": false,
+                                                        "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "action",
-                                                        "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
+                                                        "label": "email",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}"
+                                                    },
+                                                    "firstName": {
+                                                        "index": 4,
+                                                        "width": 150,
+                                                        "id": "firstName",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "firstName",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.firstName))}}"
+                                                    },
+                                                    "lastName": {
+                                                        "index": 5,
+                                                        "width": 150,
+                                                        "id": "lastName",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "lastName",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.lastName))}}"
+                                                    },
+                                                    "contactOwner": {
+                                                        "index": 6,
+                                                        "width": 150,
+                                                        "id": "contactOwner",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "contactOwner",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.contactOwner))}}"
+                                                    },
+                                                    "phoneNumber": {
+                                                        "index": 7,
+                                                        "width": 150,
+                                                        "id": "phoneNumber",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "phoneNumber",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.phoneNumber))}}"
+                                                    },
+                                                    "dealStage": {
+                                                        "index": 8,
+                                                        "width": 150,
+                                                        "id": "dealStage",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "dealStage",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.dealStage))}}"
+                                                    },
+                                                    "leadStatus": {
+                                                        "index": 9,
+                                                        "width": 150,
+                                                        "id": "leadStatus",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "leadStatus",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.leadStatus))}}"
+                                                    },
+                                                    "country": {
+                                                        "index": 10,
+                                                        "width": 150,
+                                                        "id": "country",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "country",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.country))}}"
+                                                    },
+                                                    "city": {
+                                                        "index": 11,
+                                                        "width": 150,
+                                                        "id": "city",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "city",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
+                                                    },
+                                                    "industry": {
+                                                        "index": 12,
+                                                        "width": 150,
+                                                        "id": "industry",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "industry",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.industry))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {},
-                                                "tableData": "",
+                                                "tableData": "{{getContacts.data}}",
                                                 "columnSizeMap": {
                                                     "task": 245,
                                                     "step": 62,
                                                     "status": 75
                                                 },
                                                 "columnOrder": [
-                                                    "step",
-                                                    "task",
-                                                    "status",
-                                                    "action"
+                                                    "_id",
+                                                    "deleted",
+                                                    "createdAt",
+                                                    "email",
+                                                    "firstName",
+                                                    "lastName",
+                                                    "contactOwner",
+                                                    "phoneNumber",
+                                                    "dealStage",
+                                                    "leadStatus",
+                                                    "country",
+                                                    "city",
+                                                    "industry"
                                                 ],
                                                 "enableClientSideSearch": true,
                                                 "isVisibleSearch": true,
@@ -12975,7 +13157,8 @@
                                                 "topRow": 9,
                                                 "bottomRow": 73,
                                                 "parentId": "l01teij63x",
-                                                "dynamicTriggerPathList": []
+                                                "dynamicTriggerPathList": [],
+                                                "dynamicPropertyPathList": []
                                             },
                                             {
                                                 "isVisible": true,
@@ -14355,6 +14538,17 @@
                                     "main.env.nodeUrl"
                                 ],
                                 "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65e9ec58c273cc13c1789127",
+                                "id": "65e9ec58c273cc13c1789127",
+                                "confirmBeforeExecute": false,
+                                "name": "getContacts",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
                             }
                         ]
                     ],
@@ -15678,23 +15872,10 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getWidgetsFillers.data.priority}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewPriority",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "defaultOptionValue": "Low",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -15715,7 +15896,11 @@
                                                                 "topRow": 40,
                                                                 "bottomRow": 47,
                                                                 "parentId": "k71lh1oguh",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -15725,20 +15910,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{get}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewDealOwner",
                                                                 "defaultOptionValue": "GREEN",
@@ -15762,7 +15934,11 @@
                                                                 "topRow": 24,
                                                                 "bottomRow": 31,
                                                                 "parentId": "k71lh1oguh",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
