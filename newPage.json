@@ -12692,23 +12692,10 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getContactOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "defaultOptionValue": "Outreach",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -12725,11 +12712,15 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 21,
+                                                                "rightColumn": 27,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "35mqo86cuk",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -12758,8 +12749,8 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 21,
-                                                                "rightColumn": 42,
+                                                                "leftColumn": 27,
+                                                                "rightColumn": 45,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "35mqo86cuk",
@@ -12805,7 +12796,7 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 9.84375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 42,
+                                                                "leftColumn": 45,
                                                                 "rightColumn": 63,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
@@ -14344,7 +14335,19 @@
                     "deleted": false,
                     "policies": [],
                     "layoutOnLoadActions": [
-                        []
+                        [
+                            {
+                                "_id": "65e9b666c273cc13c1789122",
+                                "id": "65e9b666c273cc13c1789122",
+                                "confirmBeforeExecute": false,
+                                "name": "getContactOwners",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
                     ],
                     "layoutOnCloseActions": [
                         []
