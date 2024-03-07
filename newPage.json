@@ -12436,7 +12436,7 @@
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "ButtonCreateCopy",
-                                                "isDisabled": false,
+                                                "isDisabled": "{{!NewListName.text}}",
                                                 "isDefaultClickDisabled": true,
                                                 "recaptchaType": "V3",
                                                 "version": 1,
@@ -12455,8 +12455,12 @@
                                                 "topRow": 25,
                                                 "bottomRow": 29,
                                                 "parentId": "2qffedodz2",
-                                                "onClick": "{{\nnewList.run(() => (showAlert('List successfully created 🎉','success'), closeModal('ModalNewList'),\nshowModal('ModalAddToList')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
-                                                "dynamicBindingPathList": [],
+                                                "onClick": "{{\nnewList.run(() => (showAlert('List successfully created 🎉','success'), closeModal('ModalNewList'),\nshowModal('ModalAddToList')),resetWidget('ModalNewList'), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": [
                                                     {
                                                         "key": "onClick"
@@ -12465,6 +12469,9 @@
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
+                                                    },
+                                                    {
+                                                        "key": "isDisabled"
                                                     }
                                                 ],
                                                 "borderRadius": "ROUNDED"
@@ -13220,7 +13227,7 @@
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "ButtonCreate",
-                                                "isDisabled": false,
+                                                "isDisabled": "{{\nNewEmail.text.length < 6 ||\n!NewFirstName.text ||\n!NewContactOwner.selectedOptionValue\n}}",
                                                 "isDefaultClickDisabled": true,
                                                 "recaptchaType": "V3",
                                                 "version": 1,
@@ -13240,7 +13247,11 @@
                                                 "bottomRow": 66,
                                                 "parentId": "r4019o4p3a",
                                                 "onClick": "{{\nnewContact.run(() => (showAlert('Contact successfully saved 🎉','success'), closeModal('ModalNewContact')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
-                                                "dynamicBindingPathList": [],
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": [
                                                     {
                                                         "key": "onClick"
@@ -13249,6 +13260,9 @@
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
+                                                    },
+                                                    {
+                                                        "key": "isDisabled"
                                                     }
                                                 ],
                                                 "borderRadius": "ROUNDED"
@@ -13859,7 +13873,7 @@
                                                         "key": "onClick"
                                                     }
                                                 ],
-                                                "onClick": "{{\ncloseModal('ModalNewContact');\ncloseModal('ModalCancelNewContact')\n}}",
+                                                "onClick": "{{\ncloseModal('ModalNewContact');\ncloseModal('ModalCancelNewContact');\nresetWidget('ModalNewContact')\n}}",
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
@@ -13949,7 +13963,7 @@
                                                 "topRow": 0,
                                                 "bottomRow": 5,
                                                 "parentId": "kpr4pkhrks",
-                                                "onClick": "{{showModal('ModalCancelAddToList')}}",
+                                                "onClick": "{{closeModal('ModalAddToList')}}",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
                                                     {
