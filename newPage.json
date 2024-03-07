@@ -12695,7 +12695,7 @@
                                                                 "options": "{{getContactOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
-                                                                "defaultOptionValue": "Outreach",
+                                                                "defaultOptionValue": "",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -12730,10 +12730,10 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": "[\n  {\n    \"label\": \"Outreach\",\n    \"value\": \"Outreach\"\n  },\n  {\n    \"label\": \"Qualifying ICP\",\n    \"value\": \"Qualifying ICP\"\n  },\n  {\n    \"label\": \"Appointment scheduled\",\n    \"value\": \"Appointment scheduled\"\n  },\n  {\n    \"label\": \"Presentation made\",\n    \"value\": \"Presentation made\"\n  },\n  {\n    \"label\": \"Follow up\",\n    \"value\": \"Follow up\"\n  },\n  {\n    \"label\": \"Testing Platform\",\n    \"value\": \"Testing Platform\"\n  },\n  {\n    \"label\": \"Objections\",\n    \"value\": \"Objections\"\n  },\n  {\n    \"label\": \"Proposal Sent\",\n    \"value\": \"Proposal Sent\"\n  },\n  {\n    \"label\": \"Closed won\",\n    \"value\": \"Closed won\"\n  },\n  {\n    \"label\": \"Closed - their lost\",\n    \"value\": \"Closed - their lost\"\n  }\n]",
+                                                                "options": "{{getWidgetsFillers.data.dealStage}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select2",
-                                                                "defaultOptionValue": "Outreach",
+                                                                "defaultOptionValue": "",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -12754,7 +12754,11 @@
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "35mqo86cuk",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -12764,20 +12768,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getWidgetsFillers.data.leadStatus}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewLeadStatusCopy",
                                                                 "defaultOptionValue": "GREEN",
@@ -12801,7 +12792,11 @@
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "35mqo86cuk",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             }
                                                         ],
@@ -13284,24 +13279,49 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
+                                                                "labelText": "Country",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "options": "{{getWidgetsFillers.data.countries}}",
+                                                                "serverSideFiltering": false,
+                                                                "widgetName": "NewCountry",
+                                                                "defaultOptionValue": "",
+                                                                "version": 1,
+                                                                "isFilterable": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SELECT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Select",
+                                                                "key": "twf5owadgt",
+                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                "widgetId": "a9fbik877p",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 56,
+                                                                "bottomRow": 63,
+                                                                "parentId": "njkmsvuu3n",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "placeholderText": "Select option",
                                                                 "labelText": "Contact owner",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getContactOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewContactOwner",
                                                                 "defaultOptionValue": "GREEN",
@@ -13325,7 +13345,11 @@
                                                                 "topRow": 24,
                                                                 "bottomRow": 31,
                                                                 "parentId": "njkmsvuu3n",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -13335,7 +13359,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": "[\n  {\n    \"label\": \"Outreach\",\n    \"value\": \"Outreach\"\n  },\n  {\n    \"label\": \"Qualifying ICP\",\n    \"value\": \"Qualifying ICP\"\n  },\n  {\n    \"label\": \"Appointment scheduled\",\n    \"value\": \"Appointment scheduled\"\n  },\n  {\n    \"label\": \"Presentation made\",\n    \"value\": \"Presentation made\"\n  },\n  {\n    \"label\": \"Follow up\",\n    \"value\": \"Follow up\"\n  },\n  {\n    \"label\": \"Testing Platform\",\n    \"value\": \"Testing Platform\"\n  },\n  {\n    \"label\": \"Objections\",\n    \"value\": \"Objections\"\n  },\n  {\n    \"label\": \"Proposal Sent\",\n    \"value\": \"Proposal Sent\"\n  },\n  {\n    \"label\": \"Closed won\",\n    \"value\": \"Closed won\"\n  },\n  {\n    \"label\": \"Closed - their lost\",\n    \"value\": \"Closed - their lost\"\n  }\n]",
+                                                                "options": "{{getWidgetsFillers.data.dealStage}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewDealStage",
                                                                 "defaultOptionValue": "Outreach",
@@ -13359,7 +13383,11 @@
                                                                 "topRow": 40,
                                                                 "bottomRow": 47,
                                                                 "parentId": "njkmsvuu3n",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -13406,20 +13434,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getWidgetsFillers.data.leadStatus}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewLeadStatus",
                                                                 "defaultOptionValue": "GREEN",
@@ -13443,7 +13458,11 @@
                                                                 "topRow": 48,
                                                                 "bottomRow": 55,
                                                                 "parentId": "njkmsvuu3n",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -13479,43 +13498,6 @@
                                                                 "rightColumn": 64,
                                                                 "topRow": 64,
                                                                 "bottomRow": 71,
-                                                                "parentId": "njkmsvuu3n",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": []
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "label": "Country/Region",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "widgetName": "NewCountry",
-                                                                "version": 2,
-                                                                "defaultText": "",
-                                                                "iconAlign": "left",
-                                                                "autoFocus": false,
-                                                                "labelStyle": "",
-                                                                "resetOnSubmit": true,
-                                                                "isRequired": false,
-                                                                "isDisabled": false,
-                                                                "animateLoading": true,
-                                                                "classStyle": "",
-                                                                "inputType": "TEXT",
-                                                                "buttonPosition": "right",
-                                                                "type": "INPUT_WIDGET_V2",
-                                                                "hideCard": false,
-                                                                "displayName": "Input",
-                                                                "key": "dm9ihl3i9p",
-                                                                "iconSVG": "/static/media/icon.9f505595.svg",
-                                                                "widgetId": "7rx7116l49",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 56,
-                                                                "bottomRow": 63,
                                                                 "parentId": "njkmsvuu3n",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -14046,7 +14028,7 @@
                                                 "labelPosition": "Top",
                                                 "labelAlignment": "left",
                                                 "labelWidth": 5,
-                                                "options": "[\n  {\n    \"label\": \"Lists from API\",\n    \"value\": \"Lists from API\"\n  },\n  {\n    \"label\": \"Green\",\n    \"value\": \"GREEN\"\n  },\n  {\n    \"label\": \"Red\",\n    \"value\": \"RED\"\n  }\n]",
+                                                "options": "{{getLists.data}}",
                                                 "serverSideFiltering": false,
                                                 "widgetName": "Select3",
                                                 "defaultOptionValue": "Lists from API",
@@ -14070,7 +14052,11 @@
                                                 "topRow": 6,
                                                 "bottomRow": 10,
                                                 "parentId": "kpr4pkhrks",
-                                                "dynamicBindingPathList": [],
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "options"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": []
                                             },
                                             {
@@ -14305,12 +14291,12 @@
                         "ButtonCreate",
                         "Container6",
                         "Canvas25",
+                        "NewCountry",
                         "NewContactOwner",
                         "NewDealStage",
                         "NewIndustry",
                         "NewLeadStatus",
                         "NewCity",
-                        "NewCountry",
                         "NewPhoneNumber",
                         "NewLastName",
                         "NewFirstName",
@@ -14341,6 +14327,28 @@
                                 "id": "65e9b666c273cc13c1789122",
                                 "confirmBeforeExecute": false,
                                 "name": "getContactOwners",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65e9d57cc273cc13c1789124",
+                                "id": "65e9d57cc273cc13c1789124",
+                                "confirmBeforeExecute": false,
+                                "name": "getWidgetsFillers",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65e9e41cc273cc13c1789126",
+                                "id": "65e9e41cc273cc13c1789126",
+                                "confirmBeforeExecute": false,
+                                "name": "getLists",
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl"
@@ -14972,7 +14980,7 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 20,
+                                                                "rightColumn": 33,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "l01iotrpbr",
@@ -14989,7 +14997,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 336.421875,
                                                         "topRow": 0,
-                                                        "bottomRow": 420,
+                                                        "bottomRow": 390,
                                                         "parentId": "qf1srgo4no"
                                                     }
                                                 ],
@@ -16022,20 +16030,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getContactOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
                                                                 "defaultOptionValue": "GREEN",
@@ -16055,11 +16050,15 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 20,
+                                                                "rightColumn": 31,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "65bh9kr93x",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -16069,20 +16068,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getWidgetsFillers.data.leadStatus}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select2",
                                                                 "defaultOptionValue": "GREEN",
@@ -16101,12 +16087,16 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 21,
-                                                                "rightColumn": 41,
+                                                                "leftColumn": 31,
+                                                                "rightColumn": 51,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "65bh9kr93x",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             }
                                                         ],
@@ -16119,7 +16109,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 336.421875,
                                                         "topRow": 0,
-                                                        "bottomRow": 420,
+                                                        "bottomRow": 390,
                                                         "parentId": "daud56xoix"
                                                     }
                                                 ],
@@ -16396,7 +16386,30 @@
                     "deleted": false,
                     "policies": [],
                     "layoutOnLoadActions": [
-                        []
+                        [
+                            {
+                                "_id": "65e9d0c7c273cc13c1789123",
+                                "id": "65e9d0c7c273cc13c1789123",
+                                "confirmBeforeExecute": false,
+                                "name": "getContactOwners",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65e9d5e4c273cc13c1789125",
+                                "id": "65e9d5e4c273cc13c1789125",
+                                "confirmBeforeExecute": false,
+                                "name": "getWidgetsFillers",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
                     ],
                     "layoutOnCloseActions": [
                         []
