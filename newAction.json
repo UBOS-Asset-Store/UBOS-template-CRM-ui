@@ -9182,11 +9182,11 @@
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "getContactOwners",
+            "name": "getOwners",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getContactOwners"
+                    "url": "{{main.env.nodeUrl}}/getOwners"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -9195,6 +9195,85 @@
             },
             "executeOnLoad": true,
             "pageId": "Contacts",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "owner",
+                        "value": "{{}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                ""
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-07T12:43:18.024Z",
+        "updatedAt": "2024-03-08T09:38:44.151Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65e9d0c7c273cc13c1789123",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getOwners",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getOwners"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Deals",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9224,74 +9303,8 @@
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
-        "createdAt": "2024-03-07T12:43:18.024Z",
-        "updatedAt": "2024-03-07T14:58:07.810Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "65e9d0c7c273cc13c1789123",
-        "applicationId": "jetsondashboard",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "getContactOwners",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getContactOwners"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": true,
-            "pageId": "Deals",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "GET",
-                "headers": [],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ]
-            },
-            "dynamicBindingPathList": [],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nodeUrl"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
         "createdAt": "2024-03-07T14:35:51.757Z",
-        "updatedAt": "2024-03-07T14:57:48.083Z",
+        "updatedAt": "2024-03-08T09:13:44.732Z",
         "deleted": false,
         "policies": [
             {
@@ -9542,7 +9555,20 @@
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "owner",
+                        "value": "{{SelectContactOwner.selectedOptionValue}}"
+                    },
+                    {
+                        "key": "deal",
+                        "value": "{{SelectDealStage.selectedOptionValue}}"
+                    },
+                    {
+                        "key": "lead",
+                        "value": "{{SelectLeadStatus.selectedOptionValue}}"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -9556,8 +9582,87 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
+                },
+                {
+                    "key": "queryParameters[2].value"
                 }
             ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "SelectContactOwner.selectedOptionValue",
+                "SelectDealStage.selectedOptionValue || null",
+                "SelectLeadStatus.selectedOptionValue",
+                "SelectDealStage.selectedOptionValue"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-07T16:33:28.636Z",
+        "updatedAt": "2024-03-08T10:07:54.510Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ead6adc273cc13c1789128",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getOwners",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getOwners"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Lists",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
@@ -9566,8 +9671,8 @@
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
-        "createdAt": "2024-03-07T16:33:28.636Z",
-        "updatedAt": "2024-03-07T16:39:26.188Z",
+        "createdAt": "2024-03-08T09:13:17.106Z",
+        "updatedAt": "2024-03-08T09:14:02.653Z",
         "deleted": false,
         "policies": [
             {

@@ -12692,9 +12692,9 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": "{{getContactOwners.data}}",
+                                                                "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
-                                                                "widgetName": "Select1",
+                                                                "widgetName": "SelectContactOwner",
                                                                 "defaultOptionValue": "",
                                                                 "version": 1,
                                                                 "isFilterable": true,
@@ -12721,7 +12721,12 @@
                                                                         "key": "options"
                                                                     }
                                                                 ],
-                                                                "dynamicTriggerPathList": []
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onOptionChange"
+                                                                    }
+                                                                ],
+                                                                "onOptionChange": "{{getContacts.run()}}"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -12732,7 +12737,7 @@
                                                                 "labelWidth": 5,
                                                                 "options": "{{getWidgetsFillers.data.dealStage}}",
                                                                 "serverSideFiltering": false,
-                                                                "widgetName": "Select2",
+                                                                "widgetName": "SelectDealStage",
                                                                 "defaultOptionValue": "",
                                                                 "version": 1,
                                                                 "isFilterable": true,
@@ -12759,7 +12764,12 @@
                                                                         "key": "options"
                                                                     }
                                                                 ],
-                                                                "dynamicTriggerPathList": []
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onOptionChange"
+                                                                    }
+                                                                ],
+                                                                "onOptionChange": "{{getContacts.run()}}"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -12770,8 +12780,8 @@
                                                                 "labelWidth": 5,
                                                                 "options": "{{getWidgetsFillers.data.leadStatus}}",
                                                                 "serverSideFiltering": false,
-                                                                "widgetName": "NewLeadStatusCopy",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "widgetName": "SelectLeadStatus",
+                                                                "defaultOptionValue": "",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -12797,7 +12807,12 @@
                                                                         "key": "options"
                                                                     }
                                                                 ],
-                                                                "dynamicTriggerPathList": []
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onOptionChange"
+                                                                    }
+                                                                ],
+                                                                "onOptionChange": "{{getContacts.run()}}"
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -13415,7 +13430,7 @@
                                                 "topRow": 62,
                                                 "bottomRow": 66,
                                                 "parentId": "r4019o4p3a",
-                                                "onClick": "{{\nnewContact.run(() => (showAlert('Contact successfully saved 🎉','success'), closeModal('ModalNewContact')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "onClick": "{{\nnewContact.run(() => (showAlert('Contact successfully saved 🎉','success'), closeModal('ModalNewContact'), getContacts.run()),\n() => showAlert('Oops something went wrong 😔','error'))\n}}",
                                                 "dynamicBindingPathList": [
                                                     {
                                                         "key": "isDisabled"
@@ -13542,7 +13557,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": "{{getContactOwners.data}}",
+                                                                "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewContactOwner",
                                                                 "defaultOptionValue": "GREEN",
@@ -14461,9 +14476,9 @@
                         "Canvas22",
                         "Container_Filter",
                         "Canvas23",
-                        "Select1",
-                        "Select2",
-                        "NewLeadStatusCopy",
+                        "SelectContactOwner",
+                        "SelectDealStage",
+                        "SelectLeadStatus",
                         "Table1",
                         "Button4",
                         "Button8",
@@ -15142,20 +15157,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": [
-                                                                    {
-                                                                        "label": "Blue",
-                                                                        "value": "BLUE"
-                                                                    },
-                                                                    {
-                                                                        "label": "Green",
-                                                                        "value": "GREEN"
-                                                                    },
-                                                                    {
-                                                                        "label": "Red",
-                                                                        "value": "RED"
-                                                                    }
-                                                                ],
+                                                                "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "ListCreator",
                                                                 "defaultOptionValue": "GREEN",
@@ -15175,11 +15177,15 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 33,
+                                                                "rightColumn": 27,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "l01iotrpbr",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             }
                                                         ],
@@ -16207,7 +16213,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": "{{getContactOwners.data}}",
+                                                                "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
                                                                 "defaultOptionValue": "GREEN",
@@ -16227,7 +16233,7 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 31,
+                                                                "rightColumn": 27,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "65bh9kr93x",
@@ -16264,8 +16270,8 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 31,
-                                                                "rightColumn": 51,
+                                                                "leftColumn": 27,
+                                                                "rightColumn": 47,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "65bh9kr93x",
