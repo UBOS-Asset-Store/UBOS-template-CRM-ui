@@ -12915,7 +12915,7 @@
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
-                                                        "isVisible": true,
+                                                        "isVisible": false,
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
@@ -12932,7 +12932,7 @@
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
-                                                        "isVisible": true,
+                                                        "isVisible": false,
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
@@ -13132,22 +13132,23 @@
                                                 "columnSizeMap": {
                                                     "task": 245,
                                                     "step": 62,
-                                                    "status": 75
+                                                    "status": 75,
+                                                    "customColumn1": 60
                                                 },
                                                 "columnOrder": [
-                                                    "_id",
-                                                    "deleted",
-                                                    "createdAt",
-                                                    "email",
                                                     "firstName",
                                                     "lastName",
                                                     "contactOwner",
+                                                    "email",
                                                     "phoneNumber",
                                                     "dealStage",
                                                     "leadStatus",
+                                                    "createdAt",
                                                     "country",
                                                     "city",
-                                                    "industry"
+                                                    "industry",
+                                                    "_id",
+                                                    "deleted"
                                                 ],
                                                 "enableClientSideSearch": true,
                                                 "isVisibleSearch": true,
@@ -13173,7 +13174,8 @@
                                                 "bottomRow": 73,
                                                 "parentId": "l01teij63x",
                                                 "dynamicTriggerPathList": [],
-                                                "dynamicPropertyPathList": []
+                                                "dynamicPropertyPathList": [],
+                                                "multiRowSelection": true
                                             },
                                             {
                                                 "isVisible": true,
@@ -13220,7 +13222,7 @@
                                                 "buttonVariant": "SECONDARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button8",
-                                                "isDisabled": false,
+                                                "isDisabled": "{{!Table1.selectedRows}}",
                                                 "isDefaultClickDisabled": true,
                                                 "recaptchaType": "V3",
                                                 "version": 1,
@@ -13240,14 +13242,23 @@
                                                 "topRow": 0,
                                                 "bottomRow": 4,
                                                 "parentId": "l01teij63x",
-                                                "dynamicBindingPathList": [],
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": [
                                                     {
                                                         "key": "onClick"
                                                     }
                                                 ],
                                                 "borderRadius": "ROUNDED",
-                                                "onClick": "{{showModal('ModalAddToList')}}"
+                                                "onClick": "{{showModal('ModalAddToList')}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ]
                                             }
                                         ],
                                         "minHeight": 400,
@@ -13430,7 +13441,7 @@
                                                 "topRow": 62,
                                                 "bottomRow": 66,
                                                 "parentId": "r4019o4p3a",
-                                                "onClick": "{{\nnewContact.run(() => (showAlert('Contact successfully saved 🎉','success'), closeModal('ModalNewContact'), getContacts.run()),\n() => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "onClick": "{{\nnewContact.run(() => (showAlert('Contact successfully saved 🎉','success'),\ncloseModal('ModalNewContact'),\ngetContacts.run(),\nresetWidget('ModalNewContact')),\n() => showAlert('Oops something went wrong 😔','error'))\n}}",
                                                 "dynamicBindingPathList": [
                                                     {
                                                         "key": "isDisabled"
@@ -14112,6 +14123,47 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Confirm",
+                                                "buttonColor": "#03B365",
+                                                "buttonVariant": "PRIMARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button10Copy",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "w5mhomlrat",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "la14trim2z",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 13,
+                                                "rightColumn": 25,
+                                                "topRow": 19,
+                                                "bottomRow": 23,
+                                                "parentId": "kpr4pkhrks",
+                                                "borderRadius": "ROUNDED",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": true,
                                                 "iconName": "cross",
                                                 "borderRadius": "SHARP",
                                                 "boxShadow": "NONE",
@@ -14213,7 +14265,7 @@
                                                         "key": "onClick"
                                                     }
                                                 ],
-                                                "onClick": "{{\naddToList.run(() => (showAlert('Contacts successfully added to list🎉','success'), closeModal('ModalAddToList')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "onClick": "{{\naddToList.run(() => (showAlert('Contacts successfully added to list🎉','success'),\nresetWidget('SelectList'),\tcloseModal('ModalAddToList')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
@@ -14229,8 +14281,8 @@
                                                 "labelWidth": 5,
                                                 "options": "{{getLists.data}}",
                                                 "serverSideFiltering": false,
-                                                "widgetName": "Select3",
-                                                "defaultOptionValue": "Lists from API",
+                                                "widgetName": "SelectList",
+                                                "defaultOptionValue": "",
                                                 "version": 1,
                                                 "isFilterable": true,
                                                 "isRequired": false,
@@ -14507,10 +14559,11 @@
                         "Button7",
                         "ModalAddToList",
                         "Canvas27",
+                        "Button10Copy",
                         "IconButton2",
                         "Button9",
                         "Button10",
-                        "Select3",
+                        "SelectList",
                         "Text15",
                         "Container7",
                         "Canvas28",
@@ -15470,7 +15523,19 @@
                     "deleted": false,
                     "policies": [],
                     "layoutOnLoadActions": [
-                        []
+                        [
+                            {
+                                "_id": "65ead6adc273cc13c1789128",
+                                "id": "65ead6adc273cc13c1789128",
+                                "confirmBeforeExecute": false,
+                                "name": "getOwners",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
                     ],
                     "layoutOnCloseActions": [
                         []

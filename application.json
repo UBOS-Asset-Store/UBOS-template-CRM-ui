@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": true,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-03-07T14:59:11.065Z",
+    "updatedAt": "2024-03-08T13:56:43.802Z",
     "deleted": false,
     "pages": [
         {
@@ -3809,7 +3809,7 @@
                                         },
                                         {
                                             "isVisible": true,
-                                            "text": "{{appsmith.user.auth_module.user.info.user.email}}",
+                                            "text": "{{main.user.auth_module.user.info.user.email}}",
                                             "fontSize": "PARAGRAPH",
                                             "fontStyle": "",
                                             "textAlign": "RIGHT",
