@@ -8832,14 +8832,13 @@
                 "JSON.stringify(NewLeadStatus.selectedOptionLabel)",
                 "JSON.stringify(NewCountry.selectedOptionLabel)",
                 "JSON.stringify(NewCity.text)",
-                "JSON.stringify(NewIndustry.)",
                 "JSON.stringify(NewIndustry.selectedOptionLabel)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T12:29:15.294Z",
-        "updatedAt": "2024-03-07T16:42:51.380Z",
+        "updatedAt": "2024-03-11T12:49:49.742Z",
         "deleted": false,
         "policies": [
             {
@@ -8899,7 +8898,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n   \"name\":{{JSON.stringify(NewListName.text)}},\n   \"description\":{{JSON.stringify(NewListDescription.text)}}\n}"
+                "body": "{\n\t\"name\":{{JSON.stringify(NewListName.text)}},\n\t\"description\":{{JSON.stringify(NewListDescription.text)}},\n\t\"listCreatorID\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -8914,13 +8913,14 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(NewListName.text)",
-                "JSON.stringify(NewListDescription.text)"
+                "JSON.stringify(NewListDescription.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T15:27:06.594Z",
-        "updatedAt": "2024-03-06T16:11:11.687Z",
+        "updatedAt": "2024-03-11T13:46:24.090Z",
         "deleted": false,
         "policies": [
             {
@@ -8980,21 +8980,26 @@
                         "value": true
                     }
                 ],
-                "body": "{\n   \"name\":{{JSON.stringify(NewListName.text)}},\n   \"description\":{{JSON.stringify(NewListDescription.text)}}\n}"
+                "body": "{\n\t\"name\":{{JSON.stringify(NewListName.text)}},\n\t\"description\":{{JSON.stringify(NewListDescription.text)}},\n\t\"listCreatorID\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}"
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(NewListName.text)",
-                "JSON.stringify(NewListDescription.text)"
+                "JSON.stringify(NewListDescription.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T15:53:51.219Z",
-        "updatedAt": "2024-03-08T12:39:36.435Z",
+        "updatedAt": "2024-03-11T15:20:37.331Z",
         "deleted": false,
         "policies": [
             {
@@ -9241,7 +9246,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T12:43:18.024Z",
-        "updatedAt": "2024-03-08T09:38:44.151Z",
+        "updatedAt": "2024-03-11T11:24:59.349Z",
         "deleted": false,
         "policies": [
             {
@@ -9497,7 +9502,12 @@
                         "value": "application/json"
                     }
                 ],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "responseType",
+                        "value": "forSelector"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -9522,7 +9532,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T15:58:20.106Z",
-        "updatedAt": "2024-03-08T12:06:26.067Z",
+        "updatedAt": "2024-03-11T11:29:41.372Z",
         "deleted": false,
         "policies": [
             {
@@ -9617,7 +9627,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T16:33:28.636Z",
-        "updatedAt": "2024-03-08T10:43:38.952Z",
+        "updatedAt": "2024-03-11T23:48:33.241Z",
         "deleted": false,
         "policies": [
             {
@@ -9683,7 +9693,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-08T09:13:17.106Z",
-        "updatedAt": "2024-03-08T10:43:31.418Z",
+        "updatedAt": "2024-03-11T20:55:28.507Z",
         "deleted": false,
         "policies": [
             {
@@ -9854,5 +9864,575 @@
             "async () => {\n\t\t//use async-await or promises\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "65eee885c273cc13c178912f",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getLists",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getLists"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Lists",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "responseType",
+                        "value": "forTable"
+                    },
+                    {
+                        "key": "listCreatorID",
+                        "value": "{{ListCreator.selectedOptionValue}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[1].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "ListCreator.selectedOptionValue"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-11T11:18:29.874Z",
+        "updatedAt": "2024-03-11T20:55:26.167Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ef35f5c273cc13c1789130",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "EditList",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/editList"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "List",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"name\":{{JSON.stringify(EditListName.text)}},\n\t\"description\":{{JSON.stringify(EditListDescription.text)}},\n\t\"listID\":{{JSON.stringify(main.URL.queryParams.list)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(EditListName.text)",
+                "JSON.stringify(EditListDescription.text)",
+                "JSON.stringify()",
+                "JSON.stringify(main.URL.queryParams.list)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-11T16:48:53.858Z",
+        "updatedAt": "2024-03-11T23:31:33.761Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ef404cc273cc13c1789131",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteList",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/deleteList"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "List",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"listID\":{{JSON.stringify(main.URL.queryParams.list)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Table1.selectedRow.listID)",
+                "JSON.stringify(main.URL.queryParams.list)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-11T17:33:00.076Z",
+        "updatedAt": "2024-03-11T23:31:50.257Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ef4766c273cc13c1789139",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getOwners",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getOwners"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "List",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-11T18:03:18.118Z",
+        "updatedAt": "2024-03-11T21:56:26.047Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ef4766c273cc13c178913a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getWidgetsFillers",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getWidgetsFillers"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "List",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-11T18:03:18.118Z",
+        "updatedAt": "2024-03-11T22:52:26.254Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun1",
+        "pageId": "List",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "() => {\nconst IDs = Table1.selectedRows.map(e => e._id);\n\t\treturn IDs;\n\t}",
+            "isAsync": false,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "65ef4766c273cc13c178913e",
+        "id": "65ef4766c273cc13c178913e",
+        "collectionId": "65ef4766c273cc13c178913d",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun1",
+        "isValid": true,
+        "jsonPathKeys": [
+            "() => {\n\t\t//write code here\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun2",
+        "pageId": "List",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "65ef4766c273cc13c178913f",
+        "id": "65ef4766c273cc13c178913f",
+        "collectionId": "65ef4766c273cc13c178913d",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun2",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async () => {\n\t\t//use async-await or promises\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "_id": "65ef89d3c273cc13c1789140",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getListContacts",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getListContacts"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "List",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "list",
+                        "value": "{{main.URL.queryParams.list}}"
+                    },
+                    {
+                        "key": "owner",
+                        "value": "{{SelectContactOwner.selectedOptionValue}}"
+                    },
+                    {
+                        "key": "deal",
+                        "value": "{{SelectDealStage.selectedOptionValue}}"
+                    },
+                    {
+                        "key": "lead",
+                        "value": "{{SelectLeadStatus.selectedOptionValue}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
+                },
+                {
+                    "key": "queryParameters[2].value"
+                },
+                {
+                    "key": "queryParameters[3].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.URL.queryParams.",
+                "SelectContactOwner.selectedOptionValue",
+                "SelectDealStage.selectedOptionValue",
+                "SelectLeadStatus.selectedOptionValue",
+                "main.URL.queryParams.list"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-11T22:46:43.689Z",
+        "updatedAt": "2024-03-11T23:29:41.183Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]

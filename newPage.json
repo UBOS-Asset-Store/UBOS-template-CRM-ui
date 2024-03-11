@@ -12695,7 +12695,7 @@
                                                                 "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "SelectContactOwner",
-                                                                "defaultOptionValue": "",
+                                                                "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -12719,6 +12719,9 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -14123,47 +14126,6 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
-                                                "animateLoading": true,
-                                                "text": "Confirm",
-                                                "buttonColor": "#03B365",
-                                                "buttonVariant": "PRIMARY",
-                                                "placement": "CENTER",
-                                                "widgetName": "Button10Copy",
-                                                "isDisabled": false,
-                                                "isDefaultClickDisabled": true,
-                                                "recaptchaType": "V3",
-                                                "version": 1,
-                                                "classStyle": "",
-                                                "type": "BUTTON_WIDGET",
-                                                "hideCard": false,
-                                                "displayName": "Button",
-                                                "key": "w5mhomlrat",
-                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                "buttonStyle": "PRIMARY_BUTTON",
-                                                "widgetId": "la14trim2z",
-                                                "renderMode": "CANVAS",
-                                                "isLoading": false,
-                                                "leftColumn": 13,
-                                                "rightColumn": 25,
-                                                "topRow": 19,
-                                                "bottomRow": 23,
-                                                "parentId": "kpr4pkhrks",
-                                                "borderRadius": "ROUNDED",
-                                                "dynamicBindingPathList": [],
-                                                "dynamicTriggerPathList": [
-                                                    {
-                                                        "key": "onClick"
-                                                    }
-                                                ],
-                                                "onClick": "",
-                                                "dynamicPropertyPathList": [
-                                                    {
-                                                        "key": "onClick"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "isVisible": true,
                                                 "iconName": "cross",
                                                 "borderRadius": "SHARP",
                                                 "boxShadow": "NONE",
@@ -14239,7 +14201,7 @@
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button10",
-                                                "isDisabled": false,
+                                                "isDisabled": "{{!SelectList.selectedOptionValue}}",
                                                 "isDefaultClickDisabled": true,
                                                 "recaptchaType": "V3",
                                                 "version": 1,
@@ -14259,7 +14221,11 @@
                                                 "bottomRow": 23,
                                                 "parentId": "kpr4pkhrks",
                                                 "borderRadius": "ROUNDED",
-                                                "dynamicBindingPathList": [],
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": [
                                                     {
                                                         "key": "onClick"
@@ -14269,6 +14235,9 @@
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
+                                                    },
+                                                    {
+                                                        "key": "isDisabled"
                                                     }
                                                 ]
                                             },
@@ -14477,7 +14446,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 336.421875,
                                         "topRow": 0,
-                                        "bottomRow": 250,
+                                        "bottomRow": 280,
                                         "parentId": "6jieafzdzn",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
@@ -14559,7 +14528,6 @@
                         "Button7",
                         "ModalAddToList",
                         "Canvas27",
-                        "Button10Copy",
                         "IconButton2",
                         "Button9",
                         "Button10",
@@ -14670,6 +14638,718 @@
                         "children": [
                             {
                                 "width": 472,
+                                "height": 208,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "ModalDeleteConfirm",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas26Copy1Copy",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "3904dlz234",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "text": "Are you sure you want to delete this list?\n\nContacts in it will NOT be deleted.\nDelete list only?",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#2E3D49",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text14Copy1Copy",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "5y2xqzdnia",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "7vv2af6o6h",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 14,
+                                                "parentId": "c4da6ryktk",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "No",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button6Copy1Copy",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "6vqstq0g88",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 38,
+                                                "rightColumn": 50,
+                                                "topRow": 15,
+                                                "bottomRow": 19,
+                                                "parentId": "c4da6ryktk",
+                                                "onClick": "{{(closeModal('ModalDeleteConfirm'), showModal('ModalEditList'))}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Yes",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonDeleteYES",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "q9unflzvrd",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 52,
+                                                "rightColumn": 64,
+                                                "topRow": 15,
+                                                "bottomRow": 19,
+                                                "parentId": "c4da6ryktk",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{deleteList.run(() => (showAlert('List seccessfuly deleted', 'success'),\ngetLists.run(),\ncloseModal('ModalDeleteConfirm')), () => (showAlert('Oops something went wrong 😔', 'error')))}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            }
+                                        ],
+                                        "minHeight": 208,
+                                        "widgetId": "c4da6ryktk",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 236.25,
+                                        "topRow": 0,
+                                        "bottomRow": 210,
+                                        "parentId": "f4abl1xtyq",
+                                        "dynamicBindingPathList": [],
+                                        "dynamicTriggerPathList": []
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "iihkeae1jd",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "f4abl1xtyq",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 9.84375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 18,
+                                "rightColumn": 42,
+                                "topRow": 138,
+                                "bottomRow": 162,
+                                "parentId": "0"
+                            },
+                            {
+                                "width": 472,
+                                "height": 186,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "ModalCancelEditList",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas26Copy1",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "3904dlz234",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "text": "You have unsaved changes that will be lost.\nContinue?",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#2E3D49",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text14Copy1",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "5y2xqzdnia",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "9am5k89nxw",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 9,
+                                                "parentId": "eaznn0bptc",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "No",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button6Copy1",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "s991odpxoh",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 38,
+                                                "rightColumn": 50,
+                                                "topRow": 12,
+                                                "bottomRow": 16,
+                                                "parentId": "eaznn0bptc",
+                                                "onClick": "{{(closeModal('ModalCancelEditList'), showModal('ModalEditList'))}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Yes",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button7Copy1",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "fw57elzjbc",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 52,
+                                                "rightColumn": 64,
+                                                "topRow": 12,
+                                                "bottomRow": 16,
+                                                "parentId": "eaznn0bptc",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{\ncloseModal('ModalCancelEditList')\n}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            }
+                                        ],
+                                        "minHeight": 186,
+                                        "widgetId": "eaznn0bptc",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 236.25,
+                                        "topRow": 0,
+                                        "bottomRow": 210,
+                                        "parentId": "103ng1z5ui",
+                                        "dynamicBindingPathList": [],
+                                        "dynamicTriggerPathList": []
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "iihkeae1jd",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "103ng1z5ui",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 9.84375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 18,
+                                "rightColumn": 42,
+                                "topRow": 138,
+                                "bottomRow": 162,
+                                "parentId": "0"
+                            },
+                            {
+                                "width": 662,
+                                "height": 318,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "ModalEditList",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas24Copy1",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "ykqe1y8cz2",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Delete list",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonDeleteList",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "c5vej9or6w",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "l90k9rwzri",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 12,
+                                                "topRow": 25,
+                                                "bottomRow": 29,
+                                                "parentId": "gaujhuknl4",
+                                                "onClick": "{{showModal('ModalDeleteConfirm')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "iconName": "cross",
+                                                "borderRadius": "SHARP",
+                                                "boxShadow": "NONE",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "TERTIARY",
+                                                "isDisabled": false,
+                                                "widgetName": "IconButtonCloseCopy1",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "ICON_BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Icon Button",
+                                                "key": "j92ub0lblt",
+                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                                "iconSize": 24,
+                                                "widgetId": "kzt4i3l3fm",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 56,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 5,
+                                                "parentId": "gaujhuknl4",
+                                                "onClick": "{{showModal('ModalCancelEditList')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "text": "Edit List",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#2E3D49",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text13Copy1",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "qn5xw1hpcn",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "n2zixjep23",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 41,
+                                                "topRow": 0,
+                                                "bottomRow": 5,
+                                                "parentId": "gaujhuknl4",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Close",
+                                                "buttonColor": "#03B365",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonCloseCopy1",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "c5vej9or6w",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "rxhd2qa0mp",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 39,
+                                                "rightColumn": 51,
+                                                "topRow": 25,
+                                                "bottomRow": 29,
+                                                "parentId": "gaujhuknl4",
+                                                "onClick": "{{showModal('ModalCancelEditList')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Confirm",
+                                                "buttonColor": "#03B365",
+                                                "buttonVariant": "PRIMARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonCreateCopy1",
+                                                "isDisabled": "{{!EditListName.text}}",
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "c5vej9or6w",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "c1p1g3oqv1",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 51,
+                                                "rightColumn": 63,
+                                                "topRow": 25,
+                                                "bottomRow": 29,
+                                                "parentId": "gaujhuknl4",
+                                                "onClick": "{{\nEditList.run(() => (showAlert('List successfully created 🎉','success'), closeModal('ModalEditList'), getLists.run(),\nresetWidget('EditListName'),\nresetWidget('EditListDescription')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    },
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "backgroundColor": "#FFFFFF",
+                                                "widgetName": "Container6Copy1",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "0",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas25Copy1",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "3904dlz234",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Description",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "EditListDescription",
+                                                                "version": 2,
+                                                                "defaultText": "{{Table1.selectedRow.description}}",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "0etki9riar",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 8,
+                                                                "bottomRow": 15,
+                                                                "parentId": "oybr0yhqld",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "List name *",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "EditListName",
+                                                                "version": 2,
+                                                                "defaultText": "{{Table1.selectedRow.name}}",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "iv1gl14el8",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 0,
+                                                                "bottomRow": 7,
+                                                                "parentId": "oybr0yhqld",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "oybr0yhqld",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 243.75,
+                                                        "topRow": 0,
+                                                        "bottomRow": 420,
+                                                        "parentId": "5aw38tq3vq"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "7l1ei9a0tl",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "5aw38tq3vq",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 10.15625,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 5,
+                                                "bottomRow": 22,
+                                                "parentId": "gaujhuknl4",
+                                                "shouldScrollContents": true
+                                            }
+                                        ],
+                                        "minHeight": 318,
+                                        "widgetId": "gaujhuknl4",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 336.421875,
+                                        "topRow": 0,
+                                        "bottomRow": 310,
+                                        "parentId": "37wzh3w45v"
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "oj2a076h5a",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "37wzh3w45v",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 14.017578125,
+                                "parentRowSpace": 10,
+                                "leftColumn": 13,
+                                "rightColumn": 37,
+                                "topRow": 138,
+                                "bottomRow": 162,
+                                "parentId": "0"
+                            },
+                            {
+                                "width": 472,
                                 "height": 186,
                                 "canEscapeKeyClose": true,
                                 "animateLoading": true,
@@ -14747,7 +15427,7 @@
                                                 "topRow": 12,
                                                 "bottomRow": 16,
                                                 "parentId": "iqx580wxg8",
-                                                "onClick": "{{(closeModal('ModalCancelNewList'), showModal('ModalNewList'))}}",
+                                                "onClick": "{{(closeModal('ModalCancelEditList'), showModal('ModalEditList'))}}",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -14758,7 +15438,8 @@
                                                     {
                                                         "key": "onClick"
                                                     }
-                                                ]
+                                                ],
+                                                "borderRadius": "ROUNDED"
                                             },
                                             {
                                                 "isVisible": true,
@@ -14798,7 +15479,8 @@
                                                     {
                                                         "key": "onClick"
                                                     }
-                                                ]
+                                                ],
+                                                "borderRadius": "ROUNDED"
                                             }
                                         ],
                                         "minHeight": 186,
@@ -14810,7 +15492,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 236.25,
                                         "topRow": 0,
-                                        "bottomRow": 180,
+                                        "bottomRow": 210,
                                         "parentId": "hfpe6t042e",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
@@ -14952,7 +15634,8 @@
                                                     {
                                                         "key": "onClick"
                                                     }
-                                                ]
+                                                ],
+                                                "borderRadius": "ROUNDED"
                                             },
                                             {
                                                 "isVisible": true,
@@ -14962,7 +15645,7 @@
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "ButtonCreate",
-                                                "isDisabled": false,
+                                                "isDisabled": "{{!NewListName.text}}",
                                                 "isDefaultClickDisabled": true,
                                                 "recaptchaType": "V3",
                                                 "version": 1,
@@ -14981,8 +15664,12 @@
                                                 "topRow": 25,
                                                 "bottomRow": 29,
                                                 "parentId": "117a18fblf",
-                                                "onClick": "{{\nnewList.run(() => (showAlert('List successfully created 🎉','success'), closeModal('ModalNewList')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
-                                                "dynamicBindingPathList": [],
+                                                "onClick": "{{\nnewList.run(() => (showAlert('List successfully created 🎉','success'), closeModal('ModalNewList'),\nresetWidget('NewListName'),\nresetWidget('NewListDescription'),\ngetLists.run()), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": [
                                                     {
                                                         "key": "onClick"
@@ -14991,8 +15678,12 @@
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
+                                                    },
+                                                    {
+                                                        "key": "isDisabled"
                                                     }
-                                                ]
+                                                ],
+                                                "borderRadius": "ROUNDED"
                                             },
                                             {
                                                 "isVisible": true,
@@ -15213,7 +15904,7 @@
                                                                 "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "ListCreator",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -15230,16 +15921,24 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 27,
+                                                                "rightColumn": 35,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "l01iotrpbr",
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
                                                                     }
                                                                 ],
-                                                                "dynamicTriggerPathList": []
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onOptionChange"
+                                                                    }
+                                                                ],
+                                                                "onOptionChange": "{{getLists.run()}}"
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -15269,7 +15968,7 @@
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
-                                                "rightColumn": 46,
+                                                "rightColumn": 53,
                                                 "topRow": 0,
                                                 "bottomRow": 9,
                                                 "parentId": "2twwlljffm"
@@ -15277,7 +15976,7 @@
                                             {
                                                 "isVisible": true,
                                                 "animateLoading": true,
-                                                "defaultSelectedRow": "0",
+                                                "defaultSelectedRow": "",
                                                 "label": "Data",
                                                 "widgetName": "Table1",
                                                 "searchKey": "",
@@ -15289,61 +15988,55 @@
                                                 "isShowLoading": true,
                                                 "dynamicBindingPathList": [
                                                     {
-                                                        "key": "primaryColumns.step.computedValue"
+                                                        "key": "tableData"
                                                     },
                                                     {
-                                                        "key": "primaryColumns.task.computedValue"
+                                                        "key": "primaryColumns.listID.computedValue"
                                                     },
                                                     {
-                                                        "key": "primaryColumns.status.computedValue"
+                                                        "key": "primaryColumns.name.computedValue"
                                                     },
                                                     {
-                                                        "key": "primaryColumns.action.computedValue"
+                                                        "key": "primaryColumns.description.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.listCreatorName.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.listCreatorEmail.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.listCreatorID.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "derivedColumns.customColumn1.buttonLabel"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn1.buttonLabel"
                                                     }
                                                 ],
                                                 "primaryColumns": {
-                                                    "step": {
-                                                        "index": 0,
-                                                        "width": 150,
-                                                        "id": "step",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "CENTER",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "step",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
-                                                    },
-                                                    "task": {
-                                                        "index": 1,
-                                                        "width": 150,
-                                                        "id": "task",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "CENTER",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "task",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
-                                                    },
-                                                    "status": {
+                                                    "listID": {
                                                         "index": 2,
                                                         "width": 150,
-                                                        "id": "status",
+                                                        "id": "listID",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "listID",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.listID))}}"
+                                                    },
+                                                    "name": {
+                                                        "index": 0,
+                                                        "width": 150,
+                                                        "id": "name",
                                                         "horizontalAlignment": "LEFT",
                                                         "verticalAlignment": "CENTER",
                                                         "columnType": "text",
@@ -15351,48 +16044,142 @@
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
+                                                        "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "status",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
+                                                        "label": "name",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
                                                     },
-                                                    "action": {
-                                                        "index": 3,
+                                                    "description": {
+                                                        "index": 1,
                                                         "width": 150,
-                                                        "id": "action",
+                                                        "id": "description",
                                                         "horizontalAlignment": "LEFT",
                                                         "verticalAlignment": "CENTER",
-                                                        "columnType": "button",
+                                                        "columnType": "text",
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
-                                                        "isCellVisible": true,
                                                         "isDisabled": false,
+                                                        "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "action",
-                                                        "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
-                                                        "buttonColor": "#03B365",
+                                                        "label": "description",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.description))}}"
+                                                    },
+                                                    "listCreatorName": {
+                                                        "index": 3,
+                                                        "width": 150,
+                                                        "id": "listCreatorName",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "listCreatorName",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.listCreatorName))}}"
+                                                    },
+                                                    "listCreatorEmail": {
+                                                        "index": 3,
+                                                        "width": 150,
+                                                        "id": "listCreatorEmail",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "listCreatorEmail",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.listCreatorEmail))}}"
+                                                    },
+                                                    "listCreatorID": {
+                                                        "index": 3,
+                                                        "width": 150,
+                                                        "id": "listCreatorID",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "listCreatorID",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.listCreatorID))}}"
+                                                    },
+                                                    "customColumn1": {
+                                                        "index": 6,
+                                                        "width": 150,
+                                                        "id": "customColumn1",
+                                                        "columnType": "button",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "⠀⠀📂",
+                                                        "computedValue": "",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#38AFF4",
                                                         "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
+                                                        "labelColor": "#FFFFFF",
+                                                        "iconName": "",
+                                                        "boxShadow": "NONE",
+                                                        "buttonVariant": "TERTIARY",
+                                                        "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Open'))}}",
+                                                        "onClick": "{{navigateTo('List',{list: Table1.selectedRow.listID,\nlistName:Table1.selectedRow.name,\nlistDescription:Table1.selectedRow.description})}}"
                                                     }
                                                 },
-                                                "derivedColumns": {},
-                                                "tableData": "",
+                                                "derivedColumns": {
+                                                    "customColumn1": {
+                                                        "index": 6,
+                                                        "width": 150,
+                                                        "id": "customColumn1",
+                                                        "columnType": "button",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "⠀⠀📂",
+                                                        "computedValue": "",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#38AFF4",
+                                                        "menuColor": "#03B365",
+                                                        "labelColor": "#FFFFFF",
+                                                        "iconName": "eye-open",
+                                                        "boxShadow": "VARIANT1",
+                                                        "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Open'))}}"
+                                                    }
+                                                },
+                                                "tableData": "{{getLists.data}}",
                                                 "columnSizeMap": {
                                                     "task": 245,
                                                     "step": 62,
-                                                    "status": 75
+                                                    "status": 75,
+                                                    "customColumn1": 65
                                                 },
                                                 "columnOrder": [
-                                                    "step",
-                                                    "task",
-                                                    "status",
-                                                    "action"
+                                                    "customColumn1",
+                                                    "name",
+                                                    "description",
+                                                    "listID",
+                                                    "listCreatorID",
+                                                    "listCreatorName",
+                                                    "listCreatorEmail"
                                                 ],
                                                 "enableClientSideSearch": true,
                                                 "isVisibleSearch": true,
@@ -15417,7 +16204,12 @@
                                                 "topRow": 9,
                                                 "bottomRow": 72,
                                                 "parentId": "2twwlljffm",
-                                                "dynamicTriggerPathList": []
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "primaryColumns.customColumn1.onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": []
                                             },
                                             {
                                                 "isVisible": true,
@@ -15442,10 +16234,10 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 53,
-                                                "rightColumn": 63,
-                                                "topRow": 4,
-                                                "bottomRow": 8,
+                                                "leftColumn": 54,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
                                                 "parentId": "2twwlljffm",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
@@ -15497,6 +16289,27 @@
                     },
                     "widgetNames": [
                         "MainContainer",
+                        "ModalDeleteConfirm",
+                        "Canvas26Copy1Copy",
+                        "Text14Copy1Copy",
+                        "Button6Copy1Copy",
+                        "ButtonDeleteYES",
+                        "ModalCancelEditList",
+                        "Canvas26Copy1",
+                        "Text14Copy1",
+                        "Button6Copy1",
+                        "Button7Copy1",
+                        "ModalEditList",
+                        "Canvas24Copy1",
+                        "ButtonDeleteList",
+                        "IconButtonCloseCopy1",
+                        "Text13Copy1",
+                        "ButtonCloseCopy1",
+                        "ButtonCreateCopy1",
+                        "Container6Copy1",
+                        "Canvas25Copy1",
+                        "EditListDescription",
+                        "EditListName",
                         "ModalCancelNewList",
                         "Canvas26",
                         "Text14",
@@ -15529,6 +16342,17 @@
                                 "id": "65ead6adc273cc13c1789128",
                                 "confirmBeforeExecute": false,
                                 "name": "getOwners",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65eee885c273cc13c178912f",
+                                "id": "65eee885c273cc13c178912f",
+                                "confirmBeforeExecute": false,
+                                "name": "getLists",
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl"
@@ -16786,6 +17610,1533 @@
         },
         "createdAt": "2024-03-04T12:17:15.704Z",
         "updatedAt": "2024-03-04T12:17:15.704Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:pages",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:pages",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ef4766c273cc13c1789134",
+        "applicationId": "jetsondashboard",
+        "slug": "List",
+        "Page": {
+            "name": "List",
+            "layouts": [
+                {
+                    "_id": "65ef4766c273cc13c1789135",
+                    "viewMode": false,
+                    "dsl": {
+                        "widgetName": "MainContainer",
+                        "backgroundColor": "none",
+                        "rightColumn": 1224,
+                        "snapColumns": 64,
+                        "widgetId": "0",
+                        "topRow": 0,
+                        "bottomRow": 1640,
+                        "parentRowSpace": 1,
+                        "type": "CANVAS_WIDGET",
+                        "detachFromLayout": true,
+                        "minHeight": 890,
+                        "dynamicBindingPathList": [],
+                        "parentColumnSpace": 1,
+                        "leftColumn": 0,
+                        "children": [
+                            {
+                                "width": 472,
+                                "height": 208,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "ModalDeleteConfirm",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas26Copy1Copy",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "3904dlz234",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "text": "Are you sure you want to delete this list?\n\nContacts in it will NOT be deleted.\nDelete list only?",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#2E3D49",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text14Copy1Copy",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "5y2xqzdnia",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "0b3hy6oyl4",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 14,
+                                                "parentId": "2rn78qp6ot",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "No",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button6Copy1Copy",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "44t29urdgu",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 38,
+                                                "rightColumn": 50,
+                                                "topRow": 15,
+                                                "bottomRow": 19,
+                                                "parentId": "2rn78qp6ot",
+                                                "onClick": "{{(closeModal('ModalDeleteConfirm'), showModal('ModalEditList'))}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Yes",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonDeleteYES",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "e22dphu2bh",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 52,
+                                                "rightColumn": 64,
+                                                "topRow": 15,
+                                                "bottomRow": 19,
+                                                "parentId": "2rn78qp6ot",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{deleteList.run(() => (showAlert('List seccessfuly deleted', 'success'),\ncloseModal('ModalDeleteConfirm'),\nnavigateTo('Lists')), () => (showAlert('Oops something went wrong 😔', 'error')))}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            }
+                                        ],
+                                        "minHeight": 208,
+                                        "widgetId": "2rn78qp6ot",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 236.25,
+                                        "topRow": 0,
+                                        "bottomRow": 210,
+                                        "parentId": "443wn729d2",
+                                        "dynamicBindingPathList": [],
+                                        "dynamicTriggerPathList": []
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "iihkeae1jd",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "443wn729d2",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 9.84375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 18,
+                                "rightColumn": 42,
+                                "topRow": 138,
+                                "bottomRow": 162,
+                                "parentId": "0"
+                            },
+                            {
+                                "width": 662,
+                                "height": 318,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "ModalEditList",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas24Copy1",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "ykqe1y8cz2",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Delete list",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonDeleteList",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "c5vej9or6w",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "1innc1uvx6",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 12,
+                                                "topRow": 25,
+                                                "bottomRow": 29,
+                                                "parentId": "mzea6kiijn",
+                                                "onClick": "{{showModal('ModalDeleteConfirm')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "iconName": "cross",
+                                                "borderRadius": "SHARP",
+                                                "boxShadow": "NONE",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "TERTIARY",
+                                                "isDisabled": false,
+                                                "widgetName": "IconButtonCloseCopy1",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "ICON_BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Icon Button",
+                                                "key": "j92ub0lblt",
+                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                                "iconSize": 24,
+                                                "widgetId": "lwfdgjx5pa",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 56,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 5,
+                                                "parentId": "mzea6kiijn",
+                                                "onClick": "{{showModal('ModalCancelEditList')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "text": "Edit List",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#2E3D49",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text13Copy1",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "qn5xw1hpcn",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "pyakhtv24w",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 41,
+                                                "topRow": 0,
+                                                "bottomRow": 5,
+                                                "parentId": "mzea6kiijn",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Close",
+                                                "buttonColor": "#03B365",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonCloseCopy1",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "c5vej9or6w",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "0lkdtdcnt4",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 39,
+                                                "rightColumn": 51,
+                                                "topRow": 25,
+                                                "bottomRow": 29,
+                                                "parentId": "mzea6kiijn",
+                                                "onClick": "{{showModal('ModalCancelEditList')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Confirm",
+                                                "buttonColor": "#03B365",
+                                                "buttonVariant": "PRIMARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonCreateCopy1",
+                                                "isDisabled": "{{!EditListName.text}}",
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "c5vej9or6w",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "jbsy0pt8dv",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 51,
+                                                "rightColumn": 63,
+                                                "topRow": 25,
+                                                "bottomRow": 29,
+                                                "parentId": "mzea6kiijn",
+                                                "onClick": "{{\nEditList.run(() => (showAlert('List successfully created 🎉','success'), closeModal('ModalEditList'), \nresetWidget('EditListName'),\nresetWidget('EditListDescription'),\nnavigateTo('List')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    },
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "backgroundColor": "#FFFFFF",
+                                                "widgetName": "Container6Copy1",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "0",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas25Copy1",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "3904dlz234",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Description",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "EditListDescription",
+                                                                "version": 2,
+                                                                "defaultText": "{{main.URL.queryParams.listDescription}}",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "wutyifqmst",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 8,
+                                                                "bottomRow": 15,
+                                                                "parentId": "day4xd1i7g",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "List name *",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "EditListName",
+                                                                "version": 2,
+                                                                "defaultText": "{{main.URL.queryParams.listName}}",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "t4wnwaesl2",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 0,
+                                                                "bottomRow": 7,
+                                                                "parentId": "day4xd1i7g",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "day4xd1i7g",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 243.75,
+                                                        "topRow": 0,
+                                                        "bottomRow": 420,
+                                                        "parentId": "hd4vhwyf1f"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "7l1ei9a0tl",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "hd4vhwyf1f",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 10.15625,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 5,
+                                                "bottomRow": 22,
+                                                "parentId": "mzea6kiijn",
+                                                "shouldScrollContents": true
+                                            }
+                                        ],
+                                        "minHeight": 318,
+                                        "widgetId": "mzea6kiijn",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 336.421875,
+                                        "topRow": 0,
+                                        "bottomRow": 310,
+                                        "parentId": "8qhudsi9c2"
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "oj2a076h5a",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "8qhudsi9c2",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 14.017578125,
+                                "parentRowSpace": 10,
+                                "leftColumn": 13,
+                                "rightColumn": 37,
+                                "topRow": 138,
+                                "bottomRow": 162,
+                                "parentId": "0"
+                            },
+                            {
+                                "width": 472,
+                                "height": 186,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "ModalCancelEditList",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas26Copy1",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "3904dlz234",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "text": "You have unsaved changes that will be lost.\nContinue?",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#2E3D49",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text14Copy1",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "5y2xqzdnia",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "op921n46sc",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 9,
+                                                "parentId": "ccekonkorh",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "No",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button6Copy1",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "fdjpr8ezry",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 38,
+                                                "rightColumn": 50,
+                                                "topRow": 12,
+                                                "bottomRow": 16,
+                                                "parentId": "ccekonkorh",
+                                                "onClick": "{{(closeModal('ModalCancelEditList'), showModal('ModalEditList'))}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Yes",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button7Copy1",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "vo2wzukc8q",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 52,
+                                                "rightColumn": 64,
+                                                "topRow": 12,
+                                                "bottomRow": 16,
+                                                "parentId": "ccekonkorh",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{\ncloseModal('ModalCancelEditList')\n}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            }
+                                        ],
+                                        "minHeight": 186,
+                                        "widgetId": "ccekonkorh",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 236.25,
+                                        "topRow": 0,
+                                        "bottomRow": 210,
+                                        "parentId": "uvb0bhyia6",
+                                        "dynamicBindingPathList": [],
+                                        "dynamicTriggerPathList": []
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "iihkeae1jd",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "uvb0bhyia6",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 9.84375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 18,
+                                "rightColumn": 42,
+                                "topRow": 138,
+                                "bottomRow": 162,
+                                "parentId": "0"
+                            },
+                            {
+                                "isVisible": true,
+                                "backgroundColor": "#FFFFFF",
+                                "widgetName": "Container5",
+                                "containerStyle": "card",
+                                "borderColor": "transparent",
+                                "borderWidth": "0",
+                                "borderRadius": "0",
+                                "boxShadow": "NONE",
+                                "animateLoading": true,
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas22",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "ykqe1y8cz2",
+                                        "containerStyle": "none",
+                                        "canExtend": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "backgroundColor": "#FFFFFF",
+                                                "widgetName": "Container_Filter",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "0",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas23",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "ykqe1y8cz2",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "placeholderText": "Select option",
+                                                                "labelText": "Contact owner",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "options": "{{getOwners.data}}",
+                                                                "serverSideFiltering": false,
+                                                                "widgetName": "SelectContactOwner",
+                                                                "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
+                                                                "version": 1,
+                                                                "isFilterable": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SELECT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Select",
+                                                                "key": "j0rm29tpwj",
+                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                "widgetId": "91m57jeehq",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.981658935546875,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 27,
+                                                                "topRow": 0,
+                                                                "bottomRow": 7,
+                                                                "parentId": "35mqo86cuk",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onOptionChange"
+                                                                    }
+                                                                ],
+                                                                "onOptionChange": "{{getListContacts.run()}}"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "placeholderText": "Select option",
+                                                                "labelText": "Deal stage",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "options": "{{getWidgetsFillers.data.dealStage}}",
+                                                                "serverSideFiltering": false,
+                                                                "widgetName": "SelectDealStage",
+                                                                "defaultOptionValue": "",
+                                                                "version": 1,
+                                                                "isFilterable": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SELECT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Select",
+                                                                "key": "j0rm29tpwj",
+                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                "widgetId": "ncu54fpuy1",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.981658935546875,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 27,
+                                                                "rightColumn": 45,
+                                                                "topRow": 0,
+                                                                "bottomRow": 7,
+                                                                "parentId": "35mqo86cuk",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onOptionChange"
+                                                                    }
+                                                                ],
+                                                                "onOptionChange": "{{getListContacts.run()}}"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "placeholderText": "Select option",
+                                                                "labelText": "Lead status",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "options": "{{getWidgetsFillers.data.leadStatus}}",
+                                                                "serverSideFiltering": false,
+                                                                "widgetName": "SelectLeadStatus",
+                                                                "defaultOptionValue": "",
+                                                                "version": 1,
+                                                                "isFilterable": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SELECT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Select",
+                                                                "key": "twf5owadgt",
+                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                "widgetId": "mme4y9urie",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 45,
+                                                                "rightColumn": 63,
+                                                                "topRow": 0,
+                                                                "bottomRow": 7,
+                                                                "parentId": "35mqo86cuk",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onOptionChange"
+                                                                    }
+                                                                ],
+                                                                "onOptionChange": "{{getListContacts.run()}}"
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "35mqo86cuk",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 336.421875,
+                                                        "topRow": 0,
+                                                        "bottomRow": 390,
+                                                        "parentId": "azirjh1w3p"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "m4ytca1q4s",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "azirjh1w3p",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 4,
+                                                "bottomRow": 13,
+                                                "parentId": "l01teij63x"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "defaultSelectedRow": "",
+                                                "label": "Data",
+                                                "widgetName": "Table1",
+                                                "searchKey": "",
+                                                "textSize": "PARAGRAPH",
+                                                "horizontalAlignment": "LEFT",
+                                                "verticalAlignment": "CENTER",
+                                                "totalRecordsCount": 0,
+                                                "defaultPageSize": 0,
+                                                "isShowLoading": true,
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "tableData"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns._id.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.deleted.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.createdAt.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.email.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.firstName.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.lastName.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.contactOwner.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.phoneNumber.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.dealStage.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.leadStatus.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.country.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.city.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.industry.computedValue"
+                                                    }
+                                                ],
+                                                "primaryColumns": {
+                                                    "_id": {
+                                                        "index": 0,
+                                                        "width": 150,
+                                                        "id": "_id",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "_id",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
+                                                    },
+                                                    "deleted": {
+                                                        "index": 1,
+                                                        "width": 150,
+                                                        "id": "deleted",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "deleted",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.deleted))}}"
+                                                    },
+                                                    "createdAt": {
+                                                        "index": 2,
+                                                        "width": 150,
+                                                        "id": "createdAt",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "createdAt",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.createdAt))}}"
+                                                    },
+                                                    "email": {
+                                                        "index": 3,
+                                                        "width": 150,
+                                                        "id": "email",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "email",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}"
+                                                    },
+                                                    "firstName": {
+                                                        "index": 4,
+                                                        "width": 150,
+                                                        "id": "firstName",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "firstName",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.firstName))}}"
+                                                    },
+                                                    "lastName": {
+                                                        "index": 5,
+                                                        "width": 150,
+                                                        "id": "lastName",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "lastName",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.lastName))}}"
+                                                    },
+                                                    "contactOwner": {
+                                                        "index": 6,
+                                                        "width": 150,
+                                                        "id": "contactOwner",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "contactOwner",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.contactOwner))}}"
+                                                    },
+                                                    "phoneNumber": {
+                                                        "index": 7,
+                                                        "width": 150,
+                                                        "id": "phoneNumber",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "phoneNumber",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.phoneNumber))}}"
+                                                    },
+                                                    "dealStage": {
+                                                        "index": 8,
+                                                        "width": 150,
+                                                        "id": "dealStage",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "dealStage",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.dealStage))}}"
+                                                    },
+                                                    "leadStatus": {
+                                                        "index": 9,
+                                                        "width": 150,
+                                                        "id": "leadStatus",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "leadStatus",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.leadStatus))}}"
+                                                    },
+                                                    "country": {
+                                                        "index": 10,
+                                                        "width": 150,
+                                                        "id": "country",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "country",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.country))}}"
+                                                    },
+                                                    "city": {
+                                                        "index": 11,
+                                                        "width": 150,
+                                                        "id": "city",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "city",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
+                                                    },
+                                                    "industry": {
+                                                        "index": 12,
+                                                        "width": 150,
+                                                        "id": "industry",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "industry",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.industry))}}"
+                                                    }
+                                                },
+                                                "derivedColumns": {},
+                                                "tableData": "{{getListContacts.data}}",
+                                                "columnSizeMap": {
+                                                    "task": 245,
+                                                    "step": 62,
+                                                    "status": 75,
+                                                    "customColumn1": 60
+                                                },
+                                                "columnOrder": [
+                                                    "firstName",
+                                                    "lastName",
+                                                    "contactOwner",
+                                                    "email",
+                                                    "phoneNumber",
+                                                    "dealStage",
+                                                    "leadStatus",
+                                                    "createdAt",
+                                                    "country",
+                                                    "city",
+                                                    "industry",
+                                                    "_id",
+                                                    "deleted"
+                                                ],
+                                                "enableClientSideSearch": true,
+                                                "isVisibleSearch": true,
+                                                "isVisibleFilters": true,
+                                                "isVisibleDownload": true,
+                                                "isVisiblePagination": true,
+                                                "isSortable": true,
+                                                "delimiter": ",",
+                                                "version": 3,
+                                                "type": "TABLE_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Table",
+                                                "key": "wwz5l6l3u9",
+                                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                                                "widgetId": "rka18ihnb5",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 13,
+                                                "bottomRow": 73,
+                                                "parentId": "l01teij63x",
+                                                "dynamicTriggerPathList": [],
+                                                "dynamicPropertyPathList": [],
+                                                "multiRowSelection": true
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Edit list",
+                                                "buttonColor": "#FFC13D",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button8",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "ppcj14bwog",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "widgetId": "ksdt1fu3m0",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 53,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "l01teij63x",
+                                                "borderRadius": "ROUNDED",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{showModal('ModalEditList')}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "label": "List name",
+                                                "labelPosition": "Left",
+                                                "labelAlignment": "left",
+                                                "labelWidth": 5,
+                                                "widgetName": "Input1",
+                                                "version": 2,
+                                                "defaultText": "{{main.URL.queryParams.listName}}",
+                                                "iconAlign": "left",
+                                                "autoFocus": false,
+                                                "labelStyle": "",
+                                                "resetOnSubmit": true,
+                                                "isRequired": false,
+                                                "isDisabled": true,
+                                                "animateLoading": true,
+                                                "classStyle": "",
+                                                "inputType": "TEXT",
+                                                "buttonPosition": "right",
+                                                "type": "INPUT_WIDGET_V2",
+                                                "hideCard": false,
+                                                "displayName": "Input",
+                                                "key": "yom1pktf16",
+                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                "widgetId": "kzdat903o7",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 21,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "l01teij63x",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "defaultText"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [],
+                                                "labelTextColor": "#2E3D49"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "label": "Descroption",
+                                                "labelPosition": "Left",
+                                                "labelAlignment": "left",
+                                                "labelWidth": "6",
+                                                "widgetName": "Input2",
+                                                "version": 2,
+                                                "defaultText": "{{main.URL.queryParams.listDescription}}",
+                                                "iconAlign": "left",
+                                                "autoFocus": false,
+                                                "labelStyle": "",
+                                                "resetOnSubmit": true,
+                                                "isRequired": false,
+                                                "isDisabled": true,
+                                                "animateLoading": true,
+                                                "classStyle": "",
+                                                "inputType": "TEXT",
+                                                "buttonPosition": "right",
+                                                "type": "INPUT_WIDGET_V2",
+                                                "hideCard": false,
+                                                "displayName": "Input",
+                                                "key": "yom1pktf16",
+                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                "widgetId": "2plsknmrav",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 21,
+                                                "rightColumn": 53,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "l01teij63x",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "defaultText"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": []
+                                            }
+                                        ],
+                                        "minHeight": 400,
+                                        "widgetId": "l01teij63x",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 379.5,
+                                        "topRow": 0,
+                                        "bottomRow": 750,
+                                        "parentId": "8n22tu9553"
+                                    }
+                                ],
+                                "version": 1,
+                                "classStyle": "",
+                                "type": "CONTAINER_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Container",
+                                "key": "m4ytca1q4s",
+                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                "isCanvas": true,
+                                "widgetId": "8n22tu9553",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 15.8125,
+                                "parentRowSpace": 10,
+                                "leftColumn": 6,
+                                "rightColumn": 64,
+                                "topRow": 8,
+                                "bottomRow": 84,
+                                "parentId": "0"
+                            }
+                        ],
+                        "snapRows": 88,
+                        "containerStyle": "none",
+                        "canExtend": true,
+                        "version": 57
+                    },
+                    "widgetNames": [
+                        "MainContainer",
+                        "ModalDeleteConfirm",
+                        "Canvas26Copy1Copy",
+                        "Text14Copy1Copy",
+                        "Button6Copy1Copy",
+                        "ButtonDeleteYES",
+                        "ModalEditList",
+                        "Canvas24Copy1",
+                        "ButtonDeleteList",
+                        "IconButtonCloseCopy1",
+                        "Text13Copy1",
+                        "ButtonCloseCopy1",
+                        "ButtonCreateCopy1",
+                        "Container6Copy1",
+                        "Canvas25Copy1",
+                        "EditListDescription",
+                        "EditListName",
+                        "ModalCancelEditList",
+                        "Canvas26Copy1",
+                        "Text14Copy1",
+                        "Button6Copy1",
+                        "Button7Copy1",
+                        "Container5",
+                        "Canvas22",
+                        "Container_Filter",
+                        "Canvas23",
+                        "SelectContactOwner",
+                        "SelectDealStage",
+                        "SelectLeadStatus",
+                        "Table1",
+                        "Button8",
+                        "Input1",
+                        "Input2"
+                    ],
+                    "deleted": false,
+                    "policies": [],
+                    "layoutOnLoadActions": [
+                        [
+                            {
+                                "_id": "65ef4766c273cc13c178913a",
+                                "id": "65ef4766c273cc13c178913a",
+                                "confirmBeforeExecute": false,
+                                "name": "getWidgetsFillers",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65ef89d3c273cc13c1789140",
+                                "id": "65ef89d3c273cc13c1789140",
+                                "confirmBeforeExecute": false,
+                                "name": "getListContacts",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl",
+                                    "main.URL.queryParams.list",
+                                    "SelectContactOwner.selectedOptionValue",
+                                    "SelectDealStage.selectedOptionValue",
+                                    "SelectLeadStatus.selectedOptionValue"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
+                    ],
+                    "layoutOnCloseActions": [
+                        []
+                    ]
+                }
+            ]
+        },
+        "createdAt": "2024-03-11T18:03:18.117Z",
+        "updatedAt": "2024-03-04T12:15:44.847Z",
         "deleted": false,
         "policies": [
             {

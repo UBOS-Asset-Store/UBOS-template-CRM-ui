@@ -64,6 +64,10 @@
         {
             "_id": "Analytics",
             "isDefault": false
+        },
+        {
+            "_id": "List",
+            "isDefault": false
         }
     ],
     "policies": [
