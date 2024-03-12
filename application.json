@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": true,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-03-08T13:56:43.802Z",
+    "updatedAt": "2024-03-12T22:33:52.424Z",
     "deleted": false,
     "pages": [
         {
@@ -3738,7 +3738,7 @@
             "containerStyle": "card",
             "borderColor": "transparent",
             "borderWidth": "0",
-            "borderRadius": "",
+            "borderRadius": "10",
             "boxShadow": "NONE",
             "animateLoading": true,
             "dontLookPage": [

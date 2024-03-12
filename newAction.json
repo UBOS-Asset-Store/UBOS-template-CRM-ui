@@ -11166,7 +11166,16 @@
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "owner",
+                        "value": "{{SelectDealOwner.selectedOptionValue}}"
+                    },
+                    {
+                        "key": "deal",
+                        "value": "{{SelectDealStage.selectedOptionValue}}"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11180,18 +11189,26 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "SelectDealOwner.selectedOptionValue",
+                "SelectDealStage.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T16:36:25.524Z",
-        "updatedAt": "2024-03-12T16:37:00.359Z",
+        "updatedAt": "2024-03-12T19:30:17.341Z",
         "deleted": false,
         "policies": [
             {
@@ -11218,11 +11235,11 @@
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "EditContact",
+            "name": "EditDeal",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/editContact"
+                    "url": "{{main.env.nodeUrl}}/editDeal"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -11242,7 +11259,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"contactID\":{{JSON.stringify(main.URL.queryParams.contactID)}},\n\t\"email\":{{JSON.stringify(Email.text)}},\n\t\"firstName\":{{JSON.stringify(FirstName.text)}},\n\t\"lastName\":{{JSON.stringify(LastName.text)}},\n\t\"contactOwner\":{{JSON.stringify(ContactOwner.selectedOptionValue)}},\n\t\"phoneNumber\":{{JSON.stringify(PhoneNumber.text)}},\n\t\"dealStage\":{{JSON.stringify(DealStage.selectedOptionLabel)}},\n\t\"leadStatus\":{{JSON.stringify(LeadStatus.selectedOptionLabel)}},\n\t\"country\":{{JSON.stringify(Country.selectedOptionLabel)}},\n\t\"city\":{{JSON.stringify(City.text)}},\n\t\"industry\":{{JSON.stringify(Industry.selectedOptionLabel)}}\n}",
+                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}},\n\t\"DealName\":{{JSON.stringify(DealName.text)}},\n\t\"DealStage\":{{JSON.stringify(DealStage.selectedOptionValue)}},\n\t\"Amount\":{{JSON.stringify(Amount.text)}},\n\t\"DealOwner\":{{JSON.stringify(DealOwner.selectedOptionValue)}},\n\t\"CloseDate\":{{JSON.stringify(CloseDate.selectedDate)}},\n\t\"Priority\":{{JSON.stringify(Priority.selectedOptionValue)}}\n}\n\n\n\n\n",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11255,34 +11272,29 @@
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "datasourceUrl"
+                    "key": "body"
                 },
                 {
-                    "key": "body"
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify()",
-                "JSON.stringify(Email.text)",
-                "JSON.stringify(FirstName.text)",
-                "JSON.stringify(LastName.text)",
-                "JSON.stringify(ContactOwner.selectedOptionValue)",
-                "JSON.stringify(PhoneNumber.text)",
-                "JSON.stringify(DealStage.selectedOptionLabel)",
-                "JSON.stringify(LeadStatus.selectedOptionLabel)",
-                "JSON.stringify(Country.selectedOptionLabel)",
-                "JSON.stringify(City.text)",
-                "JSON.stringify(Industry.selectedOptionLabel)",
-                "JSON.stringify(main.URL.queryParams.contactID)"
+                "JSON.stringify(main.URL.queryParams.dealID)",
+                "JSON.stringify(DealName.text)",
+                "JSON.stringify(DealStage.selectedOptionValue)",
+                "JSON.stringify(Amount.text)",
+                "JSON.stringify(DealOwner.selectedOptionValue)",
+                "JSON.stringify(CloseDate.selectedDate)",
+                "JSON.stringify(Priority.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T18:28:21.836Z",
+        "updatedAt": "2024-03-12T19:04:55.123Z",
         "deleted": false,
         "policies": [
             {
@@ -11309,11 +11321,11 @@
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "deleteContact",
+            "name": "deleteDeal",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/deleteContact"
+                    "url": "{{main.env.nodeUrl}}/deleteDeal"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -11333,7 +11345,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"contactID\":{{JSON.stringify(main.URL.queryParams.contactID)}}\n}",
+                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -11346,23 +11358,24 @@
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "datasourceUrl"
+                    "key": "body"
                 },
                 {
-                    "key": "body"
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(main.URL.queryParams.contactID)"
+                "JSON.stringify(main.URL.queryParams.)",
+                "JSON.stringify(main.URL.queryParams.dealID)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T18:28:21.836Z",
+        "updatedAt": "2024-03-12T19:16:14.628Z",
         "deleted": false,
         "policies": [
             {
@@ -11557,11 +11570,16 @@
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
-                "headers": [],
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
                 "queryParameters": [],
                 "bodyFormData": [],
                 "formData": {
-                    "apiContentType": "none"
+                    "apiContentType": "application/json"
                 },
                 "pluginSpecifiedTemplates": [
                     {
@@ -11569,7 +11587,11 @@
                     }
                 ]
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
@@ -11579,7 +11601,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T18:45:45.844Z",
+        "updatedAt": "2024-03-12T18:58:24.759Z",
         "deleted": false,
         "policies": [
             {
@@ -11696,7 +11718,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
+            "executeOnLoad": true,
             "pageId": "Deal",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -11737,7 +11759,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:37:58.115Z",
-        "updatedAt": "2024-03-12T18:44:57.586Z",
+        "updatedAt": "2024-03-12T19:13:35.343Z",
         "deleted": false,
         "policies": [
             {
