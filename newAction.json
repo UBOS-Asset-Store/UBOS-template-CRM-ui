@@ -9159,15 +9159,14 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(SelectList.selectedOptionValue)",
-                "JSON.stringify(JSObject1.my)",
-                "main.env.nodeUrl,JSON.stringify(JSObject1.my),2024-03-07T09:53:34.755Z,2024-03-08T13:03:42.406Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(JSObject1.myFun1())"
+                "JSON.stringify(JSObject1.myFun1())",
+                "main.env.nodeUrl,2024-03-07T09:53:34.755Z,2024-03-12T09:05:47.083Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T09:53:34.755Z",
-        "updatedAt": "2024-03-08T13:03:44.829Z",
+        "updatedAt": "2024-03-12T10:28:56.811Z",
         "deleted": false,
         "policies": [
             {
@@ -9214,8 +9213,8 @@
                 "headers": [],
                 "queryParameters": [
                     {
-                        "key": "owner",
-                        "value": "{{}}"
+                        "key": "responseType",
+                        "value": "forSelector"
                     }
                 ],
                 "bodyFormData": [],
@@ -9231,9 +9230,6 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
-                },
-                {
-                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
@@ -9246,7 +9242,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T12:43:18.024Z",
-        "updatedAt": "2024-03-11T11:24:59.349Z",
+        "updatedAt": "2024-03-12T08:34:31.795Z",
         "deleted": false,
         "policies": [
             {
@@ -9532,7 +9528,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T15:58:20.106Z",
-        "updatedAt": "2024-03-11T11:29:41.372Z",
+        "updatedAt": "2024-03-12T10:30:58.443Z",
         "deleted": false,
         "policies": [
             {
@@ -9627,7 +9623,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T16:33:28.636Z",
-        "updatedAt": "2024-03-11T23:48:33.241Z",
+        "updatedAt": "2024-03-12T11:03:10.608Z",
         "deleted": false,
         "policies": [
             {
@@ -9665,14 +9661,19 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
+            "executeOnLoad": true,
             "pageId": "Lists",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "responseType",
+                        "value": "forSelector"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -9693,7 +9694,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-08T09:13:17.106Z",
-        "updatedAt": "2024-03-11T20:55:28.507Z",
+        "updatedAt": "2024-03-12T08:32:25.043Z",
         "deleted": false,
         "policies": [
             {
@@ -9718,7 +9719,7 @@
         "pageId": "Contacts",
         "executeOnLoad": false,
         "actionConfiguration": {
-            "body": "() => {\nconst IDs = Table1.selectedRows.map(e => e._id);\n\t\treturn IDs;\n\t}",
+            "body": "() => {\n\t\tconst IDs = Table1.selectedRows.map(e => e._id);\n\t\t\treturn IDs;\n\t}",
             "isAsync": false,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -9930,7 +9931,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-11T11:18:29.874Z",
-        "updatedAt": "2024-03-11T20:55:26.167Z",
+        "updatedAt": "2024-03-12T08:19:12.051Z",
         "deleted": false,
         "policies": [
             {
@@ -10006,14 +10007,13 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(EditListName.text)",
                 "JSON.stringify(EditListDescription.text)",
-                "JSON.stringify()",
                 "JSON.stringify(main.URL.queryParams.list)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-11T16:48:53.858Z",
-        "updatedAt": "2024-03-11T23:31:33.761Z",
+        "updatedAt": "2024-03-12T10:26:37.744Z",
         "deleted": false,
         "policies": [
             {
@@ -10087,14 +10087,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(Table1.selectedRow.listID)",
                 "JSON.stringify(main.URL.queryParams.list)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-11T17:33:00.076Z",
-        "updatedAt": "2024-03-11T23:31:50.257Z",
+        "updatedAt": "2024-03-12T13:57:05.383Z",
         "deleted": false,
         "policies": [
             {
@@ -10139,7 +10138,12 @@
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "responseType",
+                        "value": "forSelector"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -10165,7 +10169,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-11T18:03:18.118Z",
-        "updatedAt": "2024-03-11T21:56:26.047Z",
+        "updatedAt": "2024-03-12T13:57:30.852Z",
         "deleted": false,
         "policies": [
             {
@@ -10405,17 +10409,570 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.URL.queryParams.",
+                "main.URL.queryParams.list",
                 "SelectContactOwner.selectedOptionValue",
                 "SelectDealStage.selectedOptionValue",
-                "SelectLeadStatus.selectedOptionValue",
-                "main.URL.queryParams.list"
+                "SelectLeadStatus.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-11T22:46:43.689Z",
-        "updatedAt": "2024-03-11T23:29:41.183Z",
+        "updatedAt": "2024-03-12T13:58:23.944Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f018c6c273cc13c1789141",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "removeFromList",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/removeFromList"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "List",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"listID\":{{JSON.stringify(main.URL.queryParams.list)}},\n\t\"contacts\":{{JSON.stringify(JSObject1.myFun1())}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.URL.queryParams.list)",
+                "JSON.stringify(JSObject1.myFun1())"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-12T08:56:38.885Z",
+        "updatedAt": "2024-03-12T13:57:42.084Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f02deec273cc13c1789144",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "EditContact",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/editContact"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Contact",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"contactID\":{{JSON.stringify(main.URL.queryParams.contactID)}},\n\t\"email\":{{JSON.stringify(Email.text)}},\n\t\"firstName\":{{JSON.stringify(FirstName.text)}},\n\t\"lastName\":{{JSON.stringify(LastName.text)}},\n\t\"contactOwner\":{{JSON.stringify(ContactOwner.selectedOptionValue)}},\n\t\"phoneNumber\":{{JSON.stringify(PhoneNumber.text)}},\n\t\"dealStage\":{{JSON.stringify(DealStage.selectedOptionLabel)}},\n\t\"leadStatus\":{{JSON.stringify(LeadStatus.selectedOptionLabel)}},\n\t\"country\":{{JSON.stringify(Country.selectedOptionLabel)}},\n\t\"city\":{{JSON.stringify(City.text)}},\n\t\"industry\":{{JSON.stringify(Industry.selectedOptionLabel)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify()",
+                "JSON.stringify(Email.text)",
+                "JSON.stringify(FirstName.text)",
+                "JSON.stringify(LastName.text)",
+                "JSON.stringify(ContactOwner.selectedOptionValue)",
+                "JSON.stringify(PhoneNumber.text)",
+                "JSON.stringify(DealStage.selectedOptionLabel)",
+                "JSON.stringify(LeadStatus.selectedOptionLabel)",
+                "JSON.stringify(Country.selectedOptionLabel)",
+                "JSON.stringify(City.text)",
+                "JSON.stringify(Industry.selectedOptionLabel)",
+                "JSON.stringify(main.URL.queryParams.contactID)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-12T10:26:54.002Z",
+        "updatedAt": "2024-03-12T11:55:54.473Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f02e21c273cc13c1789145",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteContact",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/deleteContact"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Contact",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"contactID\":{{JSON.stringify(main.URL.queryParams.contactID)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.URL.queryParams.contactID)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-12T10:27:45.145Z",
+        "updatedAt": "2024-03-12T12:52:13.848Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f02ee7c273cc13c1789146",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getContact",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getContact"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Contact",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "contactID",
+                        "value": "{{main.URL.queryParams.contactID}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.URL.queryParams.contactID"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-12T10:31:03.473Z",
+        "updatedAt": "2024-03-12T11:59:06.441Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f038e5c273cc13c1789147",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getOwners",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getOwners"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Contact",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "responseType",
+                        "value": "forSelector"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-12T11:13:41.606Z",
+        "updatedAt": "2024-03-12T11:15:56.146Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f038f6c273cc13c1789148",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getWidgetsFillers",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getWidgetsFillers"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Contact",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-12T11:13:58.646Z",
+        "updatedAt": "2024-03-12T11:13:59.711Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f05923c273cc13c1789149",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getList",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getList"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "List",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "listID",
+                        "value": "{{main.URL.queryParams.list}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.URL.queryParams.list"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-12T13:31:15.412Z",
+        "updatedAt": "2024-03-12T13:52:45.180Z",
         "deleted": false,
         "policies": [
             {

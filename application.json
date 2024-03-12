@@ -68,6 +68,10 @@
         {
             "_id": "List",
             "isDefault": false
+        },
+        {
+            "_id": "Contact",
+            "isDefault": false
         }
     ],
     "policies": [
@@ -3780,8 +3784,8 @@
                                         {
                                             "isVisible": true,
                                             "iconName": "log-out",
-                                            "borderRadius": "CIRCLE",
-                                            "boxShadow": "VARIANT3",
+                                            "borderRadius": "ROUNDED",
+                                            "boxShadow": "NONE",
                                             "buttonColor": "#107de1",
                                             "buttonVariant": "SECONDARY",
                                             "isDisabled": false,

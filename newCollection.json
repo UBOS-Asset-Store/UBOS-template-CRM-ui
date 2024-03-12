@@ -136,7 +136,7 @@
         "id": "65eb0226c273cc13c1789129",
         "name": "JSObject1",
         "pageId": "Contacts",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\nconst IDs = Table1.selectedRows.map(e => e._id);\n\t\treturn IDs;\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\tconst IDs = Table1.selectedRows.map(e => e._id);\n\t\t\treturn IDs;\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -153,7 +153,7 @@
                 "pageId": "Contacts",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "() => {\nconst IDs = Table1.selectedRows.map(e => e._id);\n\t\treturn IDs;\n\t}",
+                    "body": "() => {\n\t\tconst IDs = Table1.selectedRows.map(e => e._id);\n\t\t\treturn IDs;\n\t}",
                     "isAsync": false,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
