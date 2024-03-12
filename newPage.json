@@ -16455,7 +16455,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1710,
+                        "bottomRow": 1390,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -16590,8 +16590,12 @@
                                                         "key": "onClick"
                                                     }
                                                 ],
-                                                "onClick": "{{closeModal('ModalCancelNewDeal')}}",
-                                                "dynamicPropertyPathList": [],
+                                                "onClick": "{{\n(closeModal('ModalCancelNewDeal'),\nresetWidget('NewDealName'),\nresetWidget('NewDealStage'),\nresetWidget('NewAmount'),\nresetWidget('NewDealOwner'),\nresetWidget('NewCloseDate'),\nresetWidget('NewPriority'))\n}}\n\n\n\n\n\n\n\n",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
                                                 "borderRadius": "ROUNDED"
                                             }
                                         ],
@@ -16785,7 +16789,7 @@
                                                         "key": "onClick"
                                                     }
                                                 ],
-                                                "onClick": "{{\nnewDeal.run(() => (showAlert('Deal successfully created 🎉','success'), closeModal('ModalNewDeal')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "onClick": "{{\nnewDeal.run(() => (showAlert('Deal successfully created 🎉','success'), closeModal('ModalNewDeal'),\nresetWidget('NewDealName'),\nresetWidget('NewDealStage'),\nresetWidget('NewAmount'),\nresetWidget('NewDealOwner'),\nresetWidget('NewCloseDate'),\nresetWidget('NewPriority')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
@@ -16860,10 +16864,10 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": "{{get}}",
+                                                                "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewDealOwner",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -16887,6 +16891,9 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": []
@@ -16972,7 +16979,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "options": "[\n  {\n    \"label\": \"Outreach\",\n    \"value\": \"Outreach\"\n  },\n  {\n    \"label\": \"Qualifying ICP\",\n    \"value\": \"Qualifying ICP\"\n  },\n  {\n    \"label\": \"Appointment scheduled\",\n    \"value\": \"Appointment scheduled\"\n  },\n  {\n    \"label\": \"Presentation made\",\n    \"value\": \"Presentation made\"\n  },\n  {\n    \"label\": \"Folow up\",\n    \"value\": \"Folow up\"\n  },\n  {\n    \"label\": \"Testing platform\",\n    \"value\": \"Testing platform\"\n  },\n  {\n    \"label\": \"Objections\",\n    \"value\": \"Objections\"\n  },\n  {\n    \"label\": \"Proposal sent\",\n    \"value\": \"Proposal sent\"\n  },\n  {\n    \"label\": \"Close won\",\n    \"value\": \"Close their-lost\"\n  }\n]",
+                                                                "options": "{{getWidgetsFillers.data.dealStage}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewDealStage",
                                                                 "defaultOptionValue": "Outreach",
@@ -16996,7 +17003,11 @@
                                                                 "topRow": 8,
                                                                 "bottomRow": 15,
                                                                 "parentId": "k71lh1oguh",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -17160,7 +17171,7 @@
                                                                 "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -17184,6 +17195,9 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": []
@@ -17198,7 +17212,7 @@
                                                                 "options": "{{getWidgetsFillers.data.leadStatus}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select2",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "defaultOptionValue": "",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -17262,151 +17276,6 @@
                                             {
                                                 "isVisible": true,
                                                 "animateLoading": true,
-                                                "defaultSelectedRow": "0",
-                                                "label": "Data",
-                                                "widgetName": "Table1",
-                                                "searchKey": "",
-                                                "textSize": "PARAGRAPH",
-                                                "horizontalAlignment": "LEFT",
-                                                "verticalAlignment": "CENTER",
-                                                "totalRecordsCount": 0,
-                                                "defaultPageSize": 0,
-                                                "isShowLoading": true,
-                                                "dynamicBindingPathList": [
-                                                    {
-                                                        "key": "primaryColumns.step.computedValue"
-                                                    },
-                                                    {
-                                                        "key": "primaryColumns.task.computedValue"
-                                                    },
-                                                    {
-                                                        "key": "primaryColumns.status.computedValue"
-                                                    },
-                                                    {
-                                                        "key": "primaryColumns.action.computedValue"
-                                                    }
-                                                ],
-                                                "primaryColumns": {
-                                                    "step": {
-                                                        "index": 0,
-                                                        "width": 150,
-                                                        "id": "step",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "CENTER",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "step",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
-                                                    },
-                                                    "task": {
-                                                        "index": 1,
-                                                        "width": 150,
-                                                        "id": "task",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "CENTER",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "task",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
-                                                    },
-                                                    "status": {
-                                                        "index": 2,
-                                                        "width": 150,
-                                                        "id": "status",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "CENTER",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "status",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
-                                                    },
-                                                    "action": {
-                                                        "index": 3,
-                                                        "width": 150,
-                                                        "id": "action",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "CENTER",
-                                                        "columnType": "button",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isCellVisible": true,
-                                                        "isDisabled": false,
-                                                        "isDerived": false,
-                                                        "label": "action",
-                                                        "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
-                                                        "buttonColor": "#03B365",
-                                                        "menuColor": "#03B365",
-                                                        "labelColor": "#FFFFFF"
-                                                    }
-                                                },
-                                                "derivedColumns": {},
-                                                "tableData": "",
-                                                "columnSizeMap": {
-                                                    "task": 245,
-                                                    "step": 62,
-                                                    "status": 75
-                                                },
-                                                "columnOrder": [
-                                                    "step",
-                                                    "task",
-                                                    "status",
-                                                    "action"
-                                                ],
-                                                "enableClientSideSearch": true,
-                                                "isVisibleSearch": true,
-                                                "isVisibleFilters": true,
-                                                "isVisibleDownload": true,
-                                                "isVisiblePagination": true,
-                                                "isSortable": true,
-                                                "delimiter": ",",
-                                                "version": 3,
-                                                "type": "TABLE_WIDGET",
-                                                "hideCard": false,
-                                                "displayName": "Table",
-                                                "key": "wwz5l6l3u9",
-                                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
-                                                "widgetId": "j9aq7bv1q3",
-                                                "renderMode": "CANVAS",
-                                                "isLoading": false,
-                                                "parentColumnSpace": 14.017578125,
-                                                "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 64,
-                                                "topRow": 9,
-                                                "bottomRow": 72,
-                                                "parentId": "fpla4b15m9",
-                                                "dynamicTriggerPathList": []
-                                            },
-                                            {
-                                                "isVisible": true,
-                                                "animateLoading": true,
                                                 "text": "Create deal",
                                                 "buttonColor": "#03B365",
                                                 "buttonVariant": "PRIMARY",
@@ -17427,10 +17296,10 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 53,
-                                                "rightColumn": 63,
-                                                "topRow": 4,
-                                                "bottomRow": 8,
+                                                "leftColumn": 54,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
                                                 "parentId": "fpla4b15m9",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
@@ -17440,6 +17309,609 @@
                                                 ],
                                                 "borderRadius": "ROUNDED",
                                                 "onClick": "{{showModal('ModalNewDeal')}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "shouldScrollContents": false,
+                                                "widgetName": "Tabs1",
+                                                "animateLoading": true,
+                                                "tabsObj": {
+                                                    "tab1": {
+                                                        "label": "⠀⠀⠀⠀⠀Table⠀⠀⠀⠀⠀",
+                                                        "id": "tab1",
+                                                        "widgetId": "12sajrn2xb",
+                                                        "isVisible": true,
+                                                        "index": 0
+                                                    },
+                                                    "tab2": {
+                                                        "label": "⠀⠀⠀⠀Canban⠀⠀⠀⠀",
+                                                        "id": "tab2",
+                                                        "widgetId": "h1j08ebtgw",
+                                                        "isVisible": true,
+                                                        "index": 1
+                                                    }
+                                                },
+                                                "shouldShowTabs": true,
+                                                "defaultTab": "Tab 1",
+                                                "version": 3,
+                                                "type": "TABS_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Tabs",
+                                                "key": "5qyguao028",
+                                                "iconSVG": "/static/media/icon.74a6d653.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "nb2ehgecsf",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 9,
+                                                "bottomRow": 70,
+                                                "parentId": "fpla4b15m9",
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas27",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "ndz2hs0dbq",
+                                                        "canExtend": true,
+                                                        "isDisabled": false,
+                                                        "shouldScrollContents": false,
+                                                        "tabId": "tab1",
+                                                        "tabName": "⠀⠀⠀⠀⠀Table⠀⠀⠀⠀⠀",
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "defaultSelectedRow": "0",
+                                                                "label": "Data",
+                                                                "widgetName": "Table1",
+                                                                "searchKey": "",
+                                                                "textSize": "PARAGRAPH",
+                                                                "horizontalAlignment": "LEFT",
+                                                                "verticalAlignment": "CENTER",
+                                                                "totalRecordsCount": 0,
+                                                                "defaultPageSize": 0,
+                                                                "isShowLoading": true,
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "tableData"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.name.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.stage.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.amount.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.closeDate.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.priority.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.dealID.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.ownerID.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.ownerEmail.computedValue"
+                                                                    }
+                                                                ],
+                                                                "primaryColumns": {
+                                                                    "name": {
+                                                                        "index": 3,
+                                                                        "width": 150,
+                                                                        "id": "name",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "name",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                                                                    },
+                                                                    "stage": {
+                                                                        "index": 4,
+                                                                        "width": 150,
+                                                                        "id": "stage",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "stage",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}"
+                                                                    },
+                                                                    "amount": {
+                                                                        "index": 5,
+                                                                        "width": 150,
+                                                                        "id": "amount",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "amount",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.amount))}}"
+                                                                    },
+                                                                    "closeDate": {
+                                                                        "index": 7,
+                                                                        "width": 150,
+                                                                        "id": "closeDate",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "closeDate",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.closeDate))}}"
+                                                                    },
+                                                                    "priority": {
+                                                                        "index": 8,
+                                                                        "width": 150,
+                                                                        "id": "priority",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "priority",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.priority))}}"
+                                                                    },
+                                                                    "dealID": {
+                                                                        "index": 0,
+                                                                        "width": 150,
+                                                                        "id": "dealID",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "dealID",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.dealID))}}"
+                                                                    },
+                                                                    "ownerID": {
+                                                                        "index": 6,
+                                                                        "width": 150,
+                                                                        "id": "ownerID",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "ownerID",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ownerID))}}"
+                                                                    },
+                                                                    "ownerEmail": {
+                                                                        "index": 7,
+                                                                        "width": 150,
+                                                                        "id": "ownerEmail",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "ownerEmail",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ownerEmail))}}"
+                                                                    },
+                                                                    "customColumn1": {
+                                                                        "index": 8,
+                                                                        "width": 150,
+                                                                        "id": "customColumn1",
+                                                                        "columnType": "iconButton",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": true,
+                                                                        "label": "⠀👁",
+                                                                        "computedValue": "",
+                                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                                        "buttonColor": "#38AFF4",
+                                                                        "menuColor": "#03B365",
+                                                                        "labelColor": "#FFFFFF",
+                                                                        "iconName": "eye-open",
+                                                                        "buttonVariant": "TERTIARY",
+                                                                        "boxShadow": "NONE",
+                                                                        "borderRadius": "SHARP",
+                                                                        "onClick": "{{navigateTo('Deal',{dealID: Table1.selectedRow.dealID})}}"
+                                                                    }
+                                                                },
+                                                                "derivedColumns": {
+                                                                    "customColumn1": {
+                                                                        "index": 8,
+                                                                        "width": 150,
+                                                                        "id": "customColumn1",
+                                                                        "columnType": "iconButton",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": true,
+                                                                        "label": "⠀👁",
+                                                                        "computedValue": "",
+                                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                                        "buttonColor": "#38AFF4",
+                                                                        "menuColor": "#03B365",
+                                                                        "labelColor": "#FFFFFF",
+                                                                        "iconName": "eye-open",
+                                                                        "buttonVariant": "TERTIARY",
+                                                                        "boxShadow": "NONE",
+                                                                        "borderRadius": "SHARP"
+                                                                    }
+                                                                },
+                                                                "tableData": "{{getDeals.data}}",
+                                                                "columnSizeMap": {
+                                                                    "task": 245,
+                                                                    "step": 62,
+                                                                    "status": 75,
+                                                                    "customColumn1": 60
+                                                                },
+                                                                "columnOrder": [
+                                                                    "customColumn1",
+                                                                    "dealID",
+                                                                    "name",
+                                                                    "stage",
+                                                                    "amount",
+                                                                    "closeDate",
+                                                                    "priority",
+                                                                    "ownerID",
+                                                                    "ownerEmail"
+                                                                ],
+                                                                "enableClientSideSearch": true,
+                                                                "isVisibleSearch": true,
+                                                                "isVisibleFilters": true,
+                                                                "isVisibleDownload": true,
+                                                                "isVisiblePagination": true,
+                                                                "isSortable": true,
+                                                                "delimiter": ",",
+                                                                "version": 3,
+                                                                "type": "TABLE_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Table",
+                                                                "key": "wwz5l6l3u9",
+                                                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                                                                "widgetId": "54xluehxt4",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 14.017578125,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 0,
+                                                                "bottomRow": 55,
+                                                                "parentId": "12sajrn2xb",
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn1.onClick"
+                                                                    }
+                                                                ],
+                                                                "dynamicPropertyPathList": []
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "12sajrn2xb",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 336.421875,
+                                                        "topRow": 0,
+                                                        "bottomRow": 570,
+                                                        "parentId": "nb2ehgecsf",
+                                                        "dynamicBindingPathList": [],
+                                                        "dynamicTriggerPathList": []
+                                                    },
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas28",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "ndz2hs0dbq",
+                                                        "canExtend": true,
+                                                        "isDisabled": false,
+                                                        "shouldScrollContents": false,
+                                                        "tabId": "tab2",
+                                                        "tabName": "⠀⠀⠀⠀Canban⠀⠀⠀⠀",
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "defaultSelectedRow": "0",
+                                                                "label": "Data",
+                                                                "widgetName": "Table1Copy",
+                                                                "searchKey": "",
+                                                                "textSize": "PARAGRAPH",
+                                                                "horizontalAlignment": "LEFT",
+                                                                "verticalAlignment": "CENTER",
+                                                                "totalRecordsCount": 0,
+                                                                "defaultPageSize": 0,
+                                                                "isShowLoading": true,
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "tableData"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.name.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.stage.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.amount.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.closeDate.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.priority.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.dealID.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.ownerID.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.ownerEmail.computedValue"
+                                                                    }
+                                                                ],
+                                                                "primaryColumns": {
+                                                                    "name": {
+                                                                        "index": 3,
+                                                                        "width": 150,
+                                                                        "id": "name",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "name",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                                                                    },
+                                                                    "stage": {
+                                                                        "index": 4,
+                                                                        "width": 150,
+                                                                        "id": "stage",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "stage",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}"
+                                                                    },
+                                                                    "amount": {
+                                                                        "index": 5,
+                                                                        "width": 150,
+                                                                        "id": "amount",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "amount",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.amount))}}"
+                                                                    },
+                                                                    "closeDate": {
+                                                                        "index": 7,
+                                                                        "width": 150,
+                                                                        "id": "closeDate",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "closeDate",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.closeDate))}}"
+                                                                    },
+                                                                    "priority": {
+                                                                        "index": 8,
+                                                                        "width": 150,
+                                                                        "id": "priority",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "priority",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.priority))}}"
+                                                                    },
+                                                                    "dealID": {
+                                                                        "index": 0,
+                                                                        "width": 150,
+                                                                        "id": "dealID",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "dealID",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealID))}}"
+                                                                    },
+                                                                    "ownerID": {
+                                                                        "index": 6,
+                                                                        "width": 150,
+                                                                        "id": "ownerID",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "ownerID",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerID))}}"
+                                                                    },
+                                                                    "ownerEmail": {
+                                                                        "index": 7,
+                                                                        "width": 150,
+                                                                        "id": "ownerEmail",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "ownerEmail",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerEmail))}}"
+                                                                    }
+                                                                },
+                                                                "derivedColumns": {},
+                                                                "tableData": "{{getDeals.data}}",
+                                                                "columnSizeMap": {
+                                                                    "task": 245,
+                                                                    "step": 62,
+                                                                    "status": 75
+                                                                },
+                                                                "columnOrder": [
+                                                                    "dealID",
+                                                                    "name",
+                                                                    "stage",
+                                                                    "amount",
+                                                                    "closeDate",
+                                                                    "priority",
+                                                                    "ownerID",
+                                                                    "ownerEmail"
+                                                                ],
+                                                                "enableClientSideSearch": true,
+                                                                "isVisibleSearch": true,
+                                                                "isVisibleFilters": true,
+                                                                "isVisibleDownload": true,
+                                                                "isVisiblePagination": true,
+                                                                "isSortable": true,
+                                                                "delimiter": ",",
+                                                                "version": 3,
+                                                                "type": "TABLE_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Table",
+                                                                "key": "wwz5l6l3u9",
+                                                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                                                                "widgetId": "f1cvbqh2wy",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 14.017578125,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 1,
+                                                                "bottomRow": 56,
+                                                                "parentId": "h1j08ebtgw",
+                                                                "dynamicTriggerPathList": [],
+                                                                "dynamicPropertyPathList": []
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "h1j08ebtgw",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 336.421875,
+                                                        "topRow": 0,
+                                                        "bottomRow": 580,
+                                                        "parentId": "nb2ehgecsf",
+                                                        "dynamicBindingPathList": [],
+                                                        "dynamicTriggerPathList": []
+                                                    }
+                                                ],
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
                                             }
                                         ],
                                         "minHeight": 400,
@@ -17451,7 +17923,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 379.5,
                                         "topRow": 0,
-                                        "bottomRow": 740,
+                                        "bottomRow": 720,
                                         "parentId": "u2o9q3unm7"
                                     }
                                 ],
@@ -17471,7 +17943,7 @@
                                 "leftColumn": 6,
                                 "rightColumn": 64,
                                 "topRow": 8,
-                                "bottomRow": 84,
+                                "bottomRow": 81,
                                 "parentId": "0"
                             }
                         ],
@@ -17507,8 +17979,12 @@
                         "Canvas23",
                         "Select1",
                         "Select2",
+                        "Button4",
+                        "Tabs1",
+                        "Canvas27",
                         "Table1",
-                        "Button4"
+                        "Canvas28",
+                        "Table1Copy"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -17530,6 +18006,17 @@
                                 "id": "65e9d5e4c273cc13c1789125",
                                 "confirmBeforeExecute": false,
                                 "name": "getWidgetsFillers",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65f08489c273cc13c178914c",
+                                "id": "65f08489c273cc13c178914c",
+                                "confirmBeforeExecute": false,
+                                "name": "getDeals",
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl"
@@ -17696,7 +18183,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1640,
+                        "bottomRow": 1390,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -19017,7 +19504,7 @@
                                                         "isCellVisible": true,
                                                         "isDerived": false,
                                                         "label": "contactOwner",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.contactOwner))}}"
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( (\ngetOwners.data.find(owner => owner.value === currentRow.contactOwner).label\n)))}}"
                                                     },
                                                     "phoneNumber": {
                                                         "index": 7,
@@ -19372,6 +19859,41 @@
                                 "topRow": 8,
                                 "bottomRow": 84,
                                 "parentId": "0"
+                            },
+                            {
+                                "isVisible": true,
+                                "text": "{{getOwners.data.find(owner => owner.value === )}}\n",
+                                "fontSize": "PARAGRAPH",
+                                "fontStyle": "BOLD",
+                                "textAlign": "LEFT",
+                                "textColor": "#231F20",
+                                "truncateButtonColor": "#FFC13D",
+                                "widgetName": "Text13",
+                                "shouldTruncate": false,
+                                "overflow": "NONE",
+                                "version": 1,
+                                "animateLoading": true,
+                                "type": "TEXT_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Text",
+                                "key": "sugb01fiph",
+                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                "widgetId": "je06yx6mo4",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 14.234375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 35,
+                                "rightColumn": 51,
+                                "topRow": 110,
+                                "bottomRow": 135,
+                                "parentId": "0",
+                                "dynamicBindingPathList": [
+                                    {
+                                        "key": "text"
+                                    }
+                                ],
+                                "dynamicTriggerPathList": []
                             }
                         ],
                         "snapRows": 88,
@@ -19418,7 +19940,8 @@
                         "Table1",
                         "Button8",
                         "Input1",
-                        "Input2"
+                        "Input2",
+                        "Text13"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -19716,12 +20239,12 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
-                                                "backgroundColor": "#FFFFFF",
+                                                "backgroundColor": "#eee",
                                                 "widgetName": "Container6",
                                                 "containerStyle": "card",
                                                 "borderColor": "transparent",
                                                 "borderWidth": "0",
-                                                "borderRadius": "0",
+                                                "borderRadius": "20",
                                                 "boxShadow": "NONE",
                                                 "animateLoading": true,
                                                 "children": [
@@ -20256,10 +20779,1086 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 25,
-                                                "topRow": 1,
-                                                "bottomRow": 68,
+                                                "topRow": 0,
+                                                "bottomRow": 70,
                                                 "parentId": "kn6i41ah3x",
-                                                "shouldScrollContents": true
+                                                "shouldScrollContents": true,
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "iconName": "trash",
+                                                "borderRadius": "ROUNDED",
+                                                "boxShadow": "NONE",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "isDisabled": false,
+                                                "widgetName": "IconButtonDeleteContact",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "ICON_BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Icon Button",
+                                                "key": "89dzxyoqdb",
+                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                                "widgetId": "lzid9stwkp",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 60,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "kn6i41ah3x",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{showModal('ModalDeleteConfirm')}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "iconName": "{{\nmain.store.isEditing ? 'floppy-disk' : 'edit'\n}}",
+                                                "borderRadius": "ROUNDED",
+                                                "boxShadow": "NONE",
+                                                "buttonColor": "#38AFF4",
+                                                "buttonVariant": "SECONDARY",
+                                                "isDisabled": false,
+                                                "widgetName": "IconButtonEditContact",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "ICON_BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Icon Button",
+                                                "key": "hhsso2c40f",
+                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                                "widgetId": "6oxopwgnw6",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 56,
+                                                "rightColumn": 60,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "kn6i41ah3x",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "iconName"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "iconName"
+                                                    },
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{storeValue('isEditing',!main.store.isEditing);\n\n!main.store.isEditing && \n(EditContact.run(() => showAlert('Contact successfully updated 🎉','success'),\ngetContact.run()), () => showAlert('Oops something went wrong😔','error'))\n\n}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "backgroundColor": "#eee",
+                                                "widgetName": "Container8",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "20",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas28",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "ndz2hs0dbq",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "backgroundColor": "transparent",
+                                                                "itemBackgroundColor": "#FFFFFF",
+                                                                "animateLoading": true,
+                                                                "gridType": "vertical",
+                                                                "template": {
+                                                                    "Text13": {
+                                                                        "isVisible": true,
+                                                                        "text": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.name;\n              })();\n            })}}",
+                                                                        "fontSize": "PARAGRAPH",
+                                                                        "fontStyle": "BOLD",
+                                                                        "textAlign": "LEFT",
+                                                                        "textColor": "#231F20",
+                                                                        "truncateButtonColor": "#FFC13D",
+                                                                        "widgetName": "Text13",
+                                                                        "shouldTruncate": false,
+                                                                        "overflow": "NONE",
+                                                                        "version": 1,
+                                                                        "animateLoading": true,
+                                                                        "type": "TEXT_WIDGET",
+                                                                        "hideCard": false,
+                                                                        "displayName": "Text",
+                                                                        "key": "sugb01fiph",
+                                                                        "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                                        "textStyle": "HEADING",
+                                                                        "dynamicBindingPathList": [
+                                                                            {
+                                                                                "key": "text"
+                                                                            }
+                                                                        ],
+                                                                        "dynamicTriggerPathList": [],
+                                                                        "widgetId": "01hwyd5d52",
+                                                                        "renderMode": "CANVAS",
+                                                                        "isLoading": false,
+                                                                        "leftColumn": 16,
+                                                                        "rightColumn": 28,
+                                                                        "topRow": 0,
+                                                                        "bottomRow": 4,
+                                                                        "parentId": "ia4qbs7pdt"
+                                                                    }
+                                                                },
+                                                                "enhancements": true,
+                                                                "gridGap": 0,
+                                                                "listData": "{{getContactLists.data}}",
+                                                                "customPageNo": 1,
+                                                                "widgetName": "List1",
+                                                                "children": [
+                                                                    {
+                                                                        "isVisible": true,
+                                                                        "widgetName": "Canvas26",
+                                                                        "version": 1,
+                                                                        "detachFromLayout": true,
+                                                                        "type": "CANVAS_WIDGET",
+                                                                        "hideCard": true,
+                                                                        "displayName": "Canvas",
+                                                                        "key": "ndz2hs0dbq",
+                                                                        "containerStyle": "none",
+                                                                        "canExtend": false,
+                                                                        "dropDisabled": true,
+                                                                        "openParentPropertyPane": true,
+                                                                        "noPad": true,
+                                                                        "children": [
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "backgroundColor": "white",
+                                                                                "widgetName": "Container7",
+                                                                                "containerStyle": "card",
+                                                                                "borderColor": "transparent",
+                                                                                "borderWidth": "0",
+                                                                                "borderRadius": "0",
+                                                                                "boxShadow": "NONE",
+                                                                                "animateLoading": true,
+                                                                                "children": [
+                                                                                    {
+                                                                                        "isVisible": true,
+                                                                                        "widgetName": "Canvas27",
+                                                                                        "version": 1,
+                                                                                        "detachFromLayout": true,
+                                                                                        "type": "CANVAS_WIDGET",
+                                                                                        "hideCard": true,
+                                                                                        "displayName": "Canvas",
+                                                                                        "key": "ndz2hs0dbq",
+                                                                                        "containerStyle": "none",
+                                                                                        "canExtend": false,
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "isVisible": true,
+                                                                                                "text": "{{currentItem.name}}",
+                                                                                                "fontSize": "PARAGRAPH",
+                                                                                                "fontStyle": "BOLD",
+                                                                                                "textAlign": "LEFT",
+                                                                                                "textColor": "#231F20",
+                                                                                                "truncateButtonColor": "#FFC13D",
+                                                                                                "widgetName": "Text13",
+                                                                                                "shouldTruncate": false,
+                                                                                                "overflow": "NONE",
+                                                                                                "version": 1,
+                                                                                                "animateLoading": true,
+                                                                                                "type": "TEXT_WIDGET",
+                                                                                                "hideCard": false,
+                                                                                                "displayName": "Text",
+                                                                                                "key": "sugb01fiph",
+                                                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                                                                "textStyle": "HEADING",
+                                                                                                "dynamicBindingPathList": [
+                                                                                                    {
+                                                                                                        "key": "text"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "dynamicTriggerPathList": [],
+                                                                                                "widgetId": "01hwyd5d52",
+                                                                                                "renderMode": "CANVAS",
+                                                                                                "isLoading": false,
+                                                                                                "leftColumn": 0,
+                                                                                                "rightColumn": 64,
+                                                                                                "topRow": 0,
+                                                                                                "bottomRow": 4,
+                                                                                                "parentId": "ia4qbs7pdt",
+                                                                                                "logBlackList": {
+                                                                                                    "isVisible": true,
+                                                                                                    "text": true,
+                                                                                                    "fontSize": true,
+                                                                                                    "fontStyle": true,
+                                                                                                    "textAlign": true,
+                                                                                                    "textColor": true,
+                                                                                                    "truncateButtonColor": true,
+                                                                                                    "widgetName": true,
+                                                                                                    "shouldTruncate": true,
+                                                                                                    "overflow": true,
+                                                                                                    "version": true,
+                                                                                                    "animateLoading": true,
+                                                                                                    "type": true,
+                                                                                                    "hideCard": true,
+                                                                                                    "displayName": true,
+                                                                                                    "key": true,
+                                                                                                    "iconSVG": true,
+                                                                                                    "isCanvas": true,
+                                                                                                    "textStyle": true,
+                                                                                                    "dynamicBindingPathList": true,
+                                                                                                    "dynamicTriggerPathList": true,
+                                                                                                    "minHeight": true,
+                                                                                                    "widgetId": true,
+                                                                                                    "renderMode": true,
+                                                                                                    "isLoading": true,
+                                                                                                    "parentColumnSpace": true,
+                                                                                                    "parentRowSpace": true,
+                                                                                                    "leftColumn": true,
+                                                                                                    "rightColumn": true,
+                                                                                                    "topRow": true,
+                                                                                                    "bottomRow": true,
+                                                                                                    "parentId": true
+                                                                                                }
+                                                                                            }
+                                                                                        ],
+                                                                                        "minHeight": null,
+                                                                                        "widgetId": "ia4qbs7pdt",
+                                                                                        "renderMode": "CANVAS",
+                                                                                        "isLoading": false,
+                                                                                        "parentColumnSpace": 1,
+                                                                                        "parentRowSpace": 1,
+                                                                                        "leftColumn": 0,
+                                                                                        "rightColumn": null,
+                                                                                        "topRow": 0,
+                                                                                        "bottomRow": 60,
+                                                                                        "parentId": "ykhzmp3ulw"
+                                                                                    }
+                                                                                ],
+                                                                                "version": 1,
+                                                                                "classStyle": "",
+                                                                                "type": "CONTAINER_WIDGET",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Container",
+                                                                                "key": "tmks3zgg44",
+                                                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                                                "isCanvas": true,
+                                                                                "dragDisabled": true,
+                                                                                "isDeletable": false,
+                                                                                "disallowCopy": true,
+                                                                                "disablePropertyPane": true,
+                                                                                "openParentPropertyPane": true,
+                                                                                "widgetId": "ykhzmp3ulw",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 0,
+                                                                                "bottomRow": 6,
+                                                                                "parentId": "l9tywn974l"
+                                                                            }
+                                                                        ],
+                                                                        "minHeight": 400,
+                                                                        "widgetId": "l9tywn974l",
+                                                                        "renderMode": "CANVAS",
+                                                                        "isLoading": false,
+                                                                        "parentColumnSpace": 1,
+                                                                        "parentRowSpace": 1,
+                                                                        "leftColumn": 0,
+                                                                        "rightColumn": 260.296875,
+                                                                        "topRow": 0,
+                                                                        "bottomRow": 390,
+                                                                        "parentId": "acj99ty30q"
+                                                                    }
+                                                                ],
+                                                                "type": "LIST_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "List",
+                                                                "key": "fywqxpnr7t",
+                                                                "iconSVG": "/static/media/icon.9925ee17.svg",
+                                                                "isCanvas": true,
+                                                                "widgetId": "acj99ty30q",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 10.845703125,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 4,
+                                                                "bottomRow": 23,
+                                                                "parentId": "e0an8cu6yw",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "template.Text13.text"
+                                                                    },
+                                                                    {
+                                                                        "key": "listData"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "text": "Lists where the contact is present",
+                                                                "fontSize": "PARAGRAPH",
+                                                                "fontStyle": "BOLD",
+                                                                "textAlign": "CENTER",
+                                                                "textColor": "#2E3D49",
+                                                                "truncateButtonColor": "#FFC13D",
+                                                                "widgetName": "Text14",
+                                                                "shouldTruncate": false,
+                                                                "overflow": "NONE",
+                                                                "version": 1,
+                                                                "animateLoading": true,
+                                                                "type": "TEXT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Text",
+                                                                "key": "sugb01fiph",
+                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                                "widgetId": "qxj5roky4b",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 4.944091796875,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 0,
+                                                                "bottomRow": 4,
+                                                                "parentId": "e0an8cu6yw",
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": []
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "e0an8cu6yw",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 336.421875,
+                                                        "topRow": 0,
+                                                        "bottomRow": 390,
+                                                        "parentId": "vmw67acdu3"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "tmks3zgg44",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "vmw67acdu3",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 25,
+                                                "rightColumn": 45,
+                                                "topRow": 45,
+                                                "bottomRow": 70,
+                                                "parentId": "kn6i41ah3x",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            }
+                                        ],
+                                        "minHeight": 400,
+                                        "widgetId": "kn6i41ah3x",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 379.5,
+                                        "topRow": 0,
+                                        "bottomRow": 720,
+                                        "parentId": "o515boevjw"
+                                    }
+                                ],
+                                "version": 1,
+                                "classStyle": "",
+                                "type": "CONTAINER_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Container",
+                                "key": "9xwcmw9k7e",
+                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                "isCanvas": true,
+                                "widgetId": "o515boevjw",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 15.8125,
+                                "parentRowSpace": 10,
+                                "leftColumn": 6,
+                                "rightColumn": 64,
+                                "topRow": 8,
+                                "bottomRow": 80,
+                                "parentId": "0"
+                            }
+                        ],
+                        "snapRows": 88,
+                        "containerStyle": "none",
+                        "canExtend": true,
+                        "version": 57
+                    },
+                    "widgetNames": [
+                        "MainContainer",
+                        "ModalDeleteConfirm",
+                        "Canvas26Copy1Copy",
+                        "Text14Copy1Copy",
+                        "Button6Copy1Copy",
+                        "ButtonDeleteYES",
+                        "Container5",
+                        "Canvas22",
+                        "Container6",
+                        "Canvas25",
+                        "Email",
+                        "Industry",
+                        "Country",
+                        "ContactOwner",
+                        "DealStage",
+                        "LeadStatus",
+                        "City",
+                        "PhoneNumber",
+                        "LastName",
+                        "FirstName",
+                        "IconButtonDeleteContact",
+                        "IconButtonEditContact",
+                        "Container8",
+                        "Canvas28",
+                        "List1",
+                        "Canvas26",
+                        "Container7",
+                        "Canvas27",
+                        "Text13",
+                        "Text14"
+                    ],
+                    "deleted": false,
+                    "policies": [],
+                    "layoutOnLoadActions": [
+                        [
+                            {
+                                "_id": "65f02ee7c273cc13c1789146",
+                                "id": "65f02ee7c273cc13c1789146",
+                                "confirmBeforeExecute": false,
+                                "name": "getContact",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl",
+                                    "main.URL.queryParams.contact",
+                                    "main.URL.queryParams.contactID"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65f038e5c273cc13c1789147",
+                                "id": "65f038e5c273cc13c1789147",
+                                "confirmBeforeExecute": false,
+                                "name": "getOwners",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65f038f6c273cc13c1789148",
+                                "id": "65f038f6c273cc13c1789148",
+                                "confirmBeforeExecute": false,
+                                "name": "getWidgetsFillers",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65f0717bc273cc13c178914a",
+                                "id": "65f0717bc273cc13c178914a",
+                                "confirmBeforeExecute": false,
+                                "name": "getContactLists",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl",
+                                    "main.URL.queryParams.contactID"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
+                    ],
+                    "layoutOnCloseActions": [
+                        []
+                    ]
+                }
+            ]
+        },
+        "createdAt": "2024-03-12T09:50:43.940Z",
+        "updatedAt": "2024-03-12T09:50:43.940Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:pages",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:pages",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f09ec5c273cc13c178914d",
+        "applicationId": "jetsondashboard",
+        "slug": "Deal",
+        "Page": {
+            "name": "Deal",
+            "layouts": [
+                {
+                    "_id": "65f09ec5c273cc13c178914e",
+                    "viewMode": false,
+                    "dsl": {
+                        "widgetName": "MainContainer",
+                        "backgroundColor": "none",
+                        "rightColumn": 1224,
+                        "snapColumns": 64,
+                        "widgetId": "0",
+                        "topRow": 0,
+                        "bottomRow": 1640,
+                        "parentRowSpace": 1,
+                        "type": "CANVAS_WIDGET",
+                        "detachFromLayout": true,
+                        "minHeight": 890,
+                        "dynamicBindingPathList": [],
+                        "parentColumnSpace": 1,
+                        "leftColumn": 0,
+                        "children": [
+                            {
+                                "width": 472,
+                                "height": 208,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "ModalDeleteConfirm",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas26Copy1Copy",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "3904dlz234",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "text": "Are you sure you want to delete this contact?",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#2E3D49",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text14Copy1Copy",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "5y2xqzdnia",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "wjo36xr9s3",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 14,
+                                                "parentId": "68cst4jpcv",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "No",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button6Copy1Copy",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "2glx1w3ok0",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 38,
+                                                "rightColumn": 50,
+                                                "topRow": 15,
+                                                "bottomRow": 19,
+                                                "parentId": "68cst4jpcv",
+                                                "onClick": "{{closeModal('ModalDeleteConfirm')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Yes",
+                                                "buttonColor": "#DD4B34",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "ButtonDeleteYES",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "80841a3yhc",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "un8pqu774u",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 52,
+                                                "rightColumn": 64,
+                                                "topRow": 15,
+                                                "bottomRow": 19,
+                                                "parentId": "68cst4jpcv",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{deleteContact.run(() => (showAlert('Contact seccessfuly deleted', 'success'),\ncloseModal('ModalDeleteConfirm'),\nnavigateTo('Contacts')), () => (showAlert('Oops something went wrong 😔', 'error')))}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED"
+                                            }
+                                        ],
+                                        "minHeight": 208,
+                                        "widgetId": "68cst4jpcv",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 236.25,
+                                        "topRow": 0,
+                                        "bottomRow": 210,
+                                        "parentId": "n2nhsm0yhu",
+                                        "dynamicBindingPathList": [],
+                                        "dynamicTriggerPathList": []
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "iihkeae1jd",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "n2nhsm0yhu",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 9.84375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 18,
+                                "rightColumn": 42,
+                                "topRow": 138,
+                                "bottomRow": 162,
+                                "parentId": "0"
+                            },
+                            {
+                                "isVisible": true,
+                                "backgroundColor": "#FFFFFF",
+                                "widgetName": "Container5",
+                                "containerStyle": "card",
+                                "borderColor": "transparent",
+                                "borderWidth": "0",
+                                "borderRadius": "0",
+                                "boxShadow": "NONE",
+                                "animateLoading": true,
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas22",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "r6l3few9q0",
+                                        "containerStyle": "none",
+                                        "canExtend": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "backgroundColor": "#eee",
+                                                "widgetName": "Container6",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "20",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas25",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "3904dlz234",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "placeholderText": "Select option",
+                                                                "labelText": "Priority",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "options": "{{getWidgetsFillers.data.priority}}",
+                                                                "serverSideFiltering": false,
+                                                                "widgetName": "Priority",
+                                                                "defaultOptionValue": "{{getDeal.data.priority}}",
+                                                                "version": 1,
+                                                                "isFilterable": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SELECT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Select",
+                                                                "key": "twf5owadgt",
+                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                "widgetId": "yoeo9b24kf",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 35,
+                                                                "bottomRow": 42,
+                                                                "parentId": "7pozufp0f3",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "placeholderText": "Select option",
+                                                                "labelText": "Deal owner",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "options": "{{getOwners.data}}",
+                                                                "serverSideFiltering": false,
+                                                                "widgetName": "DealOwner",
+                                                                "defaultOptionValue": "{{getDeal.data.ownerID}}",
+                                                                "version": 1,
+                                                                "isFilterable": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SELECT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Select",
+                                                                "key": "twf5owadgt",
+                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                "widgetId": "wdazu44ydw",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 21,
+                                                                "bottomRow": 28,
+                                                                "parentId": "7pozufp0f3",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Amount",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "Amount",
+                                                                "version": 2,
+                                                                "defaultText": "{{getDeal.data.amount}}",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "NUMBER",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "e3ummtm62g",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 14,
+                                                                "bottomRow": 21,
+                                                                "parentId": "7pozufp0f3",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Deal name",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "DealName",
+                                                                "version": 2,
+                                                                "defaultText": "{{getDeal.data.name}}",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "aqy1803soy",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 0,
+                                                                "bottomRow": 7,
+                                                                "parentId": "7pozufp0f3",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "placeholderText": "Select option",
+                                                                "labelText": "Deal stage",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "options": "{{getWidgetsFillers.data.dealStage}}",
+                                                                "serverSideFiltering": false,
+                                                                "widgetName": "DealStage",
+                                                                "defaultOptionValue": "{{getDeal.data.stage}}",
+                                                                "version": 1,
+                                                                "isFilterable": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SELECT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Select",
+                                                                "key": "twf5owadgt",
+                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                "widgetId": "evj00tcbrb",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 7,
+                                                                "bottomRow": 14,
+                                                                "parentId": "7pozufp0f3",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "isDisabled": false,
+                                                                "datePickerType": "DATE_PICKER",
+                                                                "label": "Close date",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "dateFormat": "YYYY-MM-DD HH:mm",
+                                                                "widgetName": "CloseDate",
+                                                                "defaultDate": "{{getDeal.data.closeDate}}",
+                                                                "minDate": "1920-12-31T18:30:00.000Z",
+                                                                "maxDate": "2121-12-31T18:29:00.000Z",
+                                                                "version": 2,
+                                                                "isRequired": false,
+                                                                "closeOnSelection": true,
+                                                                "shortcuts": false,
+                                                                "firstDayOfWeek": 0,
+                                                                "timePrecision": "minute",
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "type": "DATE_PICKER_WIDGET2",
+                                                                "hideCard": false,
+                                                                "displayName": "DatePicker",
+                                                                "key": "nus2zwg8y1",
+                                                                "iconSVG": "/static/media/icon.300e5ab8.svg",
+                                                                "widgetId": "u36xscee2y",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 28,
+                                                                "bottomRow": 35,
+                                                                "parentId": "7pozufp0f3",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultDate"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "defaultDate"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "7pozufp0f3",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 243.75,
+                                                        "topRow": 0,
+                                                        "bottomRow": 440,
+                                                        "parentId": "560m4oq610"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "7l1ei9a0tl",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "560m4oq610",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 10.15625,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 34,
+                                                "topRow": 0,
+                                                "bottomRow": 45,
+                                                "parentId": "kn6i41ah3x",
+                                                "shouldScrollContents": false,
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
                                             },
                                             {
                                                 "isVisible": true,
@@ -20351,7 +21950,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 379.5,
                                         "topRow": 0,
-                                        "bottomRow": 700,
+                                        "bottomRow": 470,
                                         "parentId": "o515boevjw"
                                     }
                                 ],
@@ -20391,16 +21990,12 @@
                         "Canvas22",
                         "Container6",
                         "Canvas25",
-                        "Email",
-                        "Industry",
-                        "Country",
-                        "ContactOwner",
+                        "Priority",
+                        "DealOwner",
+                        "Amount",
+                        "DealName",
                         "DealStage",
-                        "LeadStatus",
-                        "City",
-                        "PhoneNumber",
-                        "LastName",
-                        "FirstName",
+                        "CloseDate",
                         "IconButtonDeleteContact",
                         "IconButtonEditContact"
                     ],
@@ -20409,37 +22004,14 @@
                     "layoutOnLoadActions": [
                         [
                             {
-                                "_id": "65f02ee7c273cc13c1789146",
-                                "id": "65f02ee7c273cc13c1789146",
+                                "_id": "65f0a106c273cc13c1789155",
+                                "id": "65f0a106c273cc13c1789155",
                                 "confirmBeforeExecute": false,
-                                "name": "getContact",
+                                "name": "getDeal",
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl",
-                                    "main.URL.queryParams.contact",
-                                    "main.URL.queryParams.contactID"
-                                ],
-                                "timeoutInMillisecond": 10000
-                            },
-                            {
-                                "_id": "65f038e5c273cc13c1789147",
-                                "id": "65f038e5c273cc13c1789147",
-                                "confirmBeforeExecute": false,
-                                "name": "getOwners",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.nodeUrl"
-                                ],
-                                "timeoutInMillisecond": 10000
-                            },
-                            {
-                                "_id": "65f038f6c273cc13c1789148",
-                                "id": "65f038f6c273cc13c1789148",
-                                "confirmBeforeExecute": false,
-                                "name": "getWidgetsFillers",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.nodeUrl"
+                                    "main.URL.queryParams.dealID"
                                 ],
                                 "timeoutInMillisecond": 10000
                             }
@@ -20451,7 +22023,7 @@
                 }
             ]
         },
-        "createdAt": "2024-03-12T09:50:43.940Z",
+        "createdAt": "2024-03-12T18:28:21.836Z",
         "updatedAt": "2024-03-12T09:50:43.940Z",
         "deleted": false,
         "policies": [
