@@ -17862,7 +17862,16 @@
                                                                         "key": "primaryColumns.ownerEmail.computedValue"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.dealWithContact.computedValue"
+                                                                        "key": "primaryColumns.dealWithContactID.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.dealWithContactEmail.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.dealWithContactFirstName.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.dealWithContactLastName.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -18025,10 +18034,10 @@
                                                                         "borderRadius": "SHARP",
                                                                         "onClick": "{{navigateTo('Deal',{dealID: Table1Copy.selectedRow.dealID})}}"
                                                                     },
-                                                                    "dealWithContact": {
+                                                                    "dealWithContactID": {
                                                                         "index": 8,
                                                                         "width": 150,
-                                                                        "id": "dealWithContact",
+                                                                        "id": "dealWithContactID",
                                                                         "horizontalAlignment": "LEFT",
                                                                         "verticalAlignment": "CENTER",
                                                                         "columnType": "text",
@@ -18039,8 +18048,59 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": false,
-                                                                        "label": "dealWithContact",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContact))}}"
+                                                                        "label": "dealWithContactID",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactID))}}"
+                                                                    },
+                                                                    "dealWithContactEmail": {
+                                                                        "index": 9,
+                                                                        "width": 150,
+                                                                        "id": "dealWithContactEmail",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "dealWithContactEmail",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactEmail))}}"
+                                                                    },
+                                                                    "dealWithContactFirstName": {
+                                                                        "index": 10,
+                                                                        "width": 150,
+                                                                        "id": "dealWithContactFirstName",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "dealWithContactFirstName",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactFirstName))}}"
+                                                                    },
+                                                                    "dealWithContactLastName": {
+                                                                        "index": 11,
+                                                                        "width": 150,
+                                                                        "id": "dealWithContactLastName",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "dealWithContactLastName",
+                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactLastName))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -18075,7 +18135,6 @@
                                                                     "customColumn1": 60
                                                                 },
                                                                 "columnOrder": [
-                                                                    "customColumn1",
                                                                     "dealID",
                                                                     "name",
                                                                     "stage",
@@ -18084,7 +18143,11 @@
                                                                     "priority",
                                                                     "ownerID",
                                                                     "ownerEmail",
-                                                                    "dealWithContact"
+                                                                    "dealWithContactID",
+                                                                    "dealWithContactEmail",
+                                                                    "dealWithContactFirstName",
+                                                                    "dealWithContactLastName",
+                                                                    "customColumn1"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -23071,6 +23134,17 @@
                                 "timeoutInMillisecond": 10000
                             },
                             {
+                                "_id": "65f09ec5c273cc13c1789152",
+                                "id": "65f09ec5c273cc13c1789152",
+                                "confirmBeforeExecute": false,
+                                "name": "getOwners",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
                                 "_id": "65f09ec5c273cc13c1789153",
                                 "id": "65f09ec5c273cc13c1789153",
                                 "confirmBeforeExecute": false,
@@ -23093,10 +23167,10 @@
                                 "timeoutInMillisecond": 10000
                             },
                             {
-                                "_id": "65f09ec5c273cc13c1789151",
-                                "id": "65f09ec5c273cc13c1789151",
+                                "_id": "65f09ec5c273cc13c1789154",
+                                "id": "65f09ec5c273cc13c1789154",
                                 "confirmBeforeExecute": false,
-                                "name": "getContact",
+                                "name": "getContactLists",
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl",
