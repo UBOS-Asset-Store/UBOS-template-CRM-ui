@@ -9059,7 +9059,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n   \"name\":{{JSON.stringify(NewDealName.text)}},\n   \"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n   \"amount\":{{JSON.stringify(NewAmount.text)}},\n   \"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n   \"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n   \"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}},\n\t\"dealWithContact\":{{JSON.stringify(DealWithContact.selectedOptionValue)}}\n}"
+                "body": "{\n\t\"name\":{{JSON.stringify(NewDealName.text)}},\n\t\"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n\t\"amount\":{{JSON.stringify(NewAmount.text)}},\n\t\"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}},\n\t\"dealWithContact\":{{JSON.stringify(NewDealWithContact.selectedOptionValue)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -9079,13 +9079,13 @@
                 "JSON.stringify(NewDealOwner.selectedOptionValue)",
                 "JSON.stringify(NewCloseDate.selectedDate)",
                 "JSON.stringify(NewPriority.selectedOptionLabel)",
-                "JSON.stringify(DealWithContact.selectedOptionValue)"
+                "JSON.stringify(NewDealWithContact.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T16:17:31.421Z",
-        "updatedAt": "2024-03-13T10:08:14.464Z",
+        "updatedAt": "2024-03-13T15:55:15.163Z",
         "deleted": false,
         "policies": [
             {
@@ -10755,7 +10755,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T10:31:03.473Z",
-        "updatedAt": "2024-03-13T09:30:30.722Z",
+        "updatedAt": "2024-03-13T15:18:21.054Z",
         "deleted": false,
         "policies": [
             {
@@ -11681,7 +11681,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:37:58.115Z",
-        "updatedAt": "2024-03-13T14:32:39.626Z",
+        "updatedAt": "2024-03-13T15:41:43.996Z",
         "deleted": false,
         "policies": [
             {
@@ -11761,7 +11761,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-13T09:30:51.115Z",
-        "updatedAt": "2024-03-13T09:36:48.244Z",
+        "updatedAt": "2024-03-13T15:38:22.038Z",
         "deleted": false,
         "policies": [
             {
