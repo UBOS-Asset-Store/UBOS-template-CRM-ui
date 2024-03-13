@@ -12845,7 +12845,7 @@
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
-                                                "rightColumn": 53,
+                                                "rightColumn": 55,
                                                 "topRow": 0,
                                                 "bottomRow": 9,
                                                 "parentId": "l01teij63x"
@@ -13251,7 +13251,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 53,
+                                                "leftColumn": 55,
                                                 "rightColumn": 64,
                                                 "topRow": 4,
                                                 "bottomRow": 8,
@@ -13263,7 +13263,9 @@
                                                     }
                                                 ],
                                                 "onClick": "{{showModal('ModalNewContact')}}",
-                                                "borderRadius": "ROUNDED"
+                                                "borderRadius": "ROUNDED",
+                                                "iconName": "new-person",
+                                                "iconAlign": "left"
                                             },
                                             {
                                                 "isVisible": true,
@@ -13288,7 +13290,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 53,
+                                                "leftColumn": 55,
                                                 "rightColumn": 64,
                                                 "topRow": 0,
                                                 "bottomRow": 4,
@@ -13309,7 +13311,9 @@
                                                     {
                                                         "key": "isDisabled"
                                                     }
-                                                ]
+                                                ],
+                                                "iconName": "add-to-artifact",
+                                                "iconAlign": "left"
                                             }
                                         ],
                                         "minHeight": 400,
@@ -15948,9 +15952,9 @@
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
                                                                 "labelText": "List creator",
-                                                                "labelPosition": "Top",
+                                                                "labelPosition": "Left",
                                                                 "labelAlignment": "left",
-                                                                "labelWidth": 5,
+                                                                "labelWidth": "6",
                                                                 "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "ListCreator",
@@ -15971,9 +15975,9 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 35,
+                                                                "rightColumn": 64,
                                                                 "topRow": 0,
-                                                                "bottomRow": 7,
+                                                                "bottomRow": 4,
                                                                 "parentId": "l01iotrpbr",
                                                                 "dynamicBindingPathList": [
                                                                     {
@@ -16018,9 +16022,9 @@
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
-                                                "rightColumn": 53,
+                                                "rightColumn": 54,
                                                 "topRow": 0,
-                                                "bottomRow": 9,
+                                                "bottomRow": 6,
                                                 "parentId": "2twwlljffm"
                                             },
                                             {
@@ -16131,7 +16135,7 @@
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "listCreatorName",
+                                                        "label": "list creator name",
                                                         "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.listCreatorName))}}"
                                                     },
                                                     "listCreatorEmail": {
@@ -16148,7 +16152,7 @@
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "listCreatorEmail",
+                                                        "label": "list creator email",
                                                         "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.listCreatorEmail))}}"
                                                     },
                                                     "listCreatorID": {
@@ -16221,9 +16225,9 @@
                                                     "step": 62,
                                                     "status": 75,
                                                     "customColumn1": 60,
-                                                    "name": 166,
+                                                    "name": 200,
                                                     "description": 276,
-                                                    "listCreatorName": 178
+                                                    "listCreatorName": 176
                                                 },
                                                 "columnOrder": [
                                                     "customColumn1",
@@ -16254,7 +16258,7 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 9,
+                                                "topRow": 6,
                                                 "bottomRow": 72,
                                                 "parentId": "2twwlljffm",
                                                 "dynamicTriggerPathList": [
@@ -16293,8 +16297,8 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 54,
                                                 "rightColumn": 64,
-                                                "topRow": 0,
-                                                "bottomRow": 4,
+                                                "topRow": 1,
+                                                "bottomRow": 5,
                                                 "parentId": "2twwlljffm",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
@@ -16303,7 +16307,9 @@
                                                     }
                                                 ],
                                                 "borderRadius": "ROUNDED",
-                                                "onClick": "{{showModal('ModalNewList')}}"
+                                                "onClick": "{{showModal('ModalNewList')}}",
+                                                "iconName": "add",
+                                                "iconAlign": "left"
                                             }
                                         ],
                                         "minHeight": 400,
@@ -19419,10 +19425,10 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 53,
+                                                "leftColumn": 56,
                                                 "rightColumn": 64,
-                                                "topRow": 4,
-                                                "bottomRow": 8,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
                                                 "parentId": "l01teij63x",
                                                 "borderRadius": "ROUNDED",
                                                 "dynamicBindingPathList": [
@@ -19625,7 +19631,7 @@
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
-                                                "rightColumn": 53,
+                                                "rightColumn": 64,
                                                 "topRow": 4,
                                                 "bottomRow": 13,
                                                 "parentId": "l01teij63x"
@@ -20031,8 +20037,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 53,
-                                                "rightColumn": 64,
+                                                "leftColumn": 48,
+                                                "rightColumn": 56,
                                                 "topRow": 0,
                                                 "bottomRow": 4,
                                                 "parentId": "l01teij63x",
@@ -20089,10 +20095,10 @@
                                             },
                                             {
                                                 "isVisible": true,
-                                                "label": "Descroption",
+                                                "label": "Description",
                                                 "labelPosition": "Left",
                                                 "labelAlignment": "left",
-                                                "labelWidth": "6",
+                                                "labelWidth": "4",
                                                 "widgetName": "Input2",
                                                 "version": 2,
                                                 "defaultText": "{{getList.data.description}}",
@@ -20117,7 +20123,7 @@
                                                 "parentColumnSpace": 14.017578125,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 21,
-                                                "rightColumn": 53,
+                                                "rightColumn": 48,
                                                 "topRow": 0,
                                                 "bottomRow": 4,
                                                 "parentId": "l01teij63x",
@@ -20340,7 +20346,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1640,
+                        "bottomRow": 1390,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -21083,7 +21089,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 25,
                                                 "topRow": 0,
-                                                "bottomRow": 70,
+                                                "bottomRow": 66,
                                                 "parentId": "kn6i41ah3x",
                                                 "shouldScrollContents": true,
                                                 "dynamicBindingPathList": [],
@@ -21209,7 +21215,7 @@
                                                 "leftColumn": 25,
                                                 "rightColumn": 64,
                                                 "topRow": 4,
-                                                "bottomRow": 70,
+                                                "bottomRow": 66,
                                                 "parentId": "kn6i41ah3x",
                                                 "children": [
                                                     {
@@ -22216,7 +22222,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 379.5,
                                         "topRow": 0,
-                                        "bottomRow": 720,
+                                        "bottomRow": 680,
                                         "parentId": "o515boevjw"
                                     }
                                 ],
@@ -22236,7 +22242,7 @@
                                 "leftColumn": 6,
                                 "rightColumn": 64,
                                 "topRow": 8,
-                                "bottomRow": 80,
+                                "bottomRow": 76,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": []
