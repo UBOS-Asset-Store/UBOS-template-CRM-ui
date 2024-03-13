@@ -1995,7 +1995,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T12:49:55.580Z",
-        "updatedAt": "2024-02-21T10:38:21.125Z",
+        "updatedAt": "2024-03-13T16:45:15.316Z",
         "deleted": false,
         "policies": [
             {
@@ -2150,7 +2150,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T12:54:09.638Z",
-        "updatedAt": "2024-02-21T16:17:07.005Z",
+        "updatedAt": "2024-03-13T17:39:22.842Z",
         "deleted": false,
         "policies": [
             {
@@ -6505,7 +6505,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-18T16:51:48.152Z",
-        "updatedAt": "2024-02-21T10:38:57.778Z",
+        "updatedAt": "2024-03-13T16:46:04.669Z",
         "deleted": false,
         "policies": [
             {
@@ -6549,7 +6549,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n  \"name\": \"{{name_field_edit.text}}\",\n  \"position\": {{position_field_edit.text}},\n  \"icon\": \"{{icon_field_edit.text}}\",\n  \"_id\": \"{{TableParent.selectedRow._id}}\",\n  \"userAttributes\": {{JSON.stringify(appsmith.user.auth_module.user.info.user.attributes)}}\n}",
+                "body": "{\n  \"name\": \"{{name_field_edit.text}}\",\n  \"position\": {{position_field_edit.text}},\n  \"icon\": \"{{icon_field_edit.text}}\",\n  \"_id\": \"{{TableParent.selectedRow._id}}\",\n  \"userAttributes\": {{JSON.stringify(appsmith.user.auth_module.user.info.user.attributes)}},\n\t\"isHidden\":{{JSON.stringify(SwitchHide.isSwitchedOn)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -6577,7 +6577,9 @@
                 "position_field_edit.text",
                 "icon_field_edit.text",
                 "TableParent.selectedRow._id",
-                "JSON.stringify(appsmith.user.auth_module.user.info.user.attributes)"
+                "JSON.stringify(appsmith.user.auth_module.user.info.user.attributes)",
+                "JSON.stringify()",
+                "JSON.stringify(SwitchHide.isSwitchedOn)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false

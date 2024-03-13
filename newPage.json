@@ -1946,6 +1946,42 @@
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "placeholderText": "Position on page"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Hide this page",
+                                                                "defaultSwitchState": "{{getModules.data.find(e=>e._id===main.store._id).isHidden}}",
+                                                                "widgetName": "SwitchHide",
+                                                                "alignWidget": "LEFT",
+                                                                "version": 1,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SWITCH_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Switch",
+                                                                "key": "4orej0l9wa",
+                                                                "iconSVG": "/static/media/icon.a3115bc1.svg",
+                                                                "widgetId": "7xivrqvigh",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 10.28125,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 1,
+                                                                "rightColumn": 16,
+                                                                "topRow": 28,
+                                                                "bottomRow": 32,
+                                                                "parentId": "jg9d62dwwi",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultSwitchState"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "defaultSwitchState"
+                                                                    }
+                                                                ]
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -1975,7 +2011,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
-                                                "bottomRow": 31,
+                                                "bottomRow": 35,
                                                 "parentId": "g9jdc2j47q",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [],
@@ -2190,8 +2226,8 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 2,
                                                 "rightColumn": 63,
-                                                "topRow": 32,
-                                                "bottomRow": 60,
+                                                "topRow": 37,
+                                                "bottomRow": 65,
                                                 "parentId": "g9jdc2j47q",
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -2354,6 +2390,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.userAttributes.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.isHidden.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -2475,6 +2514,23 @@
                                                         "isDerived": false,
                                                         "label": "userAttributes",
                                                         "computedValue": "{{TableParent.sanitizedTableData.map((currentRow) => ( currentRow.userAttributes.map(e=>e.attributeName)))}}"
+                                                    },
+                                                    "isHidden": {
+                                                        "index": 7,
+                                                        "width": 150,
+                                                        "id": "isHidden",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "isHidden",
+                                                        "computedValue": "{{TableParent.sanitizedTableData.map((currentRow) => ( currentRow.isHidden))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {},
@@ -2491,7 +2547,8 @@
                                                     "icon",
                                                     "userAttributes",
                                                     "deleted",
-                                                    "isParent"
+                                                    "isParent",
+                                                    "isHidden"
                                                 ],
                                                 "enableClientSideSearch": true,
                                                 "isVisibleSearch": true,
@@ -3413,6 +3470,7 @@
                         "Button9Copy",
                         "name_field_edit",
                         "position_field_edit",
+                        "SwitchHide",
                         "childTable",
                         "Container1",
                         "Canvas1",

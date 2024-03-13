@@ -3889,7 +3889,7 @@
                         },
                         {
                             "isVisible": true,
-                            "text": "Page Name",
+                            "text": "{{main.URL.fullPath.split(\"/\").pop().split('?')[0].replace('%20',' ') }}",
                             "fontSize": "HEADING1",
                             "fontStyle": "BOLD",
                             "textAlign": "LEFT",
@@ -3915,7 +3915,11 @@
                             "topRow": 0,
                             "bottomRow": 6,
                             "parentId": "w1m5bb29j5",
-                            "dynamicBindingPathList": [],
+                            "dynamicBindingPathList": [
+                                {
+                                    "key": "text"
+                                }
+                            ],
                             "dynamicTriggerPathList": []
                         }
                     ],
