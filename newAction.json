@@ -11260,7 +11260,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}},\n\t\"DealName\":{{JSON.stringify(DealName.text)}},\n\t\"DealStage\":{{JSON.stringify(DealStage.selectedOptionValue)}},\n\t\"Amount\":{{JSON.stringify(Amount.text)}},\n\t\"DealOwner\":{{JSON.stringify(DealOwner.selectedOptionValue)}},\n\t\"CloseDate\":{{JSON.stringify(CloseDate.selectedDate)}},\n\t\"Priority\":{{JSON.stringify(Priority.selectedOptionValue)}}\n}\n\n\n\n\n",
+                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}},\n\t\"DealName\":{{JSON.stringify(DealName.text)}},\n\t\"DealStage\":{{JSON.stringify(DealStage.selectedOptionValue)}},\n\t\"Amount\":{{JSON.stringify(Amount.text)}},\n\t\"DealOwner\":{{JSON.stringify(DealOwner.selectedOptionValue)}},\n\t\"CloseDate\":{{JSON.stringify(CloseDate.selectedDate)}},\n\t\"Priority\":{{JSON.stringify(Priority.selectedOptionValue)}},\n\t\"dealWithContact\":{{JSON.stringify(DealWithContact.selectedOptionValue)}}\n}\n\n\n\n\n",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11289,13 +11289,14 @@
                 "JSON.stringify(Amount.text)",
                 "JSON.stringify(DealOwner.selectedOptionValue)",
                 "JSON.stringify(CloseDate.selectedDate)",
-                "JSON.stringify(Priority.selectedOptionValue)"
+                "JSON.stringify(Priority.selectedOptionValue)",
+                "JSON.stringify(DealWithContact.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T19:04:55.123Z",
+        "updatedAt": "2024-03-13T14:48:45.989Z",
         "deleted": false,
         "policies": [
             {
@@ -11680,7 +11681,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:37:58.115Z",
-        "updatedAt": "2024-03-13T13:31:03.345Z",
+        "updatedAt": "2024-03-13T14:32:39.626Z",
         "deleted": false,
         "policies": [
             {

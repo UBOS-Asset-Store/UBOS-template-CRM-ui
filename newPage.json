@@ -22619,7 +22619,7 @@
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
-                                                                "isDisabled": true,
+                                                                "isDisabled": "{{!main.store.isEditing}}",
                                                                 "animateLoading": true,
                                                                 "type": "SELECT_WIDGET",
                                                                 "hideCard": false,
@@ -22642,10 +22642,17 @@
                                                                     },
                                                                     {
                                                                         "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": []
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -22710,7 +22717,7 @@
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
-                                                                "isDisabled": true,
+                                                                "isDisabled": "{{!main.store.isEditing}}",
                                                                 "animateLoading": true,
                                                                 "type": "SELECT_WIDGET",
                                                                 "hideCard": false,
@@ -22733,10 +22740,17 @@
                                                                     },
                                                                     {
                                                                         "key": "defaultOptionValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": []
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -23122,18 +23136,6 @@
                     "layoutOnLoadActions": [
                         [
                             {
-                                "_id": "65f0a106c273cc13c1789155",
-                                "id": "65f0a106c273cc13c1789155",
-                                "confirmBeforeExecute": false,
-                                "name": "getDeal",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.nodeUrl",
-                                    "main.URL.queryParams.dealID"
-                                ],
-                                "timeoutInMillisecond": 10000
-                            },
-                            {
                                 "_id": "65f09ec5c273cc13c1789152",
                                 "id": "65f09ec5c273cc13c1789152",
                                 "confirmBeforeExecute": false,
@@ -23175,6 +23177,18 @@
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl",
                                     "main.URL.queryParams.contactID"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65f0a106c273cc13c1789155",
+                                "id": "65f0a106c273cc13c1789155",
+                                "confirmBeforeExecute": false,
+                                "name": "getDeal",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl",
+                                    "main.URL.queryParams.dealID"
                                 ],
                                 "timeoutInMillisecond": 10000
                             }
