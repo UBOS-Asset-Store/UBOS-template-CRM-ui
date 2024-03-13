@@ -22584,413 +22584,6 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
-                                                "backgroundColor": "#eee",
-                                                "widgetName": "Container6",
-                                                "containerStyle": "card",
-                                                "borderColor": "transparent",
-                                                "borderWidth": "0",
-                                                "borderRadius": "10",
-                                                "boxShadow": "NONE",
-                                                "animateLoading": true,
-                                                "children": [
-                                                    {
-                                                        "isVisible": true,
-                                                        "widgetName": "Canvas25",
-                                                        "version": 1,
-                                                        "detachFromLayout": true,
-                                                        "type": "CANVAS_WIDGET",
-                                                        "hideCard": true,
-                                                        "displayName": "Canvas",
-                                                        "key": "3904dlz234",
-                                                        "containerStyle": "none",
-                                                        "canExtend": false,
-                                                        "children": [
-                                                            {
-                                                                "isVisible": true,
-                                                                "placeholderText": "Select option",
-                                                                "labelText": "Deal with",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "options": "{{getContacts.data}}",
-                                                                "serverSideFiltering": false,
-                                                                "widgetName": "DealWithContact",
-                                                                "defaultOptionValue": "{{getDeal.data.dealWithContactID}}",
-                                                                "version": 1,
-                                                                "isFilterable": true,
-                                                                "isRequired": false,
-                                                                "isDisabled": "{{!main.store.isEditing}}",
-                                                                "animateLoading": true,
-                                                                "type": "SELECT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Select",
-                                                                "key": "twf5owadgt",
-                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
-                                                                "widgetId": "zaq9qci48h",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 7,
-                                                                "bottomRow": 14,
-                                                                "parentId": "7pozufp0f3",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "defaultOptionValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "options"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "placeholderText": "Select option",
-                                                                "labelText": "Priority",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "options": "{{getWidgetsFillers.data.priority}}",
-                                                                "serverSideFiltering": false,
-                                                                "widgetName": "Priority",
-                                                                "defaultOptionValue": "{{getDeal.data.priority}}",
-                                                                "version": 1,
-                                                                "isFilterable": true,
-                                                                "isRequired": false,
-                                                                "isDisabled": "{{!main.store.isEditing}}",
-                                                                "animateLoading": true,
-                                                                "type": "SELECT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Select",
-                                                                "key": "twf5owadgt",
-                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
-                                                                "widgetId": "yoeo9b24kf",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 42,
-                                                                "bottomRow": 49,
-                                                                "parentId": "7pozufp0f3",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "options"
-                                                                    },
-                                                                    {
-                                                                        "key": "defaultOptionValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "placeholderText": "Select option",
-                                                                "labelText": "Deal owner",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "options": "{{getOwners.data}}",
-                                                                "serverSideFiltering": false,
-                                                                "widgetName": "DealOwner",
-                                                                "defaultOptionValue": "{{getDeal.data.ownerID}}",
-                                                                "version": 1,
-                                                                "isFilterable": true,
-                                                                "isRequired": false,
-                                                                "isDisabled": "{{!main.store.isEditing}}",
-                                                                "animateLoading": true,
-                                                                "type": "SELECT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Select",
-                                                                "key": "twf5owadgt",
-                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
-                                                                "widgetId": "wdazu44ydw",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 28,
-                                                                "bottomRow": 35,
-                                                                "parentId": "7pozufp0f3",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "options"
-                                                                    },
-                                                                    {
-                                                                        "key": "defaultOptionValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "label": "Amount",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "widgetName": "Amount",
-                                                                "version": 2,
-                                                                "defaultText": "{{getDeal.data.amount}}",
-                                                                "iconAlign": "left",
-                                                                "autoFocus": false,
-                                                                "labelStyle": "",
-                                                                "resetOnSubmit": true,
-                                                                "isRequired": false,
-                                                                "isDisabled": "{{!main.store.isEditing}}",
-                                                                "animateLoading": true,
-                                                                "classStyle": "",
-                                                                "inputType": "NUMBER",
-                                                                "buttonPosition": "right",
-                                                                "type": "INPUT_WIDGET_V2",
-                                                                "hideCard": false,
-                                                                "displayName": "Input",
-                                                                "key": "dm9ihl3i9p",
-                                                                "iconSVG": "/static/media/icon.9f505595.svg",
-                                                                "widgetId": "e3ummtm62g",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 21,
-                                                                "bottomRow": 28,
-                                                                "parentId": "7pozufp0f3",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "defaultText"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "label": "Deal name",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "widgetName": "DealName",
-                                                                "version": 2,
-                                                                "defaultText": "{{getDeal.data.name}}",
-                                                                "iconAlign": "left",
-                                                                "autoFocus": false,
-                                                                "labelStyle": "",
-                                                                "resetOnSubmit": true,
-                                                                "isRequired": false,
-                                                                "isDisabled": "{{!main.store.isEditing}}",
-                                                                "animateLoading": true,
-                                                                "classStyle": "",
-                                                                "inputType": "TEXT",
-                                                                "buttonPosition": "right",
-                                                                "type": "INPUT_WIDGET_V2",
-                                                                "hideCard": false,
-                                                                "displayName": "Input",
-                                                                "key": "dm9ihl3i9p",
-                                                                "iconSVG": "/static/media/icon.9f505595.svg",
-                                                                "widgetId": "aqy1803soy",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 0,
-                                                                "bottomRow": 7,
-                                                                "parentId": "7pozufp0f3",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "defaultText"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "placeholderText": "Select option",
-                                                                "labelText": "Deal stage",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "options": "{{getWidgetsFillers.data.dealStage}}",
-                                                                "serverSideFiltering": false,
-                                                                "widgetName": "DealStage",
-                                                                "defaultOptionValue": "{{getDeal.data.stage}}",
-                                                                "version": 1,
-                                                                "isFilterable": true,
-                                                                "isRequired": false,
-                                                                "isDisabled": "{{!main.store.isEditing}}",
-                                                                "animateLoading": true,
-                                                                "type": "SELECT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Select",
-                                                                "key": "twf5owadgt",
-                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
-                                                                "widgetId": "evj00tcbrb",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 14,
-                                                                "bottomRow": 21,
-                                                                "parentId": "7pozufp0f3",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "options"
-                                                                    },
-                                                                    {
-                                                                        "key": "defaultOptionValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "isDisabled": "{{!main.store.isEditing}}",
-                                                                "datePickerType": "DATE_PICKER",
-                                                                "label": "Close date",
-                                                                "labelPosition": "Top",
-                                                                "labelAlignment": "left",
-                                                                "labelWidth": 5,
-                                                                "dateFormat": "YYYY-MM-DD HH:mm",
-                                                                "widgetName": "CloseDate",
-                                                                "defaultDate": "{{getDeal.data.closeDate}}",
-                                                                "minDate": "1920-12-31T18:30:00.000Z",
-                                                                "maxDate": "2121-12-31T18:29:00.000Z",
-                                                                "version": 2,
-                                                                "isRequired": false,
-                                                                "closeOnSelection": true,
-                                                                "shortcuts": false,
-                                                                "firstDayOfWeek": 0,
-                                                                "timePrecision": "minute",
-                                                                "animateLoading": true,
-                                                                "classStyle": "",
-                                                                "type": "DATE_PICKER_WIDGET2",
-                                                                "hideCard": false,
-                                                                "displayName": "DatePicker",
-                                                                "key": "nus2zwg8y1",
-                                                                "iconSVG": "/static/media/icon.300e5ab8.svg",
-                                                                "widgetId": "u36xscee2y",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.84375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 35,
-                                                                "bottomRow": 42,
-                                                                "parentId": "7pozufp0f3",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "defaultDate"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "defaultDate"
-                                                                    },
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ],
-                                                        "minHeight": 400,
-                                                        "widgetId": "7pozufp0f3",
-                                                        "renderMode": "CANVAS",
-                                                        "isLoading": false,
-                                                        "parentColumnSpace": 1,
-                                                        "parentRowSpace": 1,
-                                                        "leftColumn": 0,
-                                                        "rightColumn": 243.75,
-                                                        "topRow": 0,
-                                                        "bottomRow": 510,
-                                                        "parentId": "560m4oq610"
-                                                    }
-                                                ],
-                                                "version": 1,
-                                                "classStyle": "",
-                                                "type": "CONTAINER_WIDGET",
-                                                "hideCard": false,
-                                                "displayName": "Container",
-                                                "key": "7l1ei9a0tl",
-                                                "iconSVG": "/static/media/icon.1977dca3.svg",
-                                                "isCanvas": true,
-                                                "widgetId": "560m4oq610",
-                                                "renderMode": "CANVAS",
-                                                "isLoading": false,
-                                                "parentColumnSpace": 10.15625,
-                                                "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 34,
-                                                "topRow": 0,
-                                                "bottomRow": 52,
-                                                "parentId": "kn6i41ah3x",
-                                                "shouldScrollContents": false,
-                                                "dynamicBindingPathList": [],
-                                                "dynamicTriggerPathList": []
-                                            },
-                                            {
-                                                "isVisible": true,
                                                 "iconName": "trash",
                                                 "borderRadius": "ROUNDED",
                                                 "boxShadow": "NONE",
@@ -23068,6 +22661,517 @@
                                                     }
                                                 ],
                                                 "onClick": "{{storeValue('isEditing',!main.store.isEditing);\n\n!main.store.isEditing && \n(EditDeal.run(() => showAlert('Deal successfully updated 🎉','success'),\ngetDeal.run()), () => showAlert('Oops something went wrong😔','error'))\n}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "backgroundColor": "#eee",
+                                                "widgetName": "Container6",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "10",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas23",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "exa9xvho7k",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Comment",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "Comment",
+                                                                "version": 2,
+                                                                "defaultText": "",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "a1kxxtuzse",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "jx99c5694l",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 13.705078125,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 32,
+                                                                "rightColumn": 64,
+                                                                "topRow": 3,
+                                                                "bottomRow": 58,
+                                                                "parentId": "ouug85meh0",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "backgroundColor": "#eee",
+                                                                "widgetName": "Container6Copy",
+                                                                "containerStyle": "card",
+                                                                "borderColor": "transparent",
+                                                                "borderWidth": "0",
+                                                                "borderRadius": "10",
+                                                                "boxShadow": "NONE",
+                                                                "animateLoading": true,
+                                                                "children": [
+                                                                    {
+                                                                        "isVisible": true,
+                                                                        "widgetName": "Canvas25",
+                                                                        "version": 1,
+                                                                        "detachFromLayout": true,
+                                                                        "type": "CANVAS_WIDGET",
+                                                                        "hideCard": true,
+                                                                        "displayName": "Canvas",
+                                                                        "key": "3904dlz234",
+                                                                        "containerStyle": "none",
+                                                                        "canExtend": false,
+                                                                        "children": [
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "placeholderText": "Select option",
+                                                                                "labelText": "Deal with",
+                                                                                "labelPosition": "Top",
+                                                                                "labelAlignment": "left",
+                                                                                "labelWidth": 5,
+                                                                                "options": "{{getContacts.data}}",
+                                                                                "serverSideFiltering": false,
+                                                                                "widgetName": "DealWithContact",
+                                                                                "defaultOptionValue": "{{getDeal.data.dealWithContactID}}",
+                                                                                "version": 1,
+                                                                                "isFilterable": true,
+                                                                                "isRequired": false,
+                                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                                "animateLoading": true,
+                                                                                "type": "SELECT_WIDGET",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Select",
+                                                                                "key": "twf5owadgt",
+                                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                                "widgetId": "kc8qo47h11",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 9.84375,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 9,
+                                                                                "bottomRow": 16,
+                                                                                "parentId": "ppk8s15laa",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "defaultOptionValue"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "options"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "placeholderText": "Select option",
+                                                                                "labelText": "Priority",
+                                                                                "labelPosition": "Top",
+                                                                                "labelAlignment": "left",
+                                                                                "labelWidth": 5,
+                                                                                "options": "{{getWidgetsFillers.data.priority}}",
+                                                                                "serverSideFiltering": false,
+                                                                                "widgetName": "Priority",
+                                                                                "defaultOptionValue": "{{getDeal.data.priority}}",
+                                                                                "version": 1,
+                                                                                "isFilterable": true,
+                                                                                "isRequired": false,
+                                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                                "animateLoading": true,
+                                                                                "type": "SELECT_WIDGET",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Select",
+                                                                                "key": "twf5owadgt",
+                                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                                "widgetId": "zzq6frfg0s",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 9.84375,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 49,
+                                                                                "bottomRow": 56,
+                                                                                "parentId": "ppk8s15laa",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "options"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "defaultOptionValue"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "placeholderText": "Select option",
+                                                                                "labelText": "Deal owner",
+                                                                                "labelPosition": "Top",
+                                                                                "labelAlignment": "left",
+                                                                                "labelWidth": 5,
+                                                                                "options": "{{getOwners.data}}",
+                                                                                "serverSideFiltering": false,
+                                                                                "widgetName": "DealOwner",
+                                                                                "defaultOptionValue": "{{getDeal.data.ownerID}}",
+                                                                                "version": 1,
+                                                                                "isFilterable": true,
+                                                                                "isRequired": false,
+                                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                                "animateLoading": true,
+                                                                                "type": "SELECT_WIDGET",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Select",
+                                                                                "key": "twf5owadgt",
+                                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                                "widgetId": "yi0wnkprp1",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 9.84375,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 33,
+                                                                                "bottomRow": 40,
+                                                                                "parentId": "ppk8s15laa",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "options"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "defaultOptionValue"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "label": "Amount",
+                                                                                "labelPosition": "Top",
+                                                                                "labelAlignment": "left",
+                                                                                "labelWidth": 5,
+                                                                                "widgetName": "Amount",
+                                                                                "version": 2,
+                                                                                "defaultText": "{{getDeal.data.amount}}",
+                                                                                "iconAlign": "left",
+                                                                                "autoFocus": false,
+                                                                                "labelStyle": "",
+                                                                                "resetOnSubmit": true,
+                                                                                "isRequired": false,
+                                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                                "animateLoading": true,
+                                                                                "classStyle": "",
+                                                                                "inputType": "NUMBER",
+                                                                                "buttonPosition": "right",
+                                                                                "type": "INPUT_WIDGET_V2",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Input",
+                                                                                "key": "dm9ihl3i9p",
+                                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                                "widgetId": "3dpq1g1tj6",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 9.84375,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 25,
+                                                                                "bottomRow": 32,
+                                                                                "parentId": "ppk8s15laa",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "defaultText"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "label": "Deal name",
+                                                                                "labelPosition": "Top",
+                                                                                "labelAlignment": "left",
+                                                                                "labelWidth": 5,
+                                                                                "widgetName": "DealName",
+                                                                                "version": 2,
+                                                                                "defaultText": "{{getDeal.data.name}}",
+                                                                                "iconAlign": "left",
+                                                                                "autoFocus": false,
+                                                                                "labelStyle": "",
+                                                                                "resetOnSubmit": true,
+                                                                                "isRequired": false,
+                                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                                "animateLoading": true,
+                                                                                "classStyle": "",
+                                                                                "inputType": "TEXT",
+                                                                                "buttonPosition": "right",
+                                                                                "type": "INPUT_WIDGET_V2",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Input",
+                                                                                "key": "dm9ihl3i9p",
+                                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                                "widgetId": "g0ivo04g4d",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 9.84375,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 1,
+                                                                                "bottomRow": 8,
+                                                                                "parentId": "ppk8s15laa",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "defaultText"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "placeholderText": "Select option",
+                                                                                "labelText": "Deal stage",
+                                                                                "labelPosition": "Top",
+                                                                                "labelAlignment": "left",
+                                                                                "labelWidth": 5,
+                                                                                "options": "{{getWidgetsFillers.data.dealStage}}",
+                                                                                "serverSideFiltering": false,
+                                                                                "widgetName": "DealStage",
+                                                                                "defaultOptionValue": "{{getDeal.data.stage}}",
+                                                                                "version": 1,
+                                                                                "isFilterable": true,
+                                                                                "isRequired": false,
+                                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                                "animateLoading": true,
+                                                                                "type": "SELECT_WIDGET",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Select",
+                                                                                "key": "twf5owadgt",
+                                                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                                                "widgetId": "9o3ifuokx4",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 9.84375,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 17,
+                                                                                "bottomRow": 24,
+                                                                                "parentId": "ppk8s15laa",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "options"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "defaultOptionValue"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "isVisible": true,
+                                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                                "datePickerType": "DATE_PICKER",
+                                                                                "label": "Close date",
+                                                                                "labelPosition": "Top",
+                                                                                "labelAlignment": "left",
+                                                                                "labelWidth": 5,
+                                                                                "dateFormat": "YYYY-MM-DD HH:mm",
+                                                                                "widgetName": "CloseDate",
+                                                                                "defaultDate": "{{getDeal.data.closeDate}}",
+                                                                                "minDate": "1920-12-31T18:30:00.000Z",
+                                                                                "maxDate": "2121-12-31T18:29:00.000Z",
+                                                                                "version": 2,
+                                                                                "isRequired": false,
+                                                                                "closeOnSelection": true,
+                                                                                "shortcuts": false,
+                                                                                "firstDayOfWeek": 0,
+                                                                                "timePrecision": "minute",
+                                                                                "animateLoading": true,
+                                                                                "classStyle": "",
+                                                                                "type": "DATE_PICKER_WIDGET2",
+                                                                                "hideCard": false,
+                                                                                "displayName": "DatePicker",
+                                                                                "key": "nus2zwg8y1",
+                                                                                "iconSVG": "/static/media/icon.300e5ab8.svg",
+                                                                                "widgetId": "p2w88jhuel",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 9.84375,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 0,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 41,
+                                                                                "bottomRow": 48,
+                                                                                "parentId": "ppk8s15laa",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "defaultDate"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "defaultDate"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ],
+                                                                        "minHeight": 400,
+                                                                        "widgetId": "ppk8s15laa",
+                                                                        "renderMode": "CANVAS",
+                                                                        "isLoading": false,
+                                                                        "parentColumnSpace": 1,
+                                                                        "parentRowSpace": 1,
+                                                                        "leftColumn": 0,
+                                                                        "rightColumn": 243.75,
+                                                                        "topRow": 0,
+                                                                        "bottomRow": 580,
+                                                                        "parentId": "1z1x04o3to"
+                                                                    }
+                                                                ],
+                                                                "version": 1,
+                                                                "classStyle": "",
+                                                                "type": "CONTAINER_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Container",
+                                                                "key": "7l1ei9a0tl",
+                                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                                "isCanvas": true,
+                                                                "widgetId": "1z1x04o3to",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 10.15625,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 30,
+                                                                "topRow": 1,
+                                                                "bottomRow": 60,
+                                                                "parentId": "ouug85meh0",
+                                                                "shouldScrollContents": false,
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": []
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "ouug85meh0",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 336.421875,
+                                                        "topRow": 0,
+                                                        "bottomRow": 620,
+                                                        "parentId": "op2bs2gz2k"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "jag6ox44r0",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "op2bs2gz2k",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 4,
+                                                "bottomRow": 69,
+                                                "parentId": "kn6i41ah3x",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
                                             }
                                         ],
                                         "minHeight": 400,
@@ -23079,7 +23183,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 379.5,
                                         "topRow": 0,
-                                        "bottomRow": 540,
+                                        "bottomRow": 710,
                                         "parentId": "o515boevjw"
                                     }
                                 ],
@@ -23119,7 +23223,12 @@
                         "ButtonDeleteYES",
                         "Container5",
                         "Canvas22",
+                        "IconButtonDeleteContact",
+                        "IconButtonEditContact",
                         "Container6",
+                        "Canvas23",
+                        "Comment",
+                        "Container6Copy",
                         "Canvas25",
                         "DealWithContact",
                         "Priority",
@@ -23127,9 +23236,7 @@
                         "Amount",
                         "DealName",
                         "DealStage",
-                        "CloseDate",
-                        "IconButtonDeleteContact",
-                        "IconButtonEditContact"
+                        "CloseDate"
                     ],
                     "deleted": false,
                     "policies": [],
