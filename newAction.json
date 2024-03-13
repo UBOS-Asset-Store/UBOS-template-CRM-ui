@@ -9059,7 +9059,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n   \"name\":{{JSON.stringify(NewDealName.text)}},\n   \"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n   \"amount\":{{JSON.stringify(NewAmount.text)}},\n   \"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n   \"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n   \"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}}\n}"
+                "body": "{\n   \"name\":{{JSON.stringify(NewDealName.text)}},\n   \"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n   \"amount\":{{JSON.stringify(NewAmount.text)}},\n   \"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n   \"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n   \"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}},\n\t\"dealWithContact\":{{JSON.stringify(DealWithContact.selectedOptionValue)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -9078,13 +9078,14 @@
                 "JSON.stringify(NewAmount.text)",
                 "JSON.stringify(NewDealOwner.selectedOptionValue)",
                 "JSON.stringify(NewCloseDate.selectedDate)",
-                "JSON.stringify(NewPriority.selectedOptionLabel)"
+                "JSON.stringify(NewPriority.selectedOptionLabel)",
+                "JSON.stringify(DealWithContact.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T16:17:31.421Z",
-        "updatedAt": "2024-03-07T16:43:13.213Z",
+        "updatedAt": "2024-03-13T10:08:14.464Z",
         "deleted": false,
         "policies": [
             {
@@ -9532,7 +9533,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T15:58:20.106Z",
-        "updatedAt": "2024-03-12T10:30:58.443Z",
+        "updatedAt": "2024-03-13T09:54:16.486Z",
         "deleted": false,
         "policies": [
             {
@@ -9627,7 +9628,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T16:33:28.636Z",
-        "updatedAt": "2024-03-12T11:03:10.608Z",
+        "updatedAt": "2024-03-13T09:53:39.162Z",
         "deleted": false,
         "policies": [
             {
@@ -10754,7 +10755,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T10:31:03.473Z",
-        "updatedAt": "2024-03-12T11:59:06.441Z",
+        "updatedAt": "2024-03-13T09:30:30.722Z",
         "deleted": false,
         "policies": [
             {
@@ -10976,7 +10977,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T13:31:15.412Z",
-        "updatedAt": "2024-03-12T13:52:45.180Z",
+        "updatedAt": "2024-03-13T09:25:32.830Z",
         "deleted": false,
         "policies": [
             {
@@ -11055,7 +11056,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T15:15:07.891Z",
-        "updatedAt": "2024-03-12T15:22:54.955Z",
+        "updatedAt": "2024-03-13T09:31:00.827Z",
         "deleted": false,
         "policies": [
             {
@@ -11396,86 +11397,6 @@
         ]
     },
     {
-        "_id": "65f09ec5c273cc13c1789151",
-        "applicationId": "jetsondashboard",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "getContact",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getContact"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "Deal",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "GET",
-                "headers": [],
-                "queryParameters": [
-                    {
-                        "key": "contactID",
-                        "value": "{{main.URL.queryParams.contactID}}"
-                    }
-                ],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": ""
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "datasourceUrl"
-                },
-                {
-                    "key": "queryParameters[0].value"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nodeUrl",
-                "main.URL.queryParams.contactID"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T18:28:21.836Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
         "_id": "65f09ec5c273cc13c1789152",
         "applicationId": "jetsondashboard",
         "organizationId": "Org",
@@ -11526,7 +11447,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T18:47:00.166Z",
+        "updatedAt": "2024-03-13T12:47:01.598Z",
         "deleted": false,
         "policies": [
             {
@@ -11601,7 +11522,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T18:58:24.759Z",
+        "updatedAt": "2024-03-13T12:47:03.577Z",
         "deleted": false,
         "policies": [
             {
@@ -11680,7 +11601,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-12T18:28:21.836Z",
+        "updatedAt": "2024-03-13T12:46:57.113Z",
         "deleted": false,
         "policies": [
             {
@@ -11759,7 +11680,229 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:37:58.115Z",
-        "updatedAt": "2024-03-12T19:13:35.343Z",
+        "updatedAt": "2024-03-13T12:46:59.609Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f1724bc273cc13c1789156",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getContactDeals",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getContactDeals"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Contact",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "contactID",
+                        "value": "{{main.URL.queryParams.contactID}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.URL.queryParams.contactID"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-13T09:30:51.115Z",
+        "updatedAt": "2024-03-13T09:36:48.244Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f177d7c273cc13c1789157",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getContacts",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getContacts"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Deals",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "responseType",
+                        "value": "forSelector"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-13T09:54:31.430Z",
+        "updatedAt": "2024-03-13T10:00:32.626Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f19bd7c273cc13c1789158",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getContacts",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getContacts"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Deal",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "responseType",
+                        "value": "forSelector"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-13T12:28:07.786Z",
+        "updatedAt": "2024-03-13T12:46:54.382Z",
         "deleted": false,
         "policies": [
             {
