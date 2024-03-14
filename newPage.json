@@ -16309,10 +16309,10 @@
                                                         "label": "⠀📂",
                                                         "computedValue": "",
                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                        "buttonColor": "#38AFF4",
+                                                        "buttonColor": "#2E3D49",
                                                         "menuColor": "#03B365",
                                                         "labelColor": "#FFFFFF",
-                                                        "iconName": "folder-open",
+                                                        "iconName": "folder-shared-open",
                                                         "boxShadow": "NONE",
                                                         "buttonVariant": "TERTIARY",
                                                         "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Open'))}}",
@@ -16334,10 +16334,10 @@
                                                         "label": "⠀📂",
                                                         "computedValue": "",
                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                        "buttonColor": "#38AFF4",
+                                                        "buttonColor": "#2E3D49",
                                                         "menuColor": "#03B365",
                                                         "labelColor": "#FFFFFF",
-                                                        "iconName": "folder-open",
+                                                        "iconName": "folder-shared-open",
                                                         "boxShadow": "VARIANT1",
                                                         "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Open'))}}"
                                                     }
@@ -21303,7 +21303,7 @@
                                                                     },
                                                                     "IconButton2": {
                                                                         "isVisible": true,
-                                                                        "iconName": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'folder-open';\n              })();\n            })}}",
+                                                                        "iconName": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'folder-shared-open';\n              })();\n            })}}",
                                                                         "borderRadius": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'SHARP';\n              })();\n            })}}",
                                                                         "boxShadow": "NONE",
                                                                         "buttonColor": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '#2E3D49';\n              })();\n            })}}",
@@ -21473,7 +21473,7 @@
                                                                                             },
                                                                                             {
                                                                                                 "isVisible": true,
-                                                                                                "iconName": "folder-open",
+                                                                                                "iconName": "folder-shared-open",
                                                                                                 "borderRadius": "SHARP",
                                                                                                 "boxShadow": "NONE",
                                                                                                 "buttonColor": "#2E3D49",
@@ -21732,7 +21732,7 @@
                                                                     },
                                                                     "IconButton2Copy": {
                                                                         "isVisible": true,
-                                                                        "iconName": "folder-open",
+                                                                        "iconName": "{{List1Copy.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'folder-shared-open';\n              })();\n            })}}",
                                                                         "borderRadius": "SHARP",
                                                                         "boxShadow": "NONE",
                                                                         "buttonColor": "#2E3D49",
@@ -21999,7 +21999,7 @@
                                                                                             },
                                                                                             {
                                                                                                 "isVisible": true,
-                                                                                                "iconName": "folder-open",
+                                                                                                "iconName": "folder-shared-open",
                                                                                                 "borderRadius": "SHARP",
                                                                                                 "boxShadow": "NONE",
                                                                                                 "buttonColor": "#2E3D49",
