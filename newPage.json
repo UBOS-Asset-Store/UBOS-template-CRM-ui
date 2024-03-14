@@ -12963,6 +12963,15 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.industry.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.contactOwnerEmail.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "derivedColumns.customColumn2.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -13014,7 +13023,7 @@
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "createdAt",
+                                                        "label": "created at",
                                                         "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.createdAt))}}"
                                                     },
                                                     "email": {
@@ -13044,7 +13053,7 @@
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
-                                                        "isVisible": true,
+                                                        "isVisible": false,
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
@@ -13061,7 +13070,7 @@
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
-                                                        "isVisible": true,
+                                                        "isVisible": false,
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
@@ -13078,7 +13087,7 @@
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
-                                                        "isVisible": true,
+                                                        "isVisible": false,
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
@@ -13099,7 +13108,7 @@
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "phoneNumber",
+                                                        "label": "phone",
                                                         "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.phoneNumber))}}"
                                                     },
                                                     "dealStage": {
@@ -13112,7 +13121,7 @@
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
-                                                        "isVisible": true,
+                                                        "isVisible": false,
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
@@ -13133,7 +13142,7 @@
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
-                                                        "label": "leadStatus",
+                                                        "label": "lead status",
                                                         "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.leadStatus))}}"
                                                     },
                                                     "country": {
@@ -13201,12 +13210,47 @@
                                                         "label": "⠀👁",
                                                         "computedValue": "",
                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                        "buttonColor": "#38AFF4",
+                                                        "buttonColor": "#2E3D49",
                                                         "menuColor": "#03B365",
                                                         "labelColor": "#FFFFFF",
                                                         "iconName": "eye-open",
                                                         "buttonVariant": "TERTIARY",
                                                         "onClick": "{{navigateTo('Contact',{contactID: Table1.selectedRow._id},'SAME_WINDOW')}}"
+                                                    },
+                                                    "contactOwnerEmail": {
+                                                        "index": 13,
+                                                        "width": 150,
+                                                        "id": "contactOwnerEmail",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "contact owner email",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.contactOwnerEmail))}}"
+                                                    },
+                                                    "customColumn2": {
+                                                        "index": 15,
+                                                        "width": 150,
+                                                        "id": "customColumn2",
+                                                        "columnType": "text",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "name",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( \n`${currentRow.firstName} ${currentRow.lastName}`\n))}}",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#03B365",
+                                                        "menuColor": "#03B365",
+                                                        "labelColor": "#FFFFFF"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -13224,12 +13268,30 @@
                                                         "label": "⠀👁",
                                                         "computedValue": "",
                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                        "buttonColor": "#38AFF4",
+                                                        "buttonColor": "#2E3D49",
                                                         "menuColor": "#03B365",
                                                         "labelColor": "#FFFFFF",
                                                         "iconName": "eye-open",
                                                         "buttonVariant": "TERTIARY",
                                                         "onClick": "{{navigateTo('Contact',{contactID: Table1.selectedRow._id},'NEW_WINDOW')}}"
+                                                    },
+                                                    "customColumn2": {
+                                                        "index": 15,
+                                                        "width": 150,
+                                                        "id": "customColumn2",
+                                                        "columnType": "text",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "name",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( \n`${currentRow.firstName} ${currentRow.lastName}`\n))}}",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#03B365",
+                                                        "menuColor": "#03B365",
+                                                        "labelColor": "#FFFFFF"
                                                     }
                                                 },
                                                 "tableData": "{{getContacts.data}}",
@@ -13237,23 +13299,26 @@
                                                     "task": 245,
                                                     "step": 62,
                                                     "status": 75,
-                                                    "customColumn1": 60
+                                                    "customColumn1": 60,
+                                                    "customColumn2": 187
                                                 },
                                                 "columnOrder": [
                                                     "customColumn1",
+                                                    "customColumn2",
                                                     "firstName",
                                                     "lastName",
-                                                    "contactOwner",
                                                     "email",
                                                     "phoneNumber",
-                                                    "dealStage",
                                                     "leadStatus",
-                                                    "createdAt",
+                                                    "contactOwnerEmail",
+                                                    "_id",
+                                                    "deleted",
+                                                    "contactOwner",
+                                                    "dealStage",
                                                     "country",
                                                     "city",
                                                     "industry",
-                                                    "_id",
-                                                    "deleted"
+                                                    "createdAt"
                                                 ],
                                                 "enableClientSideSearch": true,
                                                 "isVisibleSearch": true,
