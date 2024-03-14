@@ -3790,7 +3790,7 @@
                                             "iconName": "log-out",
                                             "borderRadius": "ROUNDED",
                                             "boxShadow": "NONE",
-                                            "buttonColor": "#107de1",
+                                            "buttonColor": "#2E3D49",
                                             "buttonVariant": "SECONDARY",
                                             "isDisabled": false,
                                             "widgetName": "IconButton1",

@@ -2311,7 +2311,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Create Page",
-                                                "buttonColor": "#66aff2",
+                                                "buttonColor": "#a7b29c",
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button1",
@@ -2333,7 +2333,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 12,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "g9sb039o8n",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -2570,7 +2570,7 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 6,
+                                                "topRow": 4,
                                                 "bottomRow": 60,
                                                 "parentId": "g9sb039o8n",
                                                 "dynamicTriggerPathList": [
@@ -2589,7 +2589,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Сreate Nested Menu",
-                                                "buttonColor": "#107de1",
+                                                "buttonColor": "#a7b29c",
                                                 "buttonVariant": "TERTIARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button5",
@@ -2611,7 +2611,7 @@
                                                 "leftColumn": 12,
                                                 "rightColumn": 24,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "g9sb039o8n",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -2644,7 +2644,7 @@
                                                         "label": "Edit Page",
                                                         "id": "groupButton1",
                                                         "widgetId": "",
-                                                        "buttonColor": "#107de1",
+                                                        "buttonColor": "#375465",
                                                         "buttonType": "SIMPLE",
                                                         "placement": "CENTER",
                                                         "isVisible": true,
@@ -2656,7 +2656,7 @@
                                                     "groupButton2": {
                                                         "label": "Delete Page",
                                                         "id": "groupButton2",
-                                                        "buttonColor": "#DD4B34",
+                                                        "buttonColor": "#b32624",
                                                         "buttonType": "SIMPLE",
                                                         "placement": "CENTER",
                                                         "widgetId": "",
@@ -2682,7 +2682,7 @@
                                                 "leftColumn": 39,
                                                 "rightColumn": 64,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "g9sb039o8n",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -4674,7 +4674,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Create Group",
-                                                "buttonColor": "#66aff2",
+                                                "buttonColor": "#a7b29c",
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button2Copy",
@@ -4696,7 +4696,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 11,
                                                 "topRow": 57,
-                                                "bottomRow": 63,
+                                                "bottomRow": 61,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -4858,7 +4858,7 @@
                                                         "label": "Delete",
                                                         "computedValue": "",
                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                        "buttonColor": "#DD4B34",
+                                                        "buttonColor": "#b32624",
                                                         "menuColor": "#03B365",
                                                         "labelColor": "#FFFFFF",
                                                         "iconName": "trash",
@@ -4900,7 +4900,7 @@
                                                         "label": "Delete",
                                                         "computedValue": "",
                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                        "buttonColor": "#DD4B34",
+                                                        "buttonColor": "#b32624",
                                                         "menuColor": "#03B365",
                                                         "labelColor": "#FFFFFF",
                                                         "iconName": "trash",
@@ -4947,7 +4947,7 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 64,
+                                                "topRow": 61,
                                                 "bottomRow": 112,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicTriggerPathList": [
@@ -4966,7 +4966,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Create Attribute",
-                                                "buttonColor": "#107de1",
+                                                "buttonColor": "#a7b29c",
                                                 "buttonVariant": "SECONDARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button1Copy",
@@ -4988,7 +4988,7 @@
                                                 "leftColumn": 11,
                                                 "rightColumn": 23,
                                                 "topRow": 57,
-                                                "bottomRow": 63,
+                                                "bottomRow": 61,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -5164,7 +5164,7 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 6,
+                                                "topRow": 4,
                                                 "bottomRow": 50,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicTriggerPathList": [
@@ -5180,7 +5180,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Create Role",
-                                                "buttonColor": "#2E3D49",
+                                                "buttonColor": "#a7b29c",
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button1",
@@ -5202,7 +5202,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 11,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -5227,7 +5227,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Add Page Access to the Role",
-                                                "buttonColor": "#107de1",
+                                                "buttonColor": "#a7b29c",
                                                 "buttonVariant": "SECONDARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button2",
@@ -5249,7 +5249,7 @@
                                                 "leftColumn": 11,
                                                 "rightColumn": 23,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -5274,7 +5274,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Delete Group",
-                                                "buttonColor": "#DD4B34",
+                                                "buttonColor": "#b32624",
                                                 "buttonVariant": "SECONDARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button8",
@@ -5296,7 +5296,7 @@
                                                 "leftColumn": 52,
                                                 "rightColumn": 64,
                                                 "topRow": 57,
-                                                "bottomRow": 63,
+                                                "bottomRow": 61,
                                                 "parentId": "5goubwl3lo",
                                                 "borderRadius": "ROUNDED",
                                                 "dynamicBindingPathList": [
@@ -5321,7 +5321,7 @@
                                             {
                                                 "isVisible": true,
                                                 "label": "Delete",
-                                                "menuColor": "#DD4B34",
+                                                "menuColor": "#b32624",
                                                 "menuVariant": "SECONDARY",
                                                 "placement": "CENTER",
                                                 "isCompact": false,
@@ -5367,7 +5367,7 @@
                                                 "leftColumn": 52,
                                                 "rightColumn": 64,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -7374,7 +7374,7 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 6,
+                                                "topRow": 4,
                                                 "bottomRow": 73,
                                                 "parentId": "h1kagy1itu",
                                                 "dynamicTriggerPathList": [
@@ -7398,7 +7398,7 @@
                                                         "label": "Edit User",
                                                         "id": "groupButton1",
                                                         "widgetId": "",
-                                                        "buttonColor": "#107de1",
+                                                        "buttonColor": "#375465",
                                                         "buttonType": "SIMPLE",
                                                         "placement": "CENTER",
                                                         "isVisible": true,
@@ -7410,7 +7410,7 @@
                                                     "groupButton2": {
                                                         "label": "Delete User",
                                                         "id": "groupButton2",
-                                                        "buttonColor": "#DD4B34",
+                                                        "buttonColor": "#b32624",
                                                         "buttonType": "SIMPLE",
                                                         "placement": "CENTER",
                                                         "widgetId": "",
@@ -7436,7 +7436,7 @@
                                                 "leftColumn": 40,
                                                 "rightColumn": 64,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "h1kagy1itu",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -7470,7 +7470,7 @@
                                                 "isVisible": true,
                                                 "animateLoading": true,
                                                 "text": "Create User",
-                                                "buttonColor": "#66aff2",
+                                                "buttonColor": "#a7b29c",
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button5",
@@ -7492,7 +7492,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 12,
                                                 "topRow": 0,
-                                                "bottomRow": 6,
+                                                "bottomRow": 4,
                                                 "parentId": "h1kagy1itu",
                                                 "borderRadius": "ROUNDED",
                                                 "dynamicBindingPathList": [
@@ -8687,36 +8687,6 @@
                                                         "children": [
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "Template settings",
-                                                                "fontSize": "HEADING1",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "CENTER",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text12",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "22qwb69yex",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "ylqjfm1bcx",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 0,
-                                                                "bottomRow": 6,
-                                                                "parentId": "x0opkfulqk",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": [],
-                                                                "backgroundColor": "#D5E8FA"
-                                                            },
-                                                            {
-                                                                "isVisible": true,
                                                                 "backgroundColor": "#FFFFFF",
                                                                 "widgetName": "Container5",
                                                                 "containerStyle": "card",
@@ -8898,8 +8868,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 8,
-                                                                "bottomRow": 26,
+                                                                "topRow": 0,
+                                                                "bottomRow": 18,
                                                                 "parentId": "x0opkfulqk",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -9140,8 +9110,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 28,
-                                                                "bottomRow": 51,
+                                                                "topRow": 18,
+                                                                "bottomRow": 41,
                                                                 "parentId": "x0opkfulqk",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -9224,8 +9194,8 @@
                                                                                 "parentRowSpace": 10,
                                                                                 "leftColumn": 0,
                                                                                 "rightColumn": 14,
-                                                                                "topRow": 6,
-                                                                                "bottomRow": 22,
+                                                                                "topRow": 5,
+                                                                                "bottomRow": 21,
                                                                                 "parentId": "jlyosovwtp",
                                                                                 "dynamicBindingPathList": [
                                                                                     {
@@ -9263,10 +9233,10 @@
                                                                                 "isLoading": false,
                                                                                 "parentColumnSpace": 15.0546875,
                                                                                 "parentRowSpace": 10,
-                                                                                "leftColumn": 14,
-                                                                                "rightColumn": 33,
-                                                                                "topRow": 10,
-                                                                                "bottomRow": 17,
+                                                                                "leftColumn": 15,
+                                                                                "rightColumn": 34,
+                                                                                "topRow": 5,
+                                                                                "bottomRow": 12,
                                                                                 "parentId": "jlyosovwtp",
                                                                                 "text": "",
                                                                                 "dynamicBindingPathList": [
@@ -9306,7 +9276,7 @@
                                                                                 "key": "e9obzvplvo",
                                                                                 "iconSVG": "/static/media/icon.cca02633.svg",
                                                                                 "buttonVariant": "PRIMARY",
-                                                                                "buttonColor": "#66aff2",
+                                                                                "buttonColor": "#a7b29c",
                                                                                 "disabledWhenInvalid": "",
                                                                                 "resetFormOnClick": false,
                                                                                 "widgetId": "ntsa8az994",
@@ -9314,8 +9284,8 @@
                                                                                 "isLoading": false,
                                                                                 "leftColumn": 48,
                                                                                 "rightColumn": 64,
-                                                                                "topRow": 11,
-                                                                                "bottomRow": 17,
+                                                                                "topRow": 16,
+                                                                                "bottomRow": 22,
                                                                                 "parentId": "jlyosovwtp",
                                                                                 "dynamicBindingPathList": [
                                                                                     {
@@ -9372,8 +9342,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 53,
-                                                                "bottomRow": 77,
+                                                                "topRow": 41,
+                                                                "bottomRow": 65,
                                                                 "parentId": "x0opkfulqk",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -9388,7 +9358,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 336.421875,
                                                         "topRow": 0,
-                                                        "bottomRow": 860,
+                                                        "bottomRow": 670,
                                                         "parentId": "y31achnryt"
                                                     }
                                                 ],
@@ -9406,12 +9376,12 @@
                                                 "leftColumn": 3,
                                                 "rightColumn": 63,
                                                 "topRow": 0,
-                                                "bottomRow": 87,
+                                                "bottomRow": 67,
                                                 "parentId": "ytf4anf170",
                                                 "classStyle": "center_container",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [],
-                                                "shouldScrollContents": true
+                                                "shouldScrollContents": false
                                             }
                                         ],
                                         "minHeight": 400,
@@ -9423,7 +9393,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 421.5,
                                         "topRow": 0,
-                                        "bottomRow": 890,
+                                        "bottomRow": 690,
                                         "parentId": "m6u0cuyp4i"
                                     }
                                 ],
@@ -9443,11 +9413,11 @@
                                 "leftColumn": 6,
                                 "rightColumn": 64,
                                 "topRow": 8,
-                                "bottomRow": 96,
+                                "bottomRow": 78,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
-                                "shouldScrollContents": true
+                                "shouldScrollContents": false
                             },
                             {
                                 "width": 670,
@@ -9921,7 +9891,6 @@
                         "Canvas16",
                         "Form2",
                         "Canvas22",
-                        "Text12",
                         "Container5",
                         "Canvas23",
                         "Text13",

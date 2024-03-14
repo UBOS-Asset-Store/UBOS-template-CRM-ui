@@ -8344,7 +8344,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-02-08T15:17:59.377Z",
-        "updatedAt": "2024-02-21T16:16:45.720Z",
+        "updatedAt": "2024-03-14T15:45:59.237Z",
         "deleted": false,
         "policies": [
             {
@@ -8611,11 +8611,16 @@
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
-                "headers": [],
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
                 "queryParameters": [],
                 "bodyFormData": [],
                 "formData": {
-                    "apiContentType": "none"
+                    "apiContentType": "application/json"
                 },
                 "pluginSpecifiedTemplates": [
                     {
@@ -8637,7 +8642,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-02-21T15:14:48.315Z",
-        "updatedAt": "2024-02-21T16:16:48.990Z",
+        "updatedAt": "2024-03-14T15:46:04.263Z",
         "deleted": false,
         "policies": [
             {
