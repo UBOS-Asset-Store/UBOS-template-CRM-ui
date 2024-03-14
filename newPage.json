@@ -17546,9 +17546,6 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn2.menuButtonLabel"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.priority.textColor"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -17635,8 +17632,8 @@
                                                                         "isCellVisible": true,
                                                                         "isDerived": false,
                                                                         "label": "priority",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.priority))}}",
-                                                                        "textColor": "{{TableDeals.sanitizedTableData.map((currentRow) => ( \n() => \n(currentRow.priority == 'Low' && '#38AFF4')\n\n(currentRow.priority == 'Medium' && '#FFC13D')\n))}}"
+                                                                        "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.priority))}}",
+                                                                        "textColor": ""
                                                                     },
                                                                     "dealID": {
                                                                         "index": 0,
@@ -17703,14 +17700,14 @@
                                                                         "label": "⠀👁",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#38AFF4",
+                                                                        "buttonColor": "#2E3D49",
                                                                         "menuColor": "#03B365",
                                                                         "labelColor": "#FFFFFF",
                                                                         "iconName": "eye-open",
                                                                         "buttonVariant": "TERTIARY",
                                                                         "boxShadow": "NONE",
                                                                         "borderRadius": "SHARP",
-                                                                        "onClick": "{{navigateTo('Deal',{dealID: Table1Copy.selectedRow.dealID})}}"
+                                                                        "onClick": "{{navigateTo('Deal',{dealID: TableDeals.selectedRow.dealID})}}"
                                                                     },
                                                                     "dealWithContactID": {
                                                                         "index": 8,
@@ -17791,7 +17788,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "change stage",
+                                                                        "label": "deal stage",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#03B365",
@@ -17893,7 +17890,7 @@
                                                                             }
                                                                         },
                                                                         "borderRadius": "ROUNDED",
-                                                                        "menuVariant": "PRIMARY",
+                                                                        "menuVariant": "SECONDARY",
                                                                         "iconAlign": "left"
                                                                     }
                                                                 },
@@ -17912,7 +17909,7 @@
                                                                         "label": "⠀👁",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#38AFF4",
+                                                                        "buttonColor": "#2E3D49",
                                                                         "menuColor": "#03B365",
                                                                         "labelColor": "#FFFFFF",
                                                                         "iconName": "eye-open",
@@ -17931,7 +17928,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "change stage",
+                                                                        "label": "deal stage",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#03B365",
@@ -18025,7 +18022,7 @@
                                                                             }
                                                                         },
                                                                         "borderRadius": "ROUNDED",
-                                                                        "menuVariant": "PRIMARY",
+                                                                        "menuVariant": "SECONDARY",
                                                                         "iconAlign": "left"
                                                                     }
                                                                 },
