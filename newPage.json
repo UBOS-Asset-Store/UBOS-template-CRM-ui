@@ -17259,6 +17259,706 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
+                                                "animateLoading": true,
+                                                "defaultSelectedRow": "0",
+                                                "label": "Data",
+                                                "widgetName": "TableDeals",
+                                                "searchKey": "",
+                                                "textSize": "PARAGRAPH",
+                                                "horizontalAlignment": "LEFT",
+                                                "verticalAlignment": "CENTER",
+                                                "totalRecordsCount": 0,
+                                                "defaultPageSize": 0,
+                                                "isShowLoading": true,
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "tableData"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.name.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.stage.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.amount.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.closeDate.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.priority.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.dealID.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.ownerID.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.ownerEmail.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.dealWithContactID.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.dealWithContactEmail.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.dealWithContactFirstName.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.dealWithContactLastName.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "derivedColumns.customColumn2.menuButtonLabel"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuButtonLabel"
+                                                    },
+                                                    {
+                                                        "key": "derivedColumns.customColumn3.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn3.computedValue"
+                                                    }
+                                                ],
+                                                "primaryColumns": {
+                                                    "name": {
+                                                        "index": 3,
+                                                        "width": 150,
+                                                        "id": "name",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "name",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                                                    },
+                                                    "stage": {
+                                                        "index": 4,
+                                                        "width": 150,
+                                                        "id": "stage",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "stage",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}"
+                                                    },
+                                                    "amount": {
+                                                        "index": 5,
+                                                        "width": 150,
+                                                        "id": "amount",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "amount",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.amount))}}"
+                                                    },
+                                                    "closeDate": {
+                                                        "index": 7,
+                                                        "width": 150,
+                                                        "id": "closeDate",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "closeDate",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.closeDate))}}"
+                                                    },
+                                                    "priority": {
+                                                        "index": 8,
+                                                        "width": 150,
+                                                        "id": "priority",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "priority",
+                                                        "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.priority))}}",
+                                                        "textColor": ""
+                                                    },
+                                                    "dealID": {
+                                                        "index": 0,
+                                                        "width": 150,
+                                                        "id": "dealID",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "dealID",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealID))}}"
+                                                    },
+                                                    "ownerID": {
+                                                        "index": 6,
+                                                        "width": 150,
+                                                        "id": "ownerID",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "ownerID",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerID))}}"
+                                                    },
+                                                    "ownerEmail": {
+                                                        "index": 7,
+                                                        "width": 150,
+                                                        "id": "ownerEmail",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "owner email",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerEmail))}}"
+                                                    },
+                                                    "customColumn1": {
+                                                        "index": 8,
+                                                        "width": 150,
+                                                        "id": "customColumn1",
+                                                        "columnType": "iconButton",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "⠀👁",
+                                                        "computedValue": "",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#2E3D49",
+                                                        "menuColor": "#03B365",
+                                                        "labelColor": "#FFFFFF",
+                                                        "iconName": "eye-open",
+                                                        "buttonVariant": "TERTIARY",
+                                                        "boxShadow": "NONE",
+                                                        "borderRadius": "SHARP",
+                                                        "onClick": "{{navigateTo('Deal',{dealID: TableDeals.selectedRow.dealID})}}"
+                                                    },
+                                                    "dealWithContactID": {
+                                                        "index": 8,
+                                                        "width": 150,
+                                                        "id": "dealWithContactID",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "dealWithContactID",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactID))}}"
+                                                    },
+                                                    "dealWithContactEmail": {
+                                                        "index": 9,
+                                                        "width": 150,
+                                                        "id": "dealWithContactEmail",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "dealWithContactEmail",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactEmail))}}"
+                                                    },
+                                                    "dealWithContactFirstName": {
+                                                        "index": 10,
+                                                        "width": 150,
+                                                        "id": "dealWithContactFirstName",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "dealWithContactFirstName",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactFirstName))}}"
+                                                    },
+                                                    "dealWithContactLastName": {
+                                                        "index": 11,
+                                                        "width": 150,
+                                                        "id": "dealWithContactLastName",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": false,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "dealWithContactLastName",
+                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactLastName))}}"
+                                                    },
+                                                    "customColumn2": {
+                                                        "index": 13,
+                                                        "width": 150,
+                                                        "id": "customColumn2",
+                                                        "columnType": "menuButton",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "deal stage",
+                                                        "computedValue": "",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#03B365",
+                                                        "menuColor": "#2E3D49",
+                                                        "labelColor": "#FFFFFF",
+                                                        "iconName": "property",
+                                                        "menuButtonLabel": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}",
+                                                        "menuItems": {
+                                                            "menuItemltbb4nwn3r": {
+                                                                "id": "menuItemltbb4nwn3r",
+                                                                "index": 0,
+                                                                "label": "Outreach",
+                                                                "widgetId": "eq46i2mtym",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Outreach');\nEditDeal.run(() => getDeals.run(), () => {})\n}}",
+                                                                "textColor": ""
+                                                            },
+                                                            "menuItemyh9cbqcbbe": {
+                                                                "id": "menuItemyh9cbqcbbe",
+                                                                "index": 1,
+                                                                "label": "Qualifying ICP",
+                                                                "widgetId": "inveqjht32",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Qualifying ICP');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItem5t1p7y7nnz": {
+                                                                "id": "menuItem5t1p7y7nnz",
+                                                                "index": 2,
+                                                                "label": "Appointment scheduled",
+                                                                "widgetId": "d1qm4n7c91",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Appointment scheduled');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItemqzfwdjs5q9": {
+                                                                "id": "menuItemqzfwdjs5q9",
+                                                                "index": 3,
+                                                                "label": "Presentation made",
+                                                                "widgetId": "gxexczxnk9",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Presentation made');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItembjcdo6930v": {
+                                                                "id": "menuItembjcdo6930v",
+                                                                "index": 4,
+                                                                "label": "Follow up",
+                                                                "widgetId": "s56d7fjt1l",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Follow up');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItemlp8zg6iyjj": {
+                                                                "id": "menuItemlp8zg6iyjj",
+                                                                "index": 5,
+                                                                "label": "Testing Platform",
+                                                                "widgetId": "cpu9sdzyc6",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Testing Platform');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItemv7fr9g8c33": {
+                                                                "id": "menuItemv7fr9g8c33",
+                                                                "index": 6,
+                                                                "label": "Objections",
+                                                                "widgetId": "wcj0j233a1",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Objections');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItemsbvnpdkm7v": {
+                                                                "id": "menuItemsbvnpdkm7v",
+                                                                "index": 7,
+                                                                "label": "Proposal Sent",
+                                                                "widgetId": "y9q4vi95c6",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Proposal Sent');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItem3u1fjeh8ah": {
+                                                                "id": "menuItem3u1fjeh8ah",
+                                                                "index": 8,
+                                                                "label": "Closed won",
+                                                                "widgetId": "2dld18vh5z",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Closed won');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            },
+                                                            "menuItemrfj33rmf8w": {
+                                                                "id": "menuItemrfj33rmf8w",
+                                                                "index": 9,
+                                                                "label": "Closed - their lost",
+                                                                "widgetId": "cp0l3a0pub",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{\nstoreValue('newDealStage','Closed - their lost');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
+                                                            }
+                                                        },
+                                                        "borderRadius": "ROUNDED",
+                                                        "menuVariant": "TERTIARY",
+                                                        "iconAlign": "left"
+                                                    },
+                                                    "customColumn3": {
+                                                        "index": 14,
+                                                        "width": 150,
+                                                        "id": "customColumn3",
+                                                        "columnType": "text",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "deal with",
+                                                        "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( \n`${currentRow.dealWithContactFirstName} ${currentRow.dealWithContactLastName} ${currentRow.dealWithContactEmail}`\n))}}",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#03B365",
+                                                        "menuColor": "#03B365",
+                                                        "labelColor": "#FFFFFF"
+                                                    }
+                                                },
+                                                "derivedColumns": {
+                                                    "customColumn1": {
+                                                        "index": 8,
+                                                        "width": 150,
+                                                        "id": "customColumn1",
+                                                        "columnType": "iconButton",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "⠀👁",
+                                                        "computedValue": "",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#2E3D49",
+                                                        "menuColor": "#03B365",
+                                                        "labelColor": "#FFFFFF",
+                                                        "iconName": "eye-open",
+                                                        "buttonVariant": "TERTIARY",
+                                                        "boxShadow": "NONE",
+                                                        "borderRadius": "SHARP"
+                                                    },
+                                                    "customColumn2": {
+                                                        "index": 13,
+                                                        "width": 150,
+                                                        "id": "customColumn2",
+                                                        "columnType": "menuButton",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "deal stage",
+                                                        "computedValue": "",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#03B365",
+                                                        "menuColor": "#2E3D49",
+                                                        "labelColor": "#FFFFFF",
+                                                        "iconName": "property",
+                                                        "menuButtonLabel": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}",
+                                                        "menuItems": {
+                                                            "menuItemltbb4nwn3r": {
+                                                                "id": "menuItemltbb4nwn3r",
+                                                                "index": 0,
+                                                                "label": "Outreach",
+                                                                "widgetId": "eq46i2mtym",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{storeValue('newDealStage','Outreach',)}}",
+                                                                "textColor": ""
+                                                            },
+                                                            "menuItemyh9cbqcbbe": {
+                                                                "id": "menuItemyh9cbqcbbe",
+                                                                "index": 1,
+                                                                "label": "Qualifying ICP",
+                                                                "widgetId": "inveqjht32",
+                                                                "isDisabled": false,
+                                                                "isVisible": true,
+                                                                "onClick": "{{storeValue('newDealStage','Qualifying ICP')}}"
+                                                            },
+                                                            "menuItem5t1p7y7nnz": {
+                                                                "id": "menuItem5t1p7y7nnz",
+                                                                "index": 2,
+                                                                "label": "Appointment scheduled",
+                                                                "widgetId": "d1qm4n7c91",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            },
+                                                            "menuItemqzfwdjs5q9": {
+                                                                "id": "menuItemqzfwdjs5q9",
+                                                                "index": 3,
+                                                                "label": "Presentation made",
+                                                                "widgetId": "gxexczxnk9",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            },
+                                                            "menuItembjcdo6930v": {
+                                                                "id": "menuItembjcdo6930v",
+                                                                "index": 4,
+                                                                "label": "Follow up",
+                                                                "widgetId": "s56d7fjt1l",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            },
+                                                            "menuItemlp8zg6iyjj": {
+                                                                "id": "menuItemlp8zg6iyjj",
+                                                                "index": 5,
+                                                                "label": "Testing Platform",
+                                                                "widgetId": "cpu9sdzyc6",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            },
+                                                            "menuItemv7fr9g8c33": {
+                                                                "id": "menuItemv7fr9g8c33",
+                                                                "index": 6,
+                                                                "label": "Objections",
+                                                                "widgetId": "wcj0j233a1",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            },
+                                                            "menuItemsbvnpdkm7v": {
+                                                                "id": "menuItemsbvnpdkm7v",
+                                                                "index": 7,
+                                                                "label": "Proposal Sent",
+                                                                "widgetId": "y9q4vi95c6",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            },
+                                                            "menuItem3u1fjeh8ah": {
+                                                                "id": "menuItem3u1fjeh8ah",
+                                                                "index": 8,
+                                                                "label": "Closed won",
+                                                                "widgetId": "2dld18vh5z",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            },
+                                                            "menuItemrfj33rmf8w": {
+                                                                "id": "menuItemrfj33rmf8w",
+                                                                "index": 9,
+                                                                "label": "Closed - their lost",
+                                                                "widgetId": "cp0l3a0pub",
+                                                                "isDisabled": false,
+                                                                "isVisible": true
+                                                            }
+                                                        },
+                                                        "borderRadius": "ROUNDED",
+                                                        "menuVariant": "TERTIARY",
+                                                        "iconAlign": "left"
+                                                    },
+                                                    "customColumn3": {
+                                                        "index": 14,
+                                                        "width": 150,
+                                                        "id": "customColumn3",
+                                                        "columnType": "text",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": true,
+                                                        "label": "deal with",
+                                                        "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( \n`${currentRow.dealWithContactFirstName} ${currentRow.dealWithContactLastName} ${currentRow.dealWithContactEmail}`\n))}}",
+                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                        "buttonColor": "#03B365",
+                                                        "menuColor": "#03B365",
+                                                        "labelColor": "#FFFFFF"
+                                                    }
+                                                },
+                                                "tableData": "{{getDeals.data}}",
+                                                "columnSizeMap": {
+                                                    "task": 245,
+                                                    "step": 62,
+                                                    "status": 75,
+                                                    "customColumn1": 60,
+                                                    "customColumn2": 218,
+                                                    "customColumn3": 288
+                                                },
+                                                "columnOrder": [
+                                                    "customColumn1",
+                                                    "name",
+                                                    "amount",
+                                                    "customColumn2",
+                                                    "dealID",
+                                                    "stage",
+                                                    "priority",
+                                                    "closeDate",
+                                                    "customColumn3",
+                                                    "ownerEmail",
+                                                    "ownerID",
+                                                    "dealWithContactID",
+                                                    "dealWithContactEmail",
+                                                    "dealWithContactFirstName",
+                                                    "dealWithContactLastName"
+                                                ],
+                                                "enableClientSideSearch": true,
+                                                "isVisibleSearch": true,
+                                                "isVisibleFilters": true,
+                                                "isVisibleDownload": true,
+                                                "isVisiblePagination": true,
+                                                "isSortable": true,
+                                                "delimiter": ",",
+                                                "version": 3,
+                                                "type": "TABLE_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Table",
+                                                "key": "wwz5l6l3u9",
+                                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                                                "widgetId": "7gj8b9cg2j",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 14.017578125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 9,
+                                                "bottomRow": 67,
+                                                "parentId": "fpla4b15m9",
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "primaryColumns.customColumn1.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemltbb4nwn3r.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemyh9cbqcbbe.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem5t1p7y7nnz.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemqzfwdjs5q9.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItembjcdo6930v.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemlp8zg6iyjj.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemv7fr9g8c33.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemsbvnpdkm7v.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem3u1fjeh8ah.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemrfj33rmf8w.onClick"
+                                                    }
+                                                ],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemltbb4nwn3r.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemyh9cbqcbbe.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem5t1p7y7nnz.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemqzfwdjs5q9.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItembjcdo6930v.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemlp8zg6iyjj.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemv7fr9g8c33.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemsbvnpdkm7v.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem3u1fjeh8ah.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemrfj33rmf8w.onClick"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.priority.textColor"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": true,
                                                 "backgroundColor": "#FFFFFF",
                                                 "widgetName": "Container_Filter",
                                                 "containerStyle": "card",
@@ -17438,730 +18138,6 @@
                                                 ],
                                                 "borderRadius": "ROUNDED",
                                                 "onClick": "{{showModal('ModalNewDeal')}}"
-                                            },
-                                            {
-                                                "isVisible": true,
-                                                "shouldScrollContents": false,
-                                                "widgetName": "Tabs1",
-                                                "animateLoading": true,
-                                                "tabsObj": {
-                                                    "tab2": {
-                                                        "label": "⠀⠀⠀⠀Canban⠀⠀⠀⠀",
-                                                        "id": "tab2",
-                                                        "widgetId": "h1j08ebtgw",
-                                                        "isVisible": true,
-                                                        "index": 0
-                                                    }
-                                                },
-                                                "shouldShowTabs": true,
-                                                "defaultTab": "Tab 1",
-                                                "version": 3,
-                                                "type": "TABS_WIDGET",
-                                                "hideCard": false,
-                                                "displayName": "Tabs",
-                                                "key": "5qyguao028",
-                                                "iconSVG": "/static/media/icon.74a6d653.svg",
-                                                "isCanvas": true,
-                                                "widgetId": "nb2ehgecsf",
-                                                "renderMode": "CANVAS",
-                                                "isLoading": false,
-                                                "parentColumnSpace": 14.017578125,
-                                                "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 64,
-                                                "topRow": 9,
-                                                "bottomRow": 70,
-                                                "parentId": "fpla4b15m9",
-                                                "children": [
-                                                    {
-                                                        "isVisible": true,
-                                                        "widgetName": "Canvas28",
-                                                        "version": 1,
-                                                        "detachFromLayout": true,
-                                                        "type": "CANVAS_WIDGET",
-                                                        "hideCard": true,
-                                                        "displayName": "Canvas",
-                                                        "key": "ndz2hs0dbq",
-                                                        "canExtend": true,
-                                                        "isDisabled": false,
-                                                        "shouldScrollContents": false,
-                                                        "tabId": "tab2",
-                                                        "tabName": "⠀⠀⠀⠀Canban⠀⠀⠀⠀",
-                                                        "children": [
-                                                            {
-                                                                "isVisible": true,
-                                                                "animateLoading": true,
-                                                                "defaultSelectedRow": "0",
-                                                                "label": "Data",
-                                                                "widgetName": "TableDeals",
-                                                                "searchKey": "",
-                                                                "textSize": "PARAGRAPH",
-                                                                "horizontalAlignment": "LEFT",
-                                                                "verticalAlignment": "CENTER",
-                                                                "totalRecordsCount": 0,
-                                                                "defaultPageSize": 0,
-                                                                "isShowLoading": true,
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "tableData"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.name.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.stage.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.amount.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.closeDate.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.priority.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.dealID.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.ownerID.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.ownerEmail.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.dealWithContactID.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.dealWithContactEmail.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.dealWithContactFirstName.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.dealWithContactLastName.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "derivedColumns.customColumn2.menuButtonLabel"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuButtonLabel"
-                                                                    }
-                                                                ],
-                                                                "primaryColumns": {
-                                                                    "name": {
-                                                                        "index": 3,
-                                                                        "width": 150,
-                                                                        "id": "name",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "name",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
-                                                                    },
-                                                                    "stage": {
-                                                                        "index": 4,
-                                                                        "width": 150,
-                                                                        "id": "stage",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": false,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "stage",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}"
-                                                                    },
-                                                                    "amount": {
-                                                                        "index": 5,
-                                                                        "width": 150,
-                                                                        "id": "amount",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "amount",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.amount))}}"
-                                                                    },
-                                                                    "closeDate": {
-                                                                        "index": 7,
-                                                                        "width": 150,
-                                                                        "id": "closeDate",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "closeDate",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.closeDate))}}"
-                                                                    },
-                                                                    "priority": {
-                                                                        "index": 8,
-                                                                        "width": 150,
-                                                                        "id": "priority",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "priority",
-                                                                        "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.priority))}}",
-                                                                        "textColor": ""
-                                                                    },
-                                                                    "dealID": {
-                                                                        "index": 0,
-                                                                        "width": 150,
-                                                                        "id": "dealID",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": false,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "dealID",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealID))}}"
-                                                                    },
-                                                                    "ownerID": {
-                                                                        "index": 6,
-                                                                        "width": 150,
-                                                                        "id": "ownerID",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": false,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "ownerID",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerID))}}"
-                                                                    },
-                                                                    "ownerEmail": {
-                                                                        "index": 7,
-                                                                        "width": 150,
-                                                                        "id": "ownerEmail",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "ownerEmail",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerEmail))}}"
-                                                                    },
-                                                                    "customColumn1": {
-                                                                        "index": 8,
-                                                                        "width": 150,
-                                                                        "id": "customColumn1",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "⠀👁",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#2E3D49",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "eye-open",
-                                                                        "buttonVariant": "TERTIARY",
-                                                                        "boxShadow": "NONE",
-                                                                        "borderRadius": "SHARP",
-                                                                        "onClick": "{{navigateTo('Deal',{dealID: TableDeals.selectedRow.dealID})}}"
-                                                                    },
-                                                                    "dealWithContactID": {
-                                                                        "index": 8,
-                                                                        "width": 150,
-                                                                        "id": "dealWithContactID",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "dealWithContactID",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactID))}}"
-                                                                    },
-                                                                    "dealWithContactEmail": {
-                                                                        "index": 9,
-                                                                        "width": 150,
-                                                                        "id": "dealWithContactEmail",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "dealWithContactEmail",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactEmail))}}"
-                                                                    },
-                                                                    "dealWithContactFirstName": {
-                                                                        "index": 10,
-                                                                        "width": 150,
-                                                                        "id": "dealWithContactFirstName",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "dealWithContactFirstName",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactFirstName))}}"
-                                                                    },
-                                                                    "dealWithContactLastName": {
-                                                                        "index": 11,
-                                                                        "width": 150,
-                                                                        "id": "dealWithContactLastName",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "dealWithContactLastName",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.dealWithContactLastName))}}"
-                                                                    },
-                                                                    "customColumn2": {
-                                                                        "index": 13,
-                                                                        "width": 150,
-                                                                        "id": "customColumn2",
-                                                                        "columnType": "menuButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "deal stage",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#03B365",
-                                                                        "menuColor": "#2E3D49",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "property",
-                                                                        "menuButtonLabel": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}",
-                                                                        "menuItems": {
-                                                                            "menuItemltbb4nwn3r": {
-                                                                                "id": "menuItemltbb4nwn3r",
-                                                                                "index": 0,
-                                                                                "label": "Outreach",
-                                                                                "widgetId": "eq46i2mtym",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Outreach');\nEditDeal.run(() => getDeals.run(), () => {})\n}}",
-                                                                                "textColor": ""
-                                                                            },
-                                                                            "menuItemyh9cbqcbbe": {
-                                                                                "id": "menuItemyh9cbqcbbe",
-                                                                                "index": 1,
-                                                                                "label": "Qualifying ICP",
-                                                                                "widgetId": "inveqjht32",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Qualifying ICP');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItem5t1p7y7nnz": {
-                                                                                "id": "menuItem5t1p7y7nnz",
-                                                                                "index": 2,
-                                                                                "label": "Appointment scheduled",
-                                                                                "widgetId": "d1qm4n7c91",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Appointment scheduled');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItemqzfwdjs5q9": {
-                                                                                "id": "menuItemqzfwdjs5q9",
-                                                                                "index": 3,
-                                                                                "label": "Presentation made",
-                                                                                "widgetId": "gxexczxnk9",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Presentation made');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItembjcdo6930v": {
-                                                                                "id": "menuItembjcdo6930v",
-                                                                                "index": 4,
-                                                                                "label": "Follow up",
-                                                                                "widgetId": "s56d7fjt1l",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Follow up');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItemlp8zg6iyjj": {
-                                                                                "id": "menuItemlp8zg6iyjj",
-                                                                                "index": 5,
-                                                                                "label": "Testing Platform",
-                                                                                "widgetId": "cpu9sdzyc6",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Testing Platform');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItemv7fr9g8c33": {
-                                                                                "id": "menuItemv7fr9g8c33",
-                                                                                "index": 6,
-                                                                                "label": "Objections",
-                                                                                "widgetId": "wcj0j233a1",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Objections');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItemsbvnpdkm7v": {
-                                                                                "id": "menuItemsbvnpdkm7v",
-                                                                                "index": 7,
-                                                                                "label": "Proposal Sent",
-                                                                                "widgetId": "y9q4vi95c6",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Proposal Sent');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItem3u1fjeh8ah": {
-                                                                                "id": "menuItem3u1fjeh8ah",
-                                                                                "index": 8,
-                                                                                "label": "Closed won",
-                                                                                "widgetId": "2dld18vh5z",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Closed won');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            },
-                                                                            "menuItemrfj33rmf8w": {
-                                                                                "id": "menuItemrfj33rmf8w",
-                                                                                "index": 9,
-                                                                                "label": "Closed - their lost",
-                                                                                "widgetId": "cp0l3a0pub",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{\nstoreValue('newDealStage','Closed - their lost');\nEditDeal.run(() => getDeals.run(), () => {})\n}}"
-                                                                            }
-                                                                        },
-                                                                        "borderRadius": "ROUNDED",
-                                                                        "menuVariant": "SECONDARY",
-                                                                        "iconAlign": "left"
-                                                                    }
-                                                                },
-                                                                "derivedColumns": {
-                                                                    "customColumn1": {
-                                                                        "index": 8,
-                                                                        "width": 150,
-                                                                        "id": "customColumn1",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "⠀👁",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#2E3D49",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "eye-open",
-                                                                        "buttonVariant": "TERTIARY",
-                                                                        "boxShadow": "NONE",
-                                                                        "borderRadius": "SHARP"
-                                                                    },
-                                                                    "customColumn2": {
-                                                                        "index": 13,
-                                                                        "width": 150,
-                                                                        "id": "customColumn2",
-                                                                        "columnType": "menuButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "deal stage",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#03B365",
-                                                                        "menuColor": "#2E3D49",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "property",
-                                                                        "menuButtonLabel": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.stage))}}",
-                                                                        "menuItems": {
-                                                                            "menuItemltbb4nwn3r": {
-                                                                                "id": "menuItemltbb4nwn3r",
-                                                                                "index": 0,
-                                                                                "label": "Outreach",
-                                                                                "widgetId": "eq46i2mtym",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{storeValue('newDealStage','Outreach',)}}",
-                                                                                "textColor": ""
-                                                                            },
-                                                                            "menuItemyh9cbqcbbe": {
-                                                                                "id": "menuItemyh9cbqcbbe",
-                                                                                "index": 1,
-                                                                                "label": "Qualifying ICP",
-                                                                                "widgetId": "inveqjht32",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true,
-                                                                                "onClick": "{{storeValue('newDealStage','Qualifying ICP')}}"
-                                                                            },
-                                                                            "menuItem5t1p7y7nnz": {
-                                                                                "id": "menuItem5t1p7y7nnz",
-                                                                                "index": 2,
-                                                                                "label": "Appointment scheduled",
-                                                                                "widgetId": "d1qm4n7c91",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            },
-                                                                            "menuItemqzfwdjs5q9": {
-                                                                                "id": "menuItemqzfwdjs5q9",
-                                                                                "index": 3,
-                                                                                "label": "Presentation made",
-                                                                                "widgetId": "gxexczxnk9",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            },
-                                                                            "menuItembjcdo6930v": {
-                                                                                "id": "menuItembjcdo6930v",
-                                                                                "index": 4,
-                                                                                "label": "Follow up",
-                                                                                "widgetId": "s56d7fjt1l",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            },
-                                                                            "menuItemlp8zg6iyjj": {
-                                                                                "id": "menuItemlp8zg6iyjj",
-                                                                                "index": 5,
-                                                                                "label": "Testing Platform",
-                                                                                "widgetId": "cpu9sdzyc6",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            },
-                                                                            "menuItemv7fr9g8c33": {
-                                                                                "id": "menuItemv7fr9g8c33",
-                                                                                "index": 6,
-                                                                                "label": "Objections",
-                                                                                "widgetId": "wcj0j233a1",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            },
-                                                                            "menuItemsbvnpdkm7v": {
-                                                                                "id": "menuItemsbvnpdkm7v",
-                                                                                "index": 7,
-                                                                                "label": "Proposal Sent",
-                                                                                "widgetId": "y9q4vi95c6",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            },
-                                                                            "menuItem3u1fjeh8ah": {
-                                                                                "id": "menuItem3u1fjeh8ah",
-                                                                                "index": 8,
-                                                                                "label": "Closed won",
-                                                                                "widgetId": "2dld18vh5z",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            },
-                                                                            "menuItemrfj33rmf8w": {
-                                                                                "id": "menuItemrfj33rmf8w",
-                                                                                "index": 9,
-                                                                                "label": "Closed - their lost",
-                                                                                "widgetId": "cp0l3a0pub",
-                                                                                "isDisabled": false,
-                                                                                "isVisible": true
-                                                                            }
-                                                                        },
-                                                                        "borderRadius": "ROUNDED",
-                                                                        "menuVariant": "SECONDARY",
-                                                                        "iconAlign": "left"
-                                                                    }
-                                                                },
-                                                                "tableData": "{{getDeals.data}}",
-                                                                "columnSizeMap": {
-                                                                    "task": 245,
-                                                                    "step": 62,
-                                                                    "status": 75,
-                                                                    "customColumn1": 60,
-                                                                    "customColumn2": 218
-                                                                },
-                                                                "columnOrder": [
-                                                                    "customColumn1",
-                                                                    "dealID",
-                                                                    "name",
-                                                                    "stage",
-                                                                    "amount",
-                                                                    "customColumn2",
-                                                                    "closeDate",
-                                                                    "priority",
-                                                                    "ownerID",
-                                                                    "ownerEmail",
-                                                                    "dealWithContactID",
-                                                                    "dealWithContactEmail",
-                                                                    "dealWithContactFirstName",
-                                                                    "dealWithContactLastName"
-                                                                ],
-                                                                "enableClientSideSearch": true,
-                                                                "isVisibleSearch": true,
-                                                                "isVisibleFilters": true,
-                                                                "isVisibleDownload": true,
-                                                                "isVisiblePagination": true,
-                                                                "isSortable": true,
-                                                                "delimiter": ",",
-                                                                "version": 3,
-                                                                "type": "TABLE_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Table",
-                                                                "key": "wwz5l6l3u9",
-                                                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
-                                                                "widgetId": "us30gfg1eq",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 14.017578125,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 1,
-                                                                "bottomRow": 56,
-                                                                "parentId": "h1j08ebtgw",
-                                                                "dynamicTriggerPathList": [
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn1.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemltbb4nwn3r.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemyh9cbqcbbe.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem5t1p7y7nnz.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemqzfwdjs5q9.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItembjcdo6930v.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemlp8zg6iyjj.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemv7fr9g8c33.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemsbvnpdkm7v.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem3u1fjeh8ah.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemrfj33rmf8w.onClick"
-                                                                    }
-                                                                ],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemltbb4nwn3r.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemyh9cbqcbbe.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem5t1p7y7nnz.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemqzfwdjs5q9.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItembjcdo6930v.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemlp8zg6iyjj.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemv7fr9g8c33.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemsbvnpdkm7v.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItem3u1fjeh8ah.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.menuItems.menuItemrfj33rmf8w.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.priority.textColor"
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ],
-                                                        "minHeight": 400,
-                                                        "widgetId": "h1j08ebtgw",
-                                                        "renderMode": "CANVAS",
-                                                        "isLoading": false,
-                                                        "parentColumnSpace": 1,
-                                                        "parentRowSpace": 1,
-                                                        "leftColumn": 0,
-                                                        "rightColumn": 336.421875,
-                                                        "topRow": 0,
-                                                        "bottomRow": 580,
-                                                        "parentId": "nb2ehgecsf",
-                                                        "dynamicBindingPathList": [],
-                                                        "dynamicTriggerPathList": []
-                                                    }
-                                                ],
-                                                "dynamicBindingPathList": [],
-                                                "dynamicTriggerPathList": []
                                             }
                                         ],
                                         "minHeight": 400,
@@ -18173,7 +18149,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 379.5,
                                         "topRow": 0,
-                                        "bottomRow": 720,
+                                        "bottomRow": 690,
                                         "parentId": "u2o9q3unm7"
                                     }
                                 ],
@@ -18193,7 +18169,7 @@
                                 "leftColumn": 6,
                                 "rightColumn": 64,
                                 "topRow": 8,
-                                "bottomRow": 81,
+                                "bottomRow": 77,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": []
@@ -18228,14 +18204,12 @@
                         "NewCloseDate",
                         "Container5",
                         "Canvas22",
+                        "TableDeals",
                         "Container_Filter",
                         "Canvas23",
                         "SelectDealOwner",
                         "SelectDealStage",
-                        "Button4",
-                        "Tabs1",
-                        "Canvas28",
-                        "TableDeals"
+                        "Button4"
                     ],
                     "deleted": false,
                     "policies": [],
