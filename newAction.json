@@ -6505,7 +6505,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-18T16:51:48.152Z",
-        "updatedAt": "2024-03-13T16:46:04.669Z",
+        "updatedAt": "2024-03-14T08:31:30.284Z",
         "deleted": false,
         "policies": [
             {
@@ -6578,7 +6578,6 @@
                 "icon_field_edit.text",
                 "TableParent.selectedRow._id",
                 "JSON.stringify(appsmith.user.auth_module.user.info.user.attributes)",
-                "JSON.stringify()",
                 "JSON.stringify(SwitchHide.isSwitchedOn)"
             ],
             "userSetOnLoad": false,
@@ -11298,7 +11297,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-13T14:48:45.989Z",
+        "updatedAt": "2024-03-14T10:36:45.509Z",
         "deleted": false,
         "policies": [
             {
@@ -11906,6 +11905,84 @@
         },
         "createdAt": "2024-03-13T12:28:07.786Z",
         "updatedAt": "2024-03-13T12:46:54.382Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65f2d3569693c46f4e24c67c",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "EditDeal",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/editDeal"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Deals",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"dealID\":{{JSON.stringify(TableDeals.selectedRow.dealID)}},\n\t\"DealStage\":{{JSON.stringify(main.store.newDealStage)}}\n}\n\n\n\n\n",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(TableDeals.selectedRow.dealID)",
+                "JSON.stringify(main.store.newDealStage)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-14T10:37:10.968Z",
+        "updatedAt": "2024-03-14T11:03:48.037Z",
         "deleted": false,
         "policies": [
             {
