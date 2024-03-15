@@ -13223,6 +13223,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn2.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.comment.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -13502,6 +13505,23 @@
                                                                         "buttonColor": "#03B365",
                                                                         "menuColor": "#03B365",
                                                                         "labelColor": "#FFFFFF"
+                                                                    },
+                                                                    "comment": {
+                                                                        "index": 13,
+                                                                        "width": 150,
+                                                                        "id": "comment",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "comment",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.comment))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -13555,21 +13575,22 @@
                                                                 },
                                                                 "columnOrder": [
                                                                     "customColumn1",
-                                                                    "customColumn2",
                                                                     "firstName",
                                                                     "lastName",
                                                                     "email",
                                                                     "phoneNumber",
                                                                     "leadStatus",
+                                                                    "comment",
                                                                     "contactOwnerEmail",
+                                                                    "contactOwner",
                                                                     "_id",
                                                                     "deleted",
-                                                                    "contactOwner",
+                                                                    "createdAt",
                                                                     "dealStage",
                                                                     "country",
                                                                     "city",
                                                                     "industry",
-                                                                    "createdAt"
+                                                                    "customColumn2"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -13862,6 +13883,44 @@
                                                         "containerStyle": "none",
                                                         "canExtend": false,
                                                         "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Comment",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "NewComment",
+                                                                "version": 2,
+                                                                "defaultText": "",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "6erib2cbyc",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 80,
+                                                                "bottomRow": 98,
+                                                                "parentId": "njkmsvuu3n",
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": [],
+                                                                "labelTextColor": "#2E3D49"
+                                                            },
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
@@ -14247,7 +14306,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 243.75,
                                                         "topRow": 0,
-                                                        "bottomRow": 810,
+                                                        "bottomRow": 1000,
                                                         "parentId": "nl4hw0q9z5"
                                                     }
                                                 ],
@@ -14890,6 +14949,7 @@
                         "ButtonCreate",
                         "Container6",
                         "Canvas25",
+                        "NewComment",
                         "NewIndustry",
                         "NewCountry",
                         "NewContactOwner",
@@ -17189,7 +17249,7 @@
                                                         "key": "onClick"
                                                     }
                                                 ],
-                                                "onClick": "{{\nnewDeal.run(() => (showAlert('Deal successfully created 🎉','success'), \ngetDeals.run(),\t\t\t\t\t\t\tcloseModal('ModalNewDeal'),\nresetWidget('NewDealName'),\nresetWidget('NewDealStage'),\nresetWidget('NewAmount'),\nresetWidget('NewDealOwner'),\nresetWidget('NewCloseDate'),\nresetWidget('NewNewDealWithContact')),\nresetWidget('NewPriority')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "onClick": "{{\nnewDeal.run(() => (showAlert('Deal successfully created 🎉','success'), \ngetDeals.run(),\t\t\t\t\t\t\tcloseModal('ModalNewDeal'),\nresetWidget('NewDealName'),\nresetWidget('NewDealStage'),\nresetWidget('NewAmount'),\nresetWidget('NewDealOwner'),\nresetWidget('NewCloseDate'),\nresetWidget('NewNewDealWithContact'),\nresetWidget('NewPriority'),\nresetWidget('NewDealComment')), () => showAlert('Oops something went wrong 😔','error'))\n}}",
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onClick"
@@ -17222,6 +17282,43 @@
                                                         "containerStyle": "none",
                                                         "canExtend": false,
                                                         "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "Comment",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "NewDealComment",
+                                                                "version": 2,
+                                                                "defaultText": "",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": true,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "9p4cj9mip2",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 50,
+                                                                "bottomRow": 66,
+                                                                "parentId": "k71lh1oguh",
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": []
+                                                            },
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
@@ -17500,7 +17597,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 243.75,
                                                         "topRow": 0,
-                                                        "bottomRow": 510,
+                                                        "bottomRow": 680,
                                                         "parentId": "b29cm4ivhz"
                                                     }
                                                 ],
@@ -17522,7 +17619,7 @@
                                                 "topRow": 5,
                                                 "bottomRow": 57,
                                                 "parentId": "h57x6f7b9w",
-                                                "shouldScrollContents": false,
+                                                "shouldScrollContents": true,
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": []
                                             }
@@ -17857,6 +17954,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn3.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.comment.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -18221,6 +18321,23 @@
                                                                         "buttonColor": "#03B365",
                                                                         "menuColor": "#03B365",
                                                                         "labelColor": "#FFFFFF"
+                                                                    },
+                                                                    "comment": {
+                                                                        "index": 12,
+                                                                        "width": 150,
+                                                                        "id": "comment",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "comment",
+                                                                        "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( currentRow.comment))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -18380,24 +18497,28 @@
                                                                     "status": 75,
                                                                     "customColumn1": 60,
                                                                     "customColumn2": 218,
-                                                                    "customColumn3": 288
+                                                                    "customColumn3": 288,
+                                                                    "priority": 69,
+                                                                    "amount": 122,
+                                                                    "closeDate": 121
                                                                 },
                                                                 "columnOrder": [
                                                                     "customColumn1",
                                                                     "name",
-                                                                    "amount",
                                                                     "customColumn2",
-                                                                    "dealID",
                                                                     "stage",
+                                                                    "amount",
                                                                     "priority",
+                                                                    "comment",
                                                                     "closeDate",
-                                                                    "customColumn3",
                                                                     "ownerEmail",
                                                                     "ownerID",
                                                                     "dealWithContactID",
                                                                     "dealWithContactEmail",
                                                                     "dealWithContactFirstName",
-                                                                    "dealWithContactLastName"
+                                                                    "dealWithContactLastName",
+                                                                    "dealID",
+                                                                    "customColumn3"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -18582,6 +18703,7 @@
                         "ButtonCreate",
                         "Container6",
                         "Canvas25",
+                        "NewDealComment",
                         "NewDealWithContact",
                         "NewPriority",
                         "NewDealOwner",
@@ -20857,6 +20979,55 @@
                                                         "children": [
                                                             {
                                                                 "isVisible": true,
+                                                                "label": "Comment",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "Comment",
+                                                                "version": 2,
+                                                                "defaultText": "{{getContact.data.comment}}",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": "{{!main.store.isEditing}}",
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "dm9ihl3i9p",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "6j5axorb6q",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 9.84375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 71,
+                                                                "bottomRow": 87,
+                                                                "parentId": "vo6rikq2lc",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "isVisible": true,
                                                                 "label": "Email",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
@@ -21355,7 +21526,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 243.75,
                                                         "topRow": 0,
-                                                        "bottomRow": 720,
+                                                        "bottomRow": 890,
                                                         "parentId": "1135qrn8d8"
                                                     }
                                                 ],
@@ -22553,6 +22724,7 @@
                         "Canvas22",
                         "Container6",
                         "Canvas25",
+                        "Comment",
                         "Email",
                         "Industry",
                         "Country",
@@ -22996,9 +23168,9 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
-                                                                "widgetName": "Comment",
+                                                                "widgetName": "DealComment",
                                                                 "version": 2,
-                                                                "defaultText": "",
+                                                                "defaultText": "{{getDeal.data.dealComment}}",
                                                                 "iconAlign": "left",
                                                                 "autoFocus": false,
                                                                 "labelStyle": "",
@@ -23027,6 +23199,9 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultText"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
@@ -23532,7 +23707,7 @@
                         "IconButtonEditContact",
                         "Container6",
                         "Canvas23",
-                        "Comment",
+                        "DealComment",
                         "Container6Copy",
                         "Canvas25",
                         "DealWithContact",

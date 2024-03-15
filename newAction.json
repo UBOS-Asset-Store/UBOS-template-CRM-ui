@@ -8815,7 +8815,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n   \"email\":{{JSON.stringify(NewEmail.text)}},\n   \"firstName\":{{JSON.stringify(NewFirstName.text)}},\n   \"lastName\":{{JSON.stringify(NewLastName.text)}},\n   \"contactOwner\":{{JSON.stringify(NewContactOwner.selectedOptionValue)}},\n   \"phoneNumber\":{{JSON.stringify(NewPhoneNumber.text)}},\n   \"dealStage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n   \"leadStatus\":{{JSON.stringify(NewLeadStatus.selectedOptionLabel)}},\n   \"country\":{{JSON.stringify(NewCountry.selectedOptionLabel)}},\n   \"city\":{{JSON.stringify(NewCity.text)}},\n   \"industry\":{{JSON.stringify(NewIndustry.selectedOptionLabel)}}\n}"
+                "body": "{\n   \"email\":{{JSON.stringify(NewEmail.text)}},\n   \"firstName\":{{JSON.stringify(NewFirstName.text)}},\n   \"lastName\":{{JSON.stringify(NewLastName.text)}},\n   \"contactOwner\":{{JSON.stringify(NewContactOwner.selectedOptionValue)}},\n   \"phoneNumber\":{{JSON.stringify(NewPhoneNumber.text)}},\n   \"dealStage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n   \"leadStatus\":{{JSON.stringify(NewLeadStatus.selectedOptionLabel)}},\n   \"country\":{{JSON.stringify(NewCountry.selectedOptionLabel)}},\n   \"city\":{{JSON.stringify(NewCity.text)}},\n   \"industry\":{{JSON.stringify(NewIndustry.selectedOptionLabel)}},\n   \"comment\":{{JSON.stringify(NewComment.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -8838,13 +8838,15 @@
                 "JSON.stringify(NewLeadStatus.selectedOptionLabel)",
                 "JSON.stringify(NewCountry.selectedOptionLabel)",
                 "JSON.stringify(NewCity.text)",
-                "JSON.stringify(NewIndustry.selectedOptionLabel)"
+                "JSON.stringify(NewIndustry.selectedOptionLabel)",
+                "JSON.stringify(NewC.text)",
+                "JSON.stringify(NewComment.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T12:29:15.294Z",
-        "updatedAt": "2024-03-11T12:49:49.742Z",
+        "updatedAt": "2024-03-15T11:03:30.966Z",
         "deleted": false,
         "policies": [
             {
@@ -9065,7 +9067,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"name\":{{JSON.stringify(NewDealName.text)}},\n\t\"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n\t\"amount\":{{JSON.stringify(NewAmount.text)}},\n\t\"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}},\n\t\"dealWithContact\":{{JSON.stringify(NewDealWithContact.selectedOptionValue)}}\n}"
+                "body": "{\n\t\"name\":{{JSON.stringify(NewDealName.text)}},\n\t\"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n\t\"amount\":{{JSON.stringify(NewAmount.text)}},\n\t\"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}},\n\t\"dealWithContact\":{{JSON.stringify(NewDealWithContact.selectedOptionValue)}},\n\t\"dealComment\":{{JSON.stringify(NewDealComment.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -9085,13 +9087,14 @@
                 "JSON.stringify(NewDealOwner.selectedOptionValue)",
                 "JSON.stringify(NewCloseDate.selectedDate)",
                 "JSON.stringify(NewPriority.selectedOptionLabel)",
-                "JSON.stringify(NewDealWithContact.selectedOptionValue)"
+                "JSON.stringify(NewDealWithContact.selectedOptionValue)",
+                "JSON.stringify(NewDealComment.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T16:17:31.421Z",
-        "updatedAt": "2024-03-13T15:55:15.163Z",
+        "updatedAt": "2024-03-15T11:30:04.992Z",
         "deleted": false,
         "policies": [
             {
@@ -10561,7 +10564,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"contactID\":{{JSON.stringify(main.URL.queryParams.contactID)}},\n\t\"email\":{{JSON.stringify(Email.text)}},\n\t\"firstName\":{{JSON.stringify(FirstName.text)}},\n\t\"lastName\":{{JSON.stringify(LastName.text)}},\n\t\"contactOwner\":{{JSON.stringify(ContactOwner.selectedOptionValue)}},\n\t\"phoneNumber\":{{JSON.stringify(PhoneNumber.text)}},\n\t\"dealStage\":{{JSON.stringify(DealStage.selectedOptionLabel)}},\n\t\"leadStatus\":{{JSON.stringify(LeadStatus.selectedOptionLabel)}},\n\t\"country\":{{JSON.stringify(Country.selectedOptionLabel)}},\n\t\"city\":{{JSON.stringify(City.text)}},\n\t\"industry\":{{JSON.stringify(Industry.selectedOptionLabel)}}\n}",
+                "body": "{\n\t\"contactID\":{{JSON.stringify(main.URL.queryParams.contactID)}},\n\t\"email\":{{JSON.stringify(Email.text)}},\n\t\"firstName\":{{JSON.stringify(FirstName.text)}},\n\t\"lastName\":{{JSON.stringify(LastName.text)}},\n\t\"contactOwner\":{{JSON.stringify(ContactOwner.selectedOptionValue)}},\n\t\"phoneNumber\":{{JSON.stringify(PhoneNumber.text)}},\n\t\"dealStage\":{{JSON.stringify(DealStage.selectedOptionLabel)}},\n\t\"leadStatus\":{{JSON.stringify(LeadStatus.selectedOptionLabel)}},\n\t\"country\":{{JSON.stringify(Country.selectedOptionLabel)}},\n\t\"city\":{{JSON.stringify(City.text)}},\n\t\"industry\":{{JSON.stringify(Industry.selectedOptionLabel)}},\n\t\"comment\":{{JSON.stringify(Comment.text)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -10584,7 +10587,7 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify()",
+                "JSON.stringify(main.URL.queryParams.contactID)",
                 "JSON.stringify(Email.text)",
                 "JSON.stringify(FirstName.text)",
                 "JSON.stringify(LastName.text)",
@@ -10595,13 +10598,13 @@
                 "JSON.stringify(Country.selectedOptionLabel)",
                 "JSON.stringify(City.text)",
                 "JSON.stringify(Industry.selectedOptionLabel)",
-                "JSON.stringify(main.URL.queryParams.contactID)"
+                "JSON.stringify(Comment.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T10:26:54.002Z",
-        "updatedAt": "2024-03-12T11:55:54.473Z",
+        "updatedAt": "2024-03-15T11:06:38.614Z",
         "deleted": false,
         "policies": [
             {
@@ -10681,7 +10684,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T10:27:45.145Z",
-        "updatedAt": "2024-03-12T12:52:13.848Z",
+        "updatedAt": "2024-03-15T11:07:50.571Z",
         "deleted": false,
         "policies": [
             {
@@ -10761,7 +10764,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T10:31:03.473Z",
-        "updatedAt": "2024-03-13T15:18:21.054Z",
+        "updatedAt": "2024-03-15T11:06:48.726Z",
         "deleted": false,
         "policies": [
             {
@@ -11266,7 +11269,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}},\n\t\"DealName\":{{JSON.stringify(DealName.text)}},\n\t\"DealStage\":{{JSON.stringify(DealStage.selectedOptionValue)}},\n\t\"Amount\":{{JSON.stringify(Amount.text)}},\n\t\"DealOwner\":{{JSON.stringify(DealOwner.selectedOptionValue)}},\n\t\"CloseDate\":{{JSON.stringify(CloseDate.selectedDate)}},\n\t\"Priority\":{{JSON.stringify(Priority.selectedOptionValue)}},\n\t\"dealWithContact\":{{JSON.stringify(DealWithContact.selectedOptionValue)}}\n}\n\n\n\n\n",
+                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}},\n\t\"dealName\":{{JSON.stringify(DealName.text)}},\n\t\"dealStage\":{{JSON.stringify(DealStage.selectedOptionValue)}},\n\t\"amount\":{{JSON.stringify(Amount.text)}},\n\t\"dealOwner\":{{JSON.stringify(DealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(CloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(Priority.selectedOptionValue)}},\n\t\"dealWithContact\":{{JSON.stringify(DealWithContact.selectedOptionValue)}},\n\t\"dealComment\":{{JSON.stringify(DealComment.text)}}\n}\n\n\n\n\n",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11296,13 +11299,14 @@
                 "JSON.stringify(DealOwner.selectedOptionValue)",
                 "JSON.stringify(CloseDate.selectedDate)",
                 "JSON.stringify(Priority.selectedOptionValue)",
-                "JSON.stringify(DealWithContact.selectedOptionValue)"
+                "JSON.stringify(DealWithContact.selectedOptionValue)",
+                "JSON.stringify(DealComment.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-14T10:36:45.509Z",
+        "updatedAt": "2024-03-15T11:34:15.242Z",
         "deleted": false,
         "policies": [
             {
@@ -11960,7 +11964,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"dealID\":{{JSON.stringify(TableDeals.selectedRow.dealID)}},\n\t\"DealStage\":{{JSON.stringify(main.store.newDealStage)}}\n}\n\n\n\n\n",
+                "body": "{\n\t\"dealID\":{{JSON.stringify(TableDeals.selectedRow.dealID)}},\n\t\"dealStage\":{{JSON.stringify(main.store.newDealStage)}}\n}\n\n\n\n\n",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11987,7 +11991,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-14T10:37:10.968Z",
-        "updatedAt": "2024-03-14T11:03:48.037Z",
+        "updatedAt": "2024-03-15T11:33:11.928Z",
         "deleted": false,
         "policies": [
             {
