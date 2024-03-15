@@ -3825,7 +3825,7 @@
                                             "fontSize": "PARAGRAPH",
                                             "fontStyle": "",
                                             "textAlign": "RIGHT",
-                                            "textColor": "#231F20",
+                                            "textColor": "#2E3D49",
                                             "truncateButtonColor": "#FFC13D",
                                             "widgetName": "Text11",
                                             "shouldTruncate": false,
@@ -3852,7 +3852,8 @@
                                                     "key": "text"
                                                 }
                                             ],
-                                            "dynamicTriggerPathList": []
+                                            "dynamicTriggerPathList": [],
+                                            "classStyle": "userEmail"
                                         }
                                     ],
                                     "minHeight": 400,

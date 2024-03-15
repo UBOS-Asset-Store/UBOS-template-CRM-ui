@@ -8839,14 +8839,13 @@
                 "JSON.stringify(NewCountry.selectedOptionLabel)",
                 "JSON.stringify(NewCity.text)",
                 "JSON.stringify(NewIndustry.selectedOptionLabel)",
-                "JSON.stringify(NewC.text)",
                 "JSON.stringify(NewComment.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T12:29:15.294Z",
-        "updatedAt": "2024-03-15T11:03:30.966Z",
+        "updatedAt": "2024-03-15T12:35:15.223Z",
         "deleted": false,
         "policies": [
             {
@@ -9067,7 +9066,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"name\":{{JSON.stringify(NewDealName.text)}},\n\t\"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n\t\"amount\":{{JSON.stringify(NewAmount.text)}},\n\t\"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}},\n\t\"dealWithContact\":{{JSON.stringify(NewDealWithContact.selectedOptionValue)}},\n\t\"dealComment\":{{JSON.stringify(NewDealComment.text)}}\n}"
+                "body": "{\n\t\"name\":{{JSON.stringify(NewDealName.text)}},\n\t\"stage\":{{JSON.stringify(NewDealStage.selectedOptionLabel)}},\n\t\"amount\":{{JSON.stringify(NewAmount.text)}},\n\t\"owner\":{{JSON.stringify(NewDealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(NewCloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(NewPriority.selectedOptionLabel)}},\n\t\"dealWithContact\":{{JSON.stringify(NewDealWithContact.selectedOptionValue)}},\n\t\"comment\":{{JSON.stringify(NewDealComment.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -9094,7 +9093,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-06T16:17:31.421Z",
-        "updatedAt": "2024-03-15T11:30:04.992Z",
+        "updatedAt": "2024-03-15T14:28:57.680Z",
         "deleted": false,
         "policies": [
             {
@@ -9214,7 +9213,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": true,
+            "executeOnLoad": false,
             "pageId": "Contacts",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -9251,7 +9250,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T12:43:18.024Z",
-        "updatedAt": "2024-03-12T16:23:17.530Z",
+        "updatedAt": "2024-03-15T14:08:55.526Z",
         "deleted": false,
         "policies": [
             {
@@ -9289,7 +9288,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": true,
+            "executeOnLoad": false,
             "pageId": "Deals",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -9326,7 +9325,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T14:35:51.757Z",
-        "updatedAt": "2024-03-14T12:45:34.090Z",
+        "updatedAt": "2024-03-15T14:18:38.443Z",
         "deleted": false,
         "policies": [
             {
@@ -9462,7 +9461,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T14:57:40.198Z",
-        "updatedAt": "2024-03-07T16:46:25.353Z",
+        "updatedAt": "2024-03-15T14:19:11.997Z",
         "deleted": false,
         "policies": [
             {
@@ -9542,7 +9541,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T15:58:20.106Z",
-        "updatedAt": "2024-03-13T09:54:16.486Z",
+        "updatedAt": "2024-03-15T14:17:16.066Z",
         "deleted": false,
         "policies": [
             {
@@ -9616,28 +9615,30 @@
                     "key": "datasourceUrl"
                 },
                 {
-                    "key": "queryParameters[0].value"
-                },
-                {
                     "key": "queryParameters[1].value"
                 },
                 {
                     "key": "queryParameters[2].value"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "SelectContactOwner.selectedOptionValue",
+                "SelectContactOwner.selectedOptio",
                 "SelectDealStage.selectedOptionValue",
-                "SelectLeadStatus.selectedOptionValue"
+                "SelectLeadStatus.selectedOptionValue",
+                "main.env.nodeUrl,SelectContactOwner.selectedOptionLabel,2024-03-07T16:33:28.636Z,2024-03-15T14:17:25.171Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,SelectContactOwner.selectedOptio,2024-03-07T16:33:28.636Z,2024-03-15T14:17:27.666Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "SelectContactOwner.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-07T16:33:28.636Z",
-        "updatedAt": "2024-03-14T12:53:06.862Z",
+        "updatedAt": "2024-03-15T14:17:30.373Z",
         "deleted": false,
         "policies": [
             {
@@ -9769,9 +9770,9 @@
     {
         "name": "myFun2",
         "pageId": "Contacts",
-        "executeOnLoad": false,
+        "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+            "body": "async () => {\n\t\tgetOwners.run(() => getContacts.run());\n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -11086,72 +11087,6 @@
         ]
     },
     {
-        "_id": "65f080dfc273cc13c178914b",
-        "applicationId": "jetsondashboard",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "getWidgetsFillersCopy",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getWidgetsFillers"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "Deals",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "GET",
-                "headers": [],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ]
-            },
-            "dynamicBindingPathList": [],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nodeUrl"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2024-03-12T16:20:47.916Z",
-        "updatedAt": "2024-03-12T16:20:48.928Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
         "_id": "65f08489c273cc13c178914c",
         "applicationId": "jetsondashboard",
         "organizationId": "Org",
@@ -11218,7 +11153,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T16:36:25.524Z",
-        "updatedAt": "2024-03-14T12:45:43.145Z",
+        "updatedAt": "2024-03-15T14:22:28.751Z",
         "deleted": false,
         "policies": [
             {
@@ -11269,7 +11204,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}},\n\t\"dealName\":{{JSON.stringify(DealName.text)}},\n\t\"dealStage\":{{JSON.stringify(DealStage.selectedOptionValue)}},\n\t\"amount\":{{JSON.stringify(Amount.text)}},\n\t\"dealOwner\":{{JSON.stringify(DealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(CloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(Priority.selectedOptionValue)}},\n\t\"dealWithContact\":{{JSON.stringify(DealWithContact.selectedOptionValue)}},\n\t\"dealComment\":{{JSON.stringify(DealComment.text)}}\n}\n\n\n\n\n",
+                "body": "{\n\t\"dealID\":{{JSON.stringify(main.URL.queryParams.dealID)}},\n\t\"dealName\":{{JSON.stringify(DealName.text)}},\n\t\"dealStage\":{{JSON.stringify(DealStage.selectedOptionValue)}},\n\t\"amount\":{{JSON.stringify(Amount.text)}},\n\t\"dealOwner\":{{JSON.stringify(DealOwner.selectedOptionValue)}},\n\t\"closeDate\":{{JSON.stringify(CloseDate.selectedDate)}},\n\t\"priority\":{{JSON.stringify(Priority.selectedOptionValue)}},\n\t\"dealWithContact\":{{JSON.stringify(DealWithContact.selectedOptionValue)}},\n\t\"comment\":{{JSON.stringify(DealComment.text)}}\n}\n\n\n\n\n",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11306,7 +11241,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-15T11:34:15.242Z",
+        "updatedAt": "2024-03-15T14:29:23.953Z",
         "deleted": false,
         "policies": [
             {
@@ -12010,5 +11945,81 @@
                 "users": []
             }
         ]
+    },
+    {
+        "name": "myFun1",
+        "pageId": "Deals",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "() => {\n\t\t//write code here\n\t}",
+            "isAsync": false,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "65f458fc9693c46f4e24c682",
+        "id": "65f458fc9693c46f4e24c682",
+        "collectionId": "65f458fc9693c46f4e24c681",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun1",
+        "isValid": true,
+        "jsonPathKeys": [
+            "() => {\n\t\t//write code here\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun2",
+        "pageId": "Deals",
+        "executeOnLoad": true,
+        "actionConfiguration": {
+            "body": "async () => {\n\t\tgetOwners.run(() => getDeals.run())\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "65f458fc9693c46f4e24c683",
+        "id": "65f458fc9693c46f4e24c683",
+        "collectionId": "65f458fc9693c46f4e24c681",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun2",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async () => {\n\t\t//use async-await or promises\n\t}"
+        ],
+        "pluginType": "JS"
     }
 ]

@@ -12320,7 +12320,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1390,
+                        "bottomRow": 1710,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -14000,17 +14000,17 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
-                                                                "labelText": "Contact owner",
+                                                                "labelText": "Contact owner *",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
                                                                 "options": "{{getOwners.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "NewContactOwner",
-                                                                "defaultOptionValue": "GREEN",
+                                                                "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
-                                                                "isRequired": false,
+                                                                "isRequired": true,
                                                                 "isDisabled": false,
                                                                 "animateLoading": true,
                                                                 "type": "SELECT_WIDGET",
@@ -14031,6 +14031,9 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "options"
+                                                                    },
+                                                                    {
+                                                                        "key": "defaultOptionValue"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": []
@@ -14224,7 +14227,7 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "label": "First name",
+                                                                "label": "First name *",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
@@ -14235,7 +14238,7 @@
                                                                 "autoFocus": false,
                                                                 "labelStyle": "",
                                                                 "resetOnSubmit": true,
-                                                                "isRequired": false,
+                                                                "isRequired": true,
                                                                 "isDisabled": false,
                                                                 "animateLoading": true,
                                                                 "classStyle": "",
@@ -14261,7 +14264,7 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "label": "Email",
+                                                                "label": "Email *",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
@@ -14272,7 +14275,7 @@
                                                                 "autoFocus": false,
                                                                 "labelStyle": "",
                                                                 "resetOnSubmit": true,
-                                                                "isRequired": false,
+                                                                "isRequired": true,
                                                                 "isDisabled": false,
                                                                 "animateLoading": true,
                                                                 "classStyle": "",
@@ -14982,17 +14985,6 @@
                     "layoutOnLoadActions": [
                         [
                             {
-                                "_id": "65e9b666c273cc13c1789122",
-                                "id": "65e9b666c273cc13c1789122",
-                                "confirmBeforeExecute": false,
-                                "name": "getContactOwners",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.nodeUrl"
-                                ],
-                                "timeoutInMillisecond": 10000
-                            },
-                            {
                                 "_id": "65e9d57cc273cc13c1789124",
                                 "id": "65e9d57cc273cc13c1789124",
                                 "confirmBeforeExecute": false,
@@ -15015,13 +15007,14 @@
                                 "timeoutInMillisecond": 10000
                             },
                             {
-                                "_id": "65e9ec58c273cc13c1789127",
-                                "id": "65e9ec58c273cc13c1789127",
+                                "_id": "65eb0226c273cc13c178912b",
+                                "id": "65eb0226c273cc13c178912b",
+                                "collectionId": "65eb0226c273cc13c1789129",
                                 "confirmBeforeExecute": false,
-                                "name": "getContacts",
-                                "pluginType": "API",
+                                "name": "myFun2",
+                                "pluginType": "JS",
                                 "jsonPathKeys": [
-                                    "main.env.nodeUrl"
+                                    "async () => {\n\t\t//use async-await or promises\n\t}"
                                 ],
                                 "timeoutInMillisecond": 10000
                             }
@@ -17793,7 +17786,7 @@
                                                                                 "parentColumnSpace": 9.981658935546875,
                                                                                 "parentRowSpace": 10,
                                                                                 "leftColumn": 0,
-                                                                                "rightColumn": 27,
+                                                                                "rightColumn": 38,
                                                                                 "topRow": 0,
                                                                                 "bottomRow": 7,
                                                                                 "parentId": "unxi3gdiw4",
@@ -17838,8 +17831,8 @@
                                                                                 "isLoading": false,
                                                                                 "parentColumnSpace": 9.981658935546875,
                                                                                 "parentRowSpace": 10,
-                                                                                "leftColumn": 27,
-                                                                                "rightColumn": 47,
+                                                                                "leftColumn": 38,
+                                                                                "rightColumn": 64,
                                                                                 "topRow": 0,
                                                                                 "bottomRow": 7,
                                                                                 "parentId": "unxi3gdiw4",
@@ -18498,7 +18491,7 @@
                                                                     "customColumn1": 60,
                                                                     "customColumn2": 218,
                                                                     "customColumn3": 288,
-                                                                    "priority": 69,
+                                                                    "priority": 86,
                                                                     "amount": 122,
                                                                     "closeDate": 121
                                                                 },
@@ -18727,32 +18720,10 @@
                     "layoutOnLoadActions": [
                         [
                             {
-                                "_id": "65e9d0c7c273cc13c1789123",
-                                "id": "65e9d0c7c273cc13c1789123",
-                                "confirmBeforeExecute": false,
-                                "name": "getContactOwners",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.nodeUrl"
-                                ],
-                                "timeoutInMillisecond": 10000
-                            },
-                            {
                                 "_id": "65e9d5e4c273cc13c1789125",
                                 "id": "65e9d5e4c273cc13c1789125",
                                 "confirmBeforeExecute": false,
                                 "name": "getWidgetsFillers",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.nodeUrl"
-                                ],
-                                "timeoutInMillisecond": 10000
-                            },
-                            {
-                                "_id": "65f08489c273cc13c178914c",
-                                "id": "65f08489c273cc13c178914c",
-                                "confirmBeforeExecute": false,
-                                "name": "getDeals",
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl"
@@ -18767,6 +18738,18 @@
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65f458fc9693c46f4e24c683",
+                                "id": "65f458fc9693c46f4e24c683",
+                                "collectionId": "65f458fc9693c46f4e24c681",
+                                "confirmBeforeExecute": false,
+                                "name": "myFun2",
+                                "pluginType": "JS",
+                                "jsonPathKeys": [
+                                    "async () => {\n\t\t//use async-await or promises\n\t}"
                                 ],
                                 "timeoutInMillisecond": 10000
                             }
@@ -20135,6 +20118,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.industry.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.comment.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -20284,7 +20270,7 @@
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
-                                                        "isVisible": true,
+                                                        "isVisible": false,
                                                         "isDisabled": false,
                                                         "isCellVisible": true,
                                                         "isDerived": false,
@@ -20379,6 +20365,23 @@
                                                         "iconName": "eye-open",
                                                         "buttonVariant": "TERTIARY",
                                                         "onClick": "{{navigateTo('Contact',{contactID: Table1.selectedRow._id})}}"
+                                                    },
+                                                    "comment": {
+                                                        "index": 13,
+                                                        "width": 150,
+                                                        "id": "comment",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "comment",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.comment))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -20415,17 +20418,18 @@
                                                     "customColumn1",
                                                     "firstName",
                                                     "lastName",
-                                                    "contactOwner",
                                                     "email",
                                                     "phoneNumber",
-                                                    "dealStage",
+                                                    "_id",
+                                                    "deleted",
                                                     "leadStatus",
+                                                    "comment",
+                                                    "contactOwner",
+                                                    "dealStage",
                                                     "createdAt",
                                                     "country",
                                                     "city",
-                                                    "industry",
-                                                    "_id",
-                                                    "deleted"
+                                                    "industry"
                                                 ],
                                                 "enableClientSideSearch": true,
                                                 "isVisibleSearch": true,
@@ -21726,7 +21730,7 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "backgroundColor": "",
-                                                                "itemBackgroundColor": "#eee",
+                                                                "itemBackgroundColor": "#fcfcfc",
                                                                 "animateLoading": true,
                                                                 "gridType": "vertical",
                                                                 "template": {
@@ -22121,7 +22125,7 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "backgroundColor": "",
-                                                                "itemBackgroundColor": "#eee",
+                                                                "itemBackgroundColor": "#fcfcfc",
                                                                 "animateLoading": true,
                                                                 "gridType": "vertical",
                                                                 "template": {
