@@ -12903,7 +12903,7 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 14.017578125,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 55,
+                                                                "leftColumn": 54,
                                                                 "rightColumn": 64,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
@@ -12952,7 +12952,7 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 14.017578125,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 55,
+                                                                "leftColumn": 54,
                                                                 "rightColumn": 64,
                                                                 "topRow": 4,
                                                                 "bottomRow": 8,
@@ -13019,7 +13019,7 @@
                                                                                 "parentColumnSpace": 9.981658935546875,
                                                                                 "parentRowSpace": 10,
                                                                                 "leftColumn": 0,
-                                                                                "rightColumn": 27,
+                                                                                "rightColumn": 21,
                                                                                 "topRow": 0,
                                                                                 "bottomRow": 7,
                                                                                 "parentId": "76sgdymuhc",
@@ -13064,8 +13064,8 @@
                                                                                 "isLoading": false,
                                                                                 "parentColumnSpace": 9.981658935546875,
                                                                                 "parentRowSpace": 10,
-                                                                                "leftColumn": 27,
-                                                                                "rightColumn": 45,
+                                                                                "leftColumn": 21,
+                                                                                "rightColumn": 42,
                                                                                 "topRow": 0,
                                                                                 "bottomRow": 7,
                                                                                 "parentId": "76sgdymuhc",
@@ -13107,8 +13107,8 @@
                                                                                 "isLoading": false,
                                                                                 "parentColumnSpace": 9.84375,
                                                                                 "parentRowSpace": 10,
-                                                                                "leftColumn": 45,
-                                                                                "rightColumn": 64,
+                                                                                "leftColumn": 42,
+                                                                                "rightColumn": 63,
                                                                                 "topRow": 0,
                                                                                 "bottomRow": 7,
                                                                                 "parentId": "76sgdymuhc",
@@ -13152,7 +13152,7 @@
                                                                 "parentColumnSpace": 14.017578125,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 53,
+                                                                "rightColumn": 54,
                                                                 "topRow": 0,
                                                                 "bottomRow": 9,
                                                                 "parentId": "8n7wfxdppc",
@@ -13571,7 +13571,10 @@
                                                                     "step": 62,
                                                                     "status": 75,
                                                                     "customColumn1": 60,
-                                                                    "customColumn2": 187
+                                                                    "customColumn2": 187,
+                                                                    "leadStatus": 113,
+                                                                    "country": 121,
+                                                                    "city": 127
                                                                 },
                                                                 "columnOrder": [
                                                                     "customColumn1",
@@ -14547,7 +14550,7 @@
                                 "animateLoading": true,
                                 "detachFromLayout": true,
                                 "canOutsideClickClose": true,
-                                "shouldScrollContents": true,
+                                "shouldScrollContents": false,
                                 "widgetName": "ModalAddToList",
                                 "children": [
                                     {
@@ -14907,7 +14910,9 @@
                                 "rightColumn": 43,
                                 "topRow": 22,
                                 "bottomRow": 46,
-                                "parentId": "0"
+                                "parentId": "0",
+                                "dynamicBindingPathList": [],
+                                "dynamicTriggerPathList": []
                             }
                         ],
                         "snapRows": 88,
@@ -16842,17 +16847,6 @@
                     "layoutOnLoadActions": [
                         [
                             {
-                                "_id": "65ead6adc273cc13c1789128",
-                                "id": "65ead6adc273cc13c1789128",
-                                "confirmBeforeExecute": false,
-                                "name": "getOwners",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.nodeUrl"
-                                ],
-                                "timeoutInMillisecond": 10000
-                            },
-                            {
                                 "_id": "65eee885c273cc13c178912f",
                                 "id": "65eee885c273cc13c178912f",
                                 "confirmBeforeExecute": false,
@@ -16860,6 +16854,18 @@
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65f81a569693c46f4e24c686",
+                                "id": "65f81a569693c46f4e24c686",
+                                "collectionId": "65f81a569693c46f4e24c684",
+                                "confirmBeforeExecute": false,
+                                "name": "myFun2",
+                                "pluginType": "JS",
+                                "jsonPathKeys": [
+                                    "async () => {\n\t\t//use async-await or promises\n\t}"
                                 ],
                                 "timeoutInMillisecond": 10000
                             }
@@ -17723,8 +17729,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 54,
                                                                 "rightColumn": 64,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
+                                                                "topRow": 4,
+                                                                "bottomRow": 8,
                                                                 "parentId": "i81qswbsxx",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [
@@ -17786,7 +17792,7 @@
                                                                                 "parentColumnSpace": 9.981658935546875,
                                                                                 "parentRowSpace": 10,
                                                                                 "leftColumn": 0,
-                                                                                "rightColumn": 38,
+                                                                                "rightColumn": 32,
                                                                                 "topRow": 0,
                                                                                 "bottomRow": 7,
                                                                                 "parentId": "unxi3gdiw4",
@@ -17831,7 +17837,7 @@
                                                                                 "isLoading": false,
                                                                                 "parentColumnSpace": 9.981658935546875,
                                                                                 "parentRowSpace": 10,
-                                                                                "leftColumn": 38,
+                                                                                "leftColumn": 32,
                                                                                 "rightColumn": 64,
                                                                                 "topRow": 0,
                                                                                 "bottomRow": 7,
@@ -17876,7 +17882,7 @@
                                                                 "parentColumnSpace": 14.017578125,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 46,
+                                                                "rightColumn": 54,
                                                                 "topRow": 0,
                                                                 "bottomRow": 9,
                                                                 "parentId": "i81qswbsxx",
@@ -19923,7 +19929,7 @@
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 27,
+                                                                "rightColumn": 22,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "35mqo86cuk",
@@ -19968,8 +19974,8 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 9.981658935546875,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 27,
-                                                                "rightColumn": 45,
+                                                                "leftColumn": 22,
+                                                                "rightColumn": 43,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
                                                                 "parentId": "35mqo86cuk",
@@ -20011,7 +20017,7 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 9.84375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 45,
+                                                                "leftColumn": 43,
                                                                 "rightColumn": 64,
                                                                 "topRow": 0,
                                                                 "bottomRow": 7,
@@ -23174,7 +23180,7 @@
                                                                 "labelWidth": 5,
                                                                 "widgetName": "DealComment",
                                                                 "version": 2,
-                                                                "defaultText": "{{getDeal.data.dealComment}}",
+                                                                "defaultText": "{{getDeal.data.comment}}",
                                                                 "iconAlign": "left",
                                                                 "autoFocus": false,
                                                                 "labelStyle": "",
