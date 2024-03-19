@@ -13578,6 +13578,7 @@
                                                                 },
                                                                 "columnOrder": [
                                                                     "customColumn1",
+                                                                    "customColumn2",
                                                                     "firstName",
                                                                     "lastName",
                                                                     "email",
@@ -13592,8 +13593,7 @@
                                                                     "dealStage",
                                                                     "country",
                                                                     "city",
-                                                                    "industry",
-                                                                    "customColumn2"
+                                                                    "industry"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -17955,10 +17955,13 @@
                                                                         "key": "derivedColumns.customColumn3.computedValue"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.customColumn3.computedValue"
+                                                                        "key": "primaryColumns.comment.computedValue"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.comment.computedValue"
+                                                                        "key": "derivedColumns.customColumn3.buttonLabel"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn3.buttonLabel"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -18310,7 +18313,7 @@
                                                                         "index": 14,
                                                                         "width": 150,
                                                                         "id": "customColumn3",
-                                                                        "columnType": "text",
+                                                                        "columnType": "button",
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
                                                                         "isVisible": true,
@@ -18318,11 +18321,15 @@
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
                                                                         "label": "deal with",
-                                                                        "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( \n`${currentRow.dealWithContactFirstName} ${currentRow.dealWithContactLastName} ${currentRow.dealWithContactEmail}`\n))}}",
+                                                                        "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#03B365",
+                                                                        "buttonColor": "#a7b29c",
                                                                         "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF"
+                                                                        "labelColor": "#FFFFFF",
+                                                                        "iconName": "",
+                                                                        "buttonLabel": "{{TableDeals.sanitizedTableData.map((currentRow) => ( '👤 ' + \n`${currentRow.dealWithContactFirstName} ${currentRow.dealWithContactLastName} ${currentRow.dealWithContactEmail}`\n))}}",
+                                                                        "buttonVariant": "TERTIARY",
+                                                                        "onClick": "{{navigateTo('Contact',{'contactID': currentRow.dealWithContactID},'NEW_WINDOW')}}"
                                                                     },
                                                                     "comment": {
                                                                         "index": 12,
@@ -18477,7 +18484,7 @@
                                                                         "index": 14,
                                                                         "width": 150,
                                                                         "id": "customColumn3",
-                                                                        "columnType": "text",
+                                                                        "columnType": "button",
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
                                                                         "isVisible": true,
@@ -18487,9 +18494,10 @@
                                                                         "label": "deal with",
                                                                         "computedValue": "{{TableDeals.sanitizedTableData.map((currentRow) => ( \n`${currentRow.dealWithContactFirstName} ${currentRow.dealWithContactLastName} ${currentRow.dealWithContactEmail}`\n))}}",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#03B365",
+                                                                        "buttonColor": "#a7b29c",
                                                                         "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF"
+                                                                        "labelColor": "#FFFFFF",
+                                                                        "buttonLabel": "{{TableDeals.sanitizedTableData.map((currentRow) => ( '👤 ' + \n`${currentRow.dealWithContactFirstName} ${currentRow.dealWithContactLastName} ${currentRow.dealWithContactEmail}`\n))}}"
                                                                     }
                                                                 },
                                                                 "tableData": "{{getDeals.data}}",
@@ -18500,9 +18508,10 @@
                                                                     "customColumn1": 60,
                                                                     "customColumn2": 218,
                                                                     "customColumn3": 288,
-                                                                    "priority": 86,
+                                                                    "priority": 79,
                                                                     "amount": 122,
-                                                                    "closeDate": 121
+                                                                    "closeDate": 121,
+                                                                    "ownerEmail": 138
                                                                 },
                                                                 "columnOrder": [
                                                                     "customColumn1",
@@ -18512,7 +18521,6 @@
                                                                     "amount",
                                                                     "priority",
                                                                     "comment",
-                                                                    "closeDate",
                                                                     "ownerEmail",
                                                                     "ownerID",
                                                                     "dealWithContactID",
@@ -18520,7 +18528,8 @@
                                                                     "dealWithContactFirstName",
                                                                     "dealWithContactLastName",
                                                                     "dealID",
-                                                                    "customColumn3"
+                                                                    "customColumn3",
+                                                                    "closeDate"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -18578,6 +18587,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn2.menuItems.menuItemrfj33rmf8w.onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn3.onClick"
                                                                     }
                                                                 ],
                                                                 "dynamicPropertyPathList": [
