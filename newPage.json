@@ -325,7 +325,9 @@
                                                                                 "parentId": "9let0sosfc",
                                                                                 "dynamicBindingPathList": [],
                                                                                 "dynamicTriggerPathList": [],
-                                                                                "labelTextColor": "#716E6E"
+                                                                                "labelTextColor": "#716E6E",
+                                                                                "regex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$",
+                                                                                "errorMessage": "Please ensure that your password meets the following criteria:\nMinimum of eight characters,\nat least one uppercase letter, one lowercase letter and one number."
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -728,7 +730,9 @@
                                                                                 "bottomRow": 18,
                                                                                 "parentId": "augpscet93",
                                                                                 "dynamicBindingPathList": [],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "regex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$",
+                                                                                "errorMessage": "Please ensure that your password meets the following criteria:\nMinimum of eight characters,\nat least one uppercase letter, one lowercase letter and one number."
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -2542,6 +2546,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.isHidden.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.childModules.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -2680,6 +2687,23 @@
                                                                         "isDerived": false,
                                                                         "label": "isHidden",
                                                                         "computedValue": "{{TableParent.sanitizedTableData.map((currentRow) => ( currentRow.isHidden))}}"
+                                                                    },
+                                                                    "childModules": {
+                                                                        "index": 8,
+                                                                        "width": 150,
+                                                                        "id": "childModules",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "childModules",
+                                                                        "computedValue": "{{TableParent.sanitizedTableData.map((currentRow) => ( currentRow.childModules))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {},
@@ -2697,7 +2721,8 @@
                                                                     "userAttributes",
                                                                     "deleted",
                                                                     "isParent",
-                                                                    "isHidden"
+                                                                    "isHidden",
+                                                                    "childModules"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -8325,17 +8350,14 @@
                                                                 "topRow": 43,
                                                                 "bottomRow": 50,
                                                                 "parentId": "ntuhkqxaw5",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "validation"
-                                                                    }
-                                                                ],
+                                                                "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [],
                                                                 "tooltip": "",
-                                                                "validation": "{{pass_field.text.length > 7}}",
-                                                                "errorMessage": "Password must be at least 8 characters long.",
+                                                                "validation": "",
+                                                                "errorMessage": "Please ensure that your password meets the following criteria:\nMinimum of eight characters,\nat least one uppercase letter, one lowercase letter and one number.",
                                                                 "placeholderText": "Enter the password...",
-                                                                "labelTextSize": "PARAGRAPH"
+                                                                "labelTextSize": "PARAGRAPH",
+                                                                "regex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -11381,14 +11403,11 @@
                                                                                 "topRow": 25,
                                                                                 "bottomRow": 29,
                                                                                 "parentId": "9ewzguz7ga",
-                                                                                "dynamicBindingPathList": [
-                                                                                    {
-                                                                                        "key": "validation"
-                                                                                    }
-                                                                                ],
+                                                                                "dynamicBindingPathList": [],
                                                                                 "dynamicTriggerPathList": [],
-                                                                                "errorMessage": "The value must be at least 8 characters",
-                                                                                "validation": "{{InputPassword.text.length > 7}}"
+                                                                                "errorMessage": "Please ensure that your password meets the following criteria:\nMinimum of eight characters,\nat least one uppercase letter, one lowercase letter and one number.",
+                                                                                "validation": "",
+                                                                                "regex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
