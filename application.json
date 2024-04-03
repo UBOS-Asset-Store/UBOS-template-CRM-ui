@@ -3922,6 +3922,46 @@
                                 }
                             ],
                             "dynamicTriggerPathList": []
+                        },
+                        {
+                            "isVisible": "{{isShowDemoON.data}}",
+                            "text": "\n🟠 You are in demonstration mode!",
+                            "fontSize": "PARAGRAPH",
+                            "fontStyle": "BOLD",
+                            "textAlign": "CENTER",
+                            "textColor": "#FFC13D",
+                            "truncateButtonColor": "#FFC13D",
+                            "widgetName": "DemoModeNotification",
+                            "shouldTruncate": false,
+                            "overflow": "NONE",
+                            "version": 1,
+                            "animateLoading": true,
+                            "type": "TEXT_WIDGET",
+                            "hideCard": false,
+                            "displayName": "Text",
+                            "key": "vh5cpf91fo",
+                            "iconSVG": "/static/media/icon.97c59b52.svg",
+                            "widgetId": "s0bzzfaxsk",
+                            "renderMode": "CANVAS",
+                            "isLoading": false,
+                            "parentColumnSpace": 12.318359375,
+                            "parentRowSpace": 10,
+                            "leftColumn": 26,
+                            "rightColumn": 44,
+                            "topRow": 0,
+                            "bottomRow": 6,
+                            "parentId": "w1m5bb29j5",
+                            "dynamicBindingPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ],
+                            "dynamicTriggerPathList": [],
+                            "dynamicPropertyPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ]
                         }
                     ],
                     "minHeight": 400,

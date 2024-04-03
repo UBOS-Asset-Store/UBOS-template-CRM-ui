@@ -2758,6 +2758,47 @@
                                                                     }
                                                                 ],
                                                                 "onRowSelected": "{{storeValue('_id',TableParent.selectedRow._id)}}"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "DEMO-VERSION",
+                                                                "defaultSwitchState": "{{isShowDemoON.data}}",
+                                                                "widgetName": "SwitchDemo",
+                                                                "alignWidget": "LEFT",
+                                                                "version": 1,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "type": "SWITCH_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Switch",
+                                                                "key": "zjhbr9ztdz",
+                                                                "iconSVG": "/static/media/icon.a3115bc1.svg",
+                                                                "widgetId": "nw8jry4dm7",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 12.005859375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 24,
+                                                                "rightColumn": 39,
+                                                                "topRow": 0,
+                                                                "bottomRow": 4,
+                                                                "parentId": "m1cq9gjnfw",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultSwitchState"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onChange"
+                                                                    }
+                                                                ],
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "defaultSwitchState"
+                                                                    }
+                                                                ],
+                                                                "onChange": "{{showDemo.run(() => isShowDemoON.run(), () => {})}}"
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -3528,6 +3569,7 @@
                         "Button5",
                         "ButtonGroupParent",
                         "TableParent",
+                        "SwitchDemo",
                         "ModalCreateChild",
                         "Canvas3",
                         "FormCreateChild",
@@ -3567,6 +3609,17 @@
                                 "id": "630cb6f1f720481100000005",
                                 "confirmBeforeExecute": false,
                                 "name": "getModules",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "660d485025be270856235ac0",
+                                "id": "660d485025be270856235ac0",
+                                "confirmBeforeExecute": false,
+                                "name": "isShowDemoON",
                                 "pluginType": "API",
                                 "jsonPathKeys": [
                                     "main.env.nodeUrl"
@@ -13235,9 +13288,6 @@
                                                                         "key": "primaryColumns.industry.computedValue"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.contactOwnerEmail.computedValue"
-                                                                    },
-                                                                    {
                                                                         "key": "derivedColumns.customColumn2.computedValue"
                                                                     },
                                                                     {
@@ -13490,23 +13540,6 @@
                                                                         "buttonVariant": "TERTIARY",
                                                                         "onClick": "{{navigateTo('Contact',{contactID: Table1.selectedRow._id},'SAME_WINDOW')}}"
                                                                     },
-                                                                    "contactOwnerEmail": {
-                                                                        "index": 13,
-                                                                        "width": 150,
-                                                                        "id": "contactOwnerEmail",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "contact owner email",
-                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.contactOwnerEmail))}}"
-                                                                    },
                                                                     "customColumn2": {
                                                                         "index": 15,
                                                                         "width": 150,
@@ -13596,23 +13629,22 @@
                                                                     "city": 127
                                                                 },
                                                                 "columnOrder": [
-                                                                    "customColumn1",
-                                                                    "customColumn2",
-                                                                    "firstName",
-                                                                    "lastName",
-                                                                    "email",
-                                                                    "phoneNumber",
-                                                                    "leadStatus",
-                                                                    "comment",
-                                                                    "contactOwnerEmail",
-                                                                    "contactOwner",
                                                                     "_id",
                                                                     "deleted",
                                                                     "createdAt",
+                                                                    "email",
+                                                                    "firstName",
+                                                                    "lastName",
+                                                                    "contactOwner",
+                                                                    "phoneNumber",
                                                                     "dealStage",
+                                                                    "leadStatus",
                                                                     "country",
                                                                     "city",
-                                                                    "industry"
+                                                                    "industry",
+                                                                    "comment",
+                                                                    "customColumn1",
+                                                                    "customColumn2"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -15039,6 +15071,17 @@
                                 "pluginType": "JS",
                                 "jsonPathKeys": [
                                     "async () => {\n\t\t//use async-await or promises\n\t}"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "660d557b25be270856235ac1",
+                                "id": "660d557b25be270856235ac1",
+                                "confirmBeforeExecute": false,
+                                "name": "isShowDemoON",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
                                 ],
                                 "timeoutInMillisecond": 10000
                             }
