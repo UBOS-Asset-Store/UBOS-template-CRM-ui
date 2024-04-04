@@ -2798,7 +2798,7 @@
                                                                         "key": "defaultSwitchState"
                                                                     }
                                                                 ],
-                                                                "onChange": "{{showDemo.run(() => isShowDemoON.run(), () => {})}}"
+                                                                "onChange": "{{showDemo.run(() => isShowDemoON.run(), () => showAlert('Opps something went wrong 😢','error'))}}"
                                                             }
                                                         ],
                                                         "minHeight": 400,

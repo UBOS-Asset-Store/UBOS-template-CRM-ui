@@ -12153,14 +12153,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "SwitchDemo.",
                 "SwitchDemo.isSwitchedOn"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-04-03T12:12:19.270Z",
-        "updatedAt": "2024-04-03T12:18:41.862Z",
+        "updatedAt": "2024-04-04T13:03:54.981Z",
         "deleted": false,
         "policies": [
             {
@@ -12230,7 +12229,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-04-03T12:15:12.409Z",
-        "updatedAt": "2024-04-04T07:57:02.645Z",
+        "updatedAt": "2024-04-04T13:04:02.348Z",
         "deleted": false,
         "policies": [
             {

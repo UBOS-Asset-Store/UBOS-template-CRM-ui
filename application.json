@@ -3924,7 +3924,7 @@
                             "dynamicTriggerPathList": []
                         },
                         {
-                            "isVisible": "{{isShowDemoON.data}}",
+                            "isVisible": "{{!!isShowDemoON.data}}",
                             "text": "🟠 You are in demo mode!",
                             "fontSize": "PARAGRAPH",
                             "fontStyle": "BOLD",
