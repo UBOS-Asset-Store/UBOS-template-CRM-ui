@@ -3925,7 +3925,7 @@
                         },
                         {
                             "isVisible": "{{isShowDemoON.data}}",
-                            "text": "\n🟠 You are in demonstration mode!",
+                            "text": "🟠 You are in demo mode!",
                             "fontSize": "PARAGRAPH",
                             "fontStyle": "BOLD",
                             "textAlign": "CENTER",
@@ -3946,10 +3946,10 @@
                             "isLoading": false,
                             "parentColumnSpace": 12.318359375,
                             "parentRowSpace": 10,
-                            "leftColumn": 26,
-                            "rightColumn": 44,
-                            "topRow": 0,
-                            "bottomRow": 6,
+                            "leftColumn": 25,
+                            "rightColumn": 42,
+                            "topRow": 1,
+                            "bottomRow": 5,
                             "parentId": "w1m5bb29j5",
                             "dynamicBindingPathList": [
                                 {

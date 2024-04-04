@@ -2761,7 +2761,7 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "label": "DEMO-VERSION",
+                                                                "label": "DEMO MODE",
                                                                 "defaultSwitchState": "{{isShowDemoON.data}}",
                                                                 "widgetName": "SwitchDemo",
                                                                 "alignWidget": "LEFT",
@@ -2778,7 +2778,7 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 12.005859375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 24,
+                                                                "leftColumn": 28,
                                                                 "rightColumn": 39,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
@@ -13295,6 +13295,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.comment.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.contactOwnerEmail.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -13574,6 +13577,23 @@
                                                                         "isDerived": false,
                                                                         "label": "comment",
                                                                         "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.comment))}}"
+                                                                    },
+                                                                    "contactOwnerEmail": {
+                                                                        "index": 14,
+                                                                        "width": 150,
+                                                                        "id": "contactOwnerEmail",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "contactOwnerEmail",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.contactOwnerEmail))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -13643,6 +13663,7 @@
                                                                     "city",
                                                                     "industry",
                                                                     "comment",
+                                                                    "contactOwnerEmail",
                                                                     "customColumn1",
                                                                     "customColumn2"
                                                                 ],
