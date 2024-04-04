@@ -106,7 +106,7 @@
                                                 "fontSize": "HEADING1",
                                                 "fontStyle": "BOLD",
                                                 "textAlign": "CENTER",
-                                                "textColor": "#107de1",
+                                                "textColor": "#2E3D49",
                                                 "truncateButtonColor": "#FFC13D",
                                                 "widgetName": "Text4",
                                                 "shouldTruncate": false,
