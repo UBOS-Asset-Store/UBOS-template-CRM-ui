@@ -13447,7 +13447,7 @@
                                                                         "textSize": "PARAGRAPH",
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
-                                                                        "isVisible": false,
+                                                                        "isVisible": true,
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": false,
@@ -13649,23 +13649,23 @@
                                                                     "city": 127
                                                                 },
                                                                 "columnOrder": [
-                                                                    "_id",
-                                                                    "deleted",
-                                                                    "createdAt",
+                                                                    "customColumn1",
+                                                                    "customColumn2",
                                                                     "email",
-                                                                    "firstName",
-                                                                    "lastName",
-                                                                    "contactOwner",
                                                                     "phoneNumber",
-                                                                    "dealStage",
+                                                                    "comment",
+                                                                    "contactOwnerEmail",
                                                                     "leadStatus",
+                                                                    "dealStage",
                                                                     "country",
                                                                     "city",
                                                                     "industry",
-                                                                    "comment",
-                                                                    "contactOwnerEmail",
-                                                                    "customColumn1",
-                                                                    "customColumn2"
+                                                                    "contactOwner",
+                                                                    "_id",
+                                                                    "deleted",
+                                                                    "createdAt",
+                                                                    "firstName",
+                                                                    "lastName"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -18014,9 +18014,6 @@
                                                                         "key": "primaryColumns.ownerID.computedValue"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.ownerEmail.computedValue"
-                                                                    },
-                                                                    {
                                                                         "key": "primaryColumns.dealWithContactID.computedValue"
                                                                     },
                                                                     {
@@ -18062,7 +18059,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": false,
-                                                                        "label": "name",
+                                                                        "label": "deal title",
                                                                         "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
                                                                     },
                                                                     "stage": {
@@ -18167,23 +18164,6 @@
                                                                         "isDerived": false,
                                                                         "label": "ownerID",
                                                                         "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerID))}}"
-                                                                    },
-                                                                    "ownerEmail": {
-                                                                        "index": 7,
-                                                                        "width": 150,
-                                                                        "id": "ownerEmail",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "owner email",
-                                                                        "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.ownerEmail))}}"
                                                                     },
                                                                     "customColumn1": {
                                                                         "index": 8,
@@ -18589,30 +18569,30 @@
                                                                     "step": 62,
                                                                     "status": 75,
                                                                     "customColumn1": 60,
-                                                                    "customColumn2": 218,
-                                                                    "customColumn3": 288,
+                                                                    "customColumn2": 201,
+                                                                    "customColumn3": 220,
                                                                     "priority": 79,
-                                                                    "amount": 122,
+                                                                    "amount": 112,
                                                                     "closeDate": 121,
-                                                                    "ownerEmail": 138
+                                                                    "ownerEmail": 138,
+                                                                    "comment": 279
                                                                 },
                                                                 "columnOrder": [
                                                                     "customColumn1",
                                                                     "name",
-                                                                    "customColumn2",
                                                                     "stage",
-                                                                    "amount",
+                                                                    "customColumn2",
+                                                                    "customColumn3",
                                                                     "priority",
+                                                                    "amount",
                                                                     "comment",
-                                                                    "ownerEmail",
+                                                                    "closeDate",
                                                                     "ownerID",
                                                                     "dealWithContactID",
                                                                     "dealWithContactEmail",
                                                                     "dealWithContactFirstName",
                                                                     "dealWithContactLastName",
-                                                                    "dealID",
-                                                                    "customColumn3",
-                                                                    "closeDate"
+                                                                    "dealID"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,

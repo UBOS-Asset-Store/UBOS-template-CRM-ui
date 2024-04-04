@@ -599,7 +599,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-08T09:31:03.416Z",
-        "updatedAt": "2024-04-02T14:37:03.704Z",
+        "updatedAt": "2024-04-04T11:20:04.476Z",
         "deleted": false,
         "policies": [
             {
@@ -669,13 +669,12 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(firstname_field.text)",
                 "JSON.stringify(lastname_field.text)",
-                "JSON.stringify(email_field.text)",
+                "JSON.stringify(email_field.text.toLowerCase())",
                 "JSON.stringify(pass_field.text)",
                 "JSON.stringify(field_add_user_role.selectedOptionValue)",
                 "JSON.stringify(attributeUserTable.tableData)",
                 "JSON.stringify(appsmith.user.auth_module.user.info.user.attributes)",
-                "main.env.nodeUrl,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(email_field.text.toLowerCase())"
+                "main.env.nodeUrl,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(email_field.text.toLowerCase()),DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
@@ -2382,7 +2381,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:13:14.157Z",
-        "updatedAt": "2024-04-02T14:41:23.242Z",
+        "updatedAt": "2024-04-04T11:53:28.428Z",
         "deleted": false,
         "policies": [
             {
@@ -6971,15 +6970,14 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(setUpAppLogin.text)",
-                "JSON.stringify(setUpAppPass.text)",
-                "JSON.stringify(setUpAppLogin.text.toLowerCase())"
+                "JSON.stringify(setUpAppLogin.text.toLowerCase())",
+                "JSON.stringify(setUpAppPass.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-10T16:18:32.543Z",
-        "updatedAt": "2024-04-02T14:36:21.784Z",
+        "updatedAt": "2024-04-04T11:39:35.440Z",
         "deleted": false,
         "policies": [
             {
