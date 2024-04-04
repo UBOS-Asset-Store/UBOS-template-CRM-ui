@@ -102,7 +102,7 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
-                                                "text": "<h1 style=\"color:#107de1\">Welcome to your App!</h1><h2 style=\"font-size:20px;color:#107de1\">Please make the first entrance to access all settings and customize your experience</h2>",
+                                                "text": "<h1 style=\"color:#2E3D49\">Welcome to your App!</h1><h2 style=\"font-size:20px;color:#2E3D49\">Please make the first entrance to access all settings and customize your experience</h2>",
                                                 "fontSize": "HEADING1",
                                                 "fontStyle": "BOLD",
                                                 "textAlign": "CENTER",
