@@ -2546,9 +2546,6 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.isHidden.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.childModules.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -2687,23 +2684,6 @@
                                                                         "isDerived": false,
                                                                         "label": "isHidden",
                                                                         "computedValue": "{{TableParent.sanitizedTableData.map((currentRow) => ( currentRow.isHidden))}}"
-                                                                    },
-                                                                    "childModules": {
-                                                                        "index": 8,
-                                                                        "width": 150,
-                                                                        "id": "childModules",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "childModules",
-                                                                        "computedValue": "{{TableParent.sanitizedTableData.map((currentRow) => ( currentRow.childModules))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {},
@@ -2721,8 +2701,7 @@
                                                                     "userAttributes",
                                                                     "deleted",
                                                                     "isParent",
-                                                                    "isHidden",
-                                                                    "childModules"
+                                                                    "isHidden"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -2914,7 +2893,7 @@
                                                                 "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Close",
-                                                                "buttonColor": "#107de1",
+                                                                "buttonColor": "#2E3D49",
                                                                 "buttonVariant": "TERTIARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button6Copy1",
@@ -2992,7 +2971,7 @@
                                                                 "key": "gq708smg70",
                                                                 "iconSVG": "/static/media/icon.cca02633.svg",
                                                                 "buttonVariant": "PRIMARY",
-                                                                "buttonColor": "#107de1",
+                                                                "buttonColor": "#a7b29c",
                                                                 "disabledWhenInvalid": true,
                                                                 "resetFormOnClick": true,
                                                                 "widgetId": "laqwv15m5k",
@@ -3258,7 +3237,7 @@
                                                                 "key": "gq708smg70",
                                                                 "iconSVG": "/static/media/icon.cca02633.svg",
                                                                 "buttonVariant": "PRIMARY",
-                                                                "buttonColor": "#107de1",
+                                                                "buttonColor": "#a7b29c",
                                                                 "disabledWhenInvalid": true,
                                                                 "resetFormOnClick": true,
                                                                 "widgetId": "x561evbf8z",
@@ -3356,7 +3335,7 @@
                                                                 "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Close",
-                                                                "buttonColor": "#107de1",
+                                                                "buttonColor": "#2E3D49",
                                                                 "buttonVariant": "TERTIARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button9",
@@ -18847,127 +18826,6 @@
         },
         "createdAt": "2024-03-04T12:16:54.951Z",
         "updatedAt": "2024-03-04T12:16:54.951Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:pages",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:pages",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "65e5bbcbaa85661d19584bb9",
-        "applicationId": "jetsondashboard",
-        "slug": "Analytics",
-        "Page": {
-            "name": "Analytics",
-            "layouts": [
-                {
-                    "_id": "65e5bbcbaa85661d19584bba",
-                    "viewMode": false,
-                    "dsl": {
-                        "widgetName": "MainContainer",
-                        "backgroundColor": "none",
-                        "rightColumn": 1224,
-                        "snapColumns": 64,
-                        "widgetId": "0",
-                        "topRow": 0,
-                        "bottomRow": 1390,
-                        "parentRowSpace": 1,
-                        "type": "CANVAS_WIDGET",
-                        "detachFromLayout": true,
-                        "minHeight": 890,
-                        "dynamicBindingPathList": [],
-                        "parentColumnSpace": 1,
-                        "leftColumn": 0,
-                        "children": [
-                            {
-                                "isVisible": true,
-                                "backgroundColor": "#FFFFFF",
-                                "widgetName": "Container5",
-                                "containerStyle": "card",
-                                "borderColor": "transparent",
-                                "borderWidth": "0",
-                                "borderRadius": "10",
-                                "boxShadow": "NONE",
-                                "animateLoading": true,
-                                "children": [
-                                    {
-                                        "isVisible": true,
-                                        "widgetName": "Canvas22",
-                                        "version": 1,
-                                        "detachFromLayout": true,
-                                        "type": "CANVAS_WIDGET",
-                                        "hideCard": true,
-                                        "displayName": "Canvas",
-                                        "key": "j9gu2cw7m0",
-                                        "containerStyle": "none",
-                                        "canExtend": false,
-                                        "children": [],
-                                        "minHeight": 400,
-                                        "widgetId": "5ptnz8eiyj",
-                                        "renderMode": "CANVAS",
-                                        "isLoading": false,
-                                        "parentColumnSpace": 1,
-                                        "parentRowSpace": 1,
-                                        "leftColumn": 0,
-                                        "rightColumn": 334.5,
-                                        "topRow": 0,
-                                        "bottomRow": 400,
-                                        "parentId": "g6rj0kjumf"
-                                    }
-                                ],
-                                "version": 1,
-                                "classStyle": "modules",
-                                "type": "CONTAINER_WIDGET",
-                                "hideCard": false,
-                                "displayName": "Container",
-                                "key": "y1ifbhvbx4",
-                                "iconSVG": "/static/media/icon.1977dca3.svg",
-                                "isCanvas": true,
-                                "widgetId": "g6rj0kjumf",
-                                "renderMode": "CANVAS",
-                                "isLoading": false,
-                                "parentColumnSpace": 13.9375,
-                                "parentRowSpace": 10,
-                                "leftColumn": 6,
-                                "rightColumn": 64,
-                                "topRow": 8,
-                                "bottomRow": 72,
-                                "parentId": "0",
-                                "dynamicBindingPathList": [],
-                                "dynamicTriggerPathList": []
-                            }
-                        ],
-                        "snapRows": 88,
-                        "containerStyle": "none",
-                        "canExtend": true,
-                        "version": 57
-                    },
-                    "widgetNames": [
-                        "MainContainer",
-                        "Container5",
-                        "Canvas22"
-                    ],
-                    "deleted": false,
-                    "policies": [],
-                    "layoutOnLoadActions": [
-                        []
-                    ],
-                    "layoutOnCloseActions": [
-                        []
-                    ]
-                }
-            ]
-        },
-        "createdAt": "2024-03-04T12:17:15.704Z",
-        "updatedAt": "2024-03-04T12:17:15.704Z",
         "deleted": false,
         "policies": [
             {

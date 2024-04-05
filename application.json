@@ -62,10 +62,6 @@
             "isDefault": false
         },
         {
-            "_id": "Analytics",
-            "isDefault": false
-        },
-        {
             "_id": "List",
             "isDefault": false
         },
