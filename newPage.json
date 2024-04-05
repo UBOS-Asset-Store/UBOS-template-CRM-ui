@@ -333,7 +333,7 @@
                                                                                 "isVisible": true,
                                                                                 "animateLoading": true,
                                                                                 "text": "Enter",
-                                                                                "buttonColor": "#107de1",
+                                                                                "buttonColor": "#375465",
                                                                                 "buttonVariant": "PRIMARY",
                                                                                 "placement": "CENTER",
                                                                                 "widgetName": "Button3Copy",
@@ -13874,7 +13874,7 @@
                                                 "buttonVariant": "PRIMARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "ButtonCreate",
-                                                "isDisabled": "{{\nNewEmail.text.length < 6 ||\n!NewFirstName.text ||\n!NewContactOwner.selectedOptionValue\n}}",
+                                                "isDisabled": "{{\nNewEmail.text.length < 6 ||\n!NewFirstName.text ||\n!NewContactOwner.selectedOptionValue ||\n!NewPhoneNumber.isValid\n}}",
                                                 "isDefaultClickDisabled": true,
                                                 "recaptchaType": "V3",
                                                 "version": 1,
@@ -14240,7 +14240,8 @@
                                                                 "bottomRow": 39,
                                                                 "parentId": "njkmsvuu3n",
                                                                 "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": []
+                                                                "dynamicTriggerPathList": [],
+                                                                "regex": "^\\d+$"
                                                             },
                                                             {
                                                                 "isVisible": true,
