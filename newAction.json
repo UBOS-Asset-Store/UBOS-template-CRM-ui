@@ -11513,7 +11513,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": true,
+            "executeOnLoad": false,
             "pageId": "Deal",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -11554,7 +11554,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-12T18:28:21.836Z",
-        "updatedAt": "2024-03-13T12:46:57.113Z",
+        "updatedAt": "2024-04-09T17:05:44.904Z",
         "deleted": false,
         "policies": [
             {
